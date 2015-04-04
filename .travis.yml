@@ -1,8 +1,8 @@
 language: node_js
 node_js:
 - iojs-v1
-- "0.12"
-- "0.10"
+- '0.12'
+- '0.10'
 sudo: false
 cache:
   directories:
@@ -10,7 +10,7 @@ cache:
 notifications:
   email: false
   slack:
-    secure: YIGQr0ZQkQxaDUZlBuA8BE1OqedEt/1qNZGjH4sN67qSPQiyn/hpHHv8SpbY2trX2AjfKPD2TNnCpoY0zoGmE0xAv7H1zgmRbMlCsgZDlMNOzDy3QneEeT+mzEc+bjxxAFCHCOMP5RsNni1xcVyUqvguWgecEMT6/Vq3rAo9Ugw=
+    secure: gozH0fviW5KECKL+2ZVnXpmfkeVpOjNejedmC/q7D8HK2WIdkcp2EYt6nj6Vzjr0C3K0HxrVhgRAcdpRBDg+fTaxgYxdFTce2fs5EKADiQx0NK6q3S4MBURySgf6fBsGIUrVcxiWLmUttp1zrsWbO3nQhSMqyAI3SZQdus+1cvE=
 before_install:
 - npm i -g npm@^2.0.0
 - npm i -g pangyp
@@ -38,7 +38,7 @@ deploy:
     repo: excellenteasy/android-icon-resize
     condition: "$BUILD_LEADER$BUILD_AGGREGATE_STATUS = YESothers_succeeded"
   api_key:
-    secure: FpPEVvW/NFRpDSN0NWFm0iWsv9iblm4TnniBzAgvUOABw4eZkxi5wS7hg11CVgjTBhAT+xeDQB8HgZBrtNThzMBYVptBXfnHgBKD6llvcARonNk81Lg/sb2+0qeQbLrOf9sdMwy96pDbnU5qCV2YIwjKlX6t3dcNehjlNZByNaA=
+    secure: CY5CFa2CU5xbEpMRC8gXoLYqG3Q6/ZEEpurf96azWeM/FfbuYMCb+uiEfcbH34JjtTP+XUtWDLk5z8XrV2mWy86KC4w8+1U2g/GtSKRIH/99f2YqXmjgJqfOZlD3v0D+MfUJlVB3MGffalBKMZ9KmQQmlllHn8FVEwMFMAOngrw=
 env:
   global:
-    secure: rVg9hRnTS5lVvV7/gOPdWD0MmePhTTK+2N6y+yzDrU5MmO8YLWrB5m3/XtSVyocNPJL/oHRimnHkMq+fGjqQuiPlJWXYcOg5O0cPceuddpR3WPkUqyEitAr1X5kfMPctL6aMthuRT9cfBanSfBR5OvcIM7A7P4DDX+kilmNuATc=
+    secure: Zy0xeBMuGtI9GL8JLPJiWSbbNquvA9qxyEqkxitpdIElvNsPowiVRAmKN9Nb9ycYbjm/ftENVv00JnQR4EW4GgNLogCfauOIOJyMth8unROWH1aw5QgzrdqwpANxHhczeC7MkzLPGZLBfMQOgr87IutIh6A1wlCM+rJSZQXEvHo=
