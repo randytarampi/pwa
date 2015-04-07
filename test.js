@@ -21,7 +21,7 @@ test('creates all icons in tmp directory', function (t) {
   })
 })
 
-test('cli  all icons in tmp directory', function (t) {
+test('cli all icons in tmp directory', function (t) {
   t.plan(15)
   rimraf('tmp', function () {
     mkdirp('tmp', function () {
