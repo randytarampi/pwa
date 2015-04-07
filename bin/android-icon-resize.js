@@ -1,26 +1,38 @@
 #!/usr/bin/env node
 'use strict'
 var abbrev = require('abbrev')
-var minimist = require('minimist')
-
-var argv = minimist(process.argv.slice(2), abbrev('help', 'input', 'output', 'version'))
+var argv = require('yargs')
 var pkg = require('../package.json')
 var resize = require('../')
 
-function help () {
-  console.log([
-    pkg.description,
-    '',
-    'Example',
-    '  $ android-icon-resize -i path/to/icon.png -o path/to/output/'
-  ].join('\n'))
-}
+// help
+argv.help('help')
+argv.alias('h', 'help')
+
+// register abbreviated aliases
+var abbrevs = abbrev(['input', 'output', 'help'])
+var aliases = Object.keys(abbrevs)
+aliases.forEach(function (alias) {
+  if (alias !== abbrevs[alias]) {
+    argv.alias(alias, abbrevs[alias])
+  }
+})
+
+// document options
+argv.option('input', {
+  description: 'input path for the original icon file'
+})
+argv.option('output', {
+  description: 'output directory'
+})
+
+argv.usage('Usage: $ android-icon-resize [options]')
+
+argv.example('$ android-icon-resize -i path/to/icon.png -o path/to/output/')
+
+argv = argv.argv
 
 function cli (argv) {
-  if (argv.help) {
-    return help()
-  }
-
   if (argv.version) {
     return console.log(pkg.version)
   }
