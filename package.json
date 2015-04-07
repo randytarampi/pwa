@@ -1,0 +1,55 @@
+{
+  "name": "android-icon-resize",
+  "description": "Create all required icons from one icon. Right size, right file name.",
+  "version": "0.0.0-semantically-released",
+  "author": "David Pfahler <david@excellenteasy.com>",
+  "bin": "./bin/android-icon-resize.js",
+  "main": "index.js",
+  "bugs": "https://github.com/excellenteasy/android-icon-resize/issues",
+  "homepage": "https://github.com/excellenteasy/android-icon-resize",
+  "dependencies": {
+    "abbrev": "^1.0.5",
+    "android-icons": "^2.0.1",
+    "colors": "^1.0.3",
+    "lwip": "0.0.6",
+    "minimist": "^1.1.0",
+    "q": "^1.1.2"
+  },
+  "devDependencies": {
+    "mkdirp": "^0.5.0",
+    "rimraf": "^2.2.8",
+    "semantic-release": "^3.0.4",
+    "standard": "^3.3.2",
+    "tape": "^4.0.0"
+  },
+  "engines": {
+    "iojs": "^1",
+    "node": "^0.10",
+    "npm": "^2"
+  },
+  "scripts": {
+    "test": "standard && node test.js",
+    "prepublish": "semantic-release pre",
+    "postpublish": "semantic-release post"
+  },
+  "files": [
+    "index.js",
+    "bin/android-icon-resize.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/excellenteasy/android-icon-resize"
+  },
+  "license": "MIT",
+  "keywords": [
+    "cli",
+    "bin",
+    "icon",
+    "android",
+    "cordova",
+    "phonegap",
+    "generator",
+    "create",
+    "resize"
+  ]
+}
