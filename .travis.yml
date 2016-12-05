@@ -1,41 +1,17 @@
 language: node_js
-node_js:
-- iojs-v1
-- '0.12'
-- '0.10'
-sudo: false
 cache:
   directories:
-  - node_modules
+    - node_modules
 notifications:
   email: false
-  slack:
-    secure: hUaooIL0OCp8O1jx7lLlos4o2JzaXfVY3JdXqGSR6gieG6jxG0zbvOLXmgCN+s+glaxyuACQQ7h10EO+OikAuF1mwmb5Q006lMHzAYAPab/5lnCxb7u14u3MwnmJv8TTN4ukWK7zjnEy7qg6dDQfdgWHMY7efMScAt9uGXWoNCw=
-before_install:
-- npm i -g npm@^2.0.0
-- npm prune
+node_js:
+  - '7'
+  - '6'
+  - '4'
 before_script:
-- curl -Lo travis_after_all.py https://raw.github.com/dmakhno/travis_after_all/master/travis_after_all.py
+  - npm prune
 after_success:
-- python travis_after_all.py
-- export $(cat .to_export_back)
-after_failure:
-- python travis_after_all.py
-- export $(cat .to_export_back)
-before_deploy:
-- rm -f travis_after_all.py .to_export_back
-after_script:
-- echo leader=$BUILD_LEADER status=$BUILD_AGGREGATE_STATUS
-deploy:
-  provider: npm
-  email: david@excellenteasy.com
-  skip_cleanup: true
-  on:
-    branch: master
-    repo: excellenteasy/android-splash
-    condition: "$BUILD_LEADER$BUILD_AGGREGATE_STATUS = YESothers_succeeded"
-  api_key:
-    secure: fxb+NQBd4P7AnZUC5UlbOjI1rB6FUPQfdM2J5Iu+wObORag2mIA6Msg0vQU/BJoZ+nTb7kvJO5QaBg9cyT4wn7pPOWbZkEa0mnDzuQ4hnDR1/RiXhAwKqFKJvsFxxj2x8xXMtFN6tVlFfG0wCrbRmc8TndgNikt1cJIeqoG9JBE=
-env:
-  global:
-    secure: b7Y1+RmKSVPX9tB1XzX88Lplf6jfhYVoj7U11jMMJr2c6gFW4udDa6A4c/6EeXD9y0iq5j7CVcKOPifrfx1VHQU9oBczGj/uIGwZn348mb7x9BQnReiIIxEiGXp53PCnfHqoUy1GhnQioio3rLmKmJGGAtkA5Iz4/10qUjzT4LY=
+  - npm run semantic-release
+branches:
+  except:
+    - /^v\d+\.\d+\.\d+$/

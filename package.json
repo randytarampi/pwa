@@ -1,13 +1,13 @@
 {
   "name": "android-splash",
-  "version": "0.0.0-semantically-released",
+  "version": "0.0.0-development",
   "description": "Get android splash screen files names and dimensions",
   "dependencies": {
     "abbrev": "^1.0.5",
     "yargs": "^6.3.0"
   },
   "devDependencies": {
-    "semantic-release": "^4.3.5",
+    "semantic-release": "^6.3.2",
     "standard": "^8.5.0",
     "tape": "^4.0.0"
   },
@@ -21,8 +21,7 @@
   },
   "scripts": {
     "test": "standard && node test.js",
-    "prepublish": "semantic-release pre",
-    "postpublish": "semantic-release post"
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "files": [
     "index.js",
