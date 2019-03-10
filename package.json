@@ -1,6 +1,6 @@
 {
   "name": "@randy.tarampi/android-splash",
-  "version": "0.0.0-development",
+  "version": "1.1.0",
   "description": "Get android splash screen files names and dimensions",
   "dependencies": {
     "abbrev": "^1.0.5",
