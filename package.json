@@ -1,42 +1,46 @@
 {
-  "name": "android-icon-resize",
+  "name": "@randy.tarampi/android-icon-resize",
   "description": "Create all required icons from one icon. Right size, right file name.",
   "version": "0.0.0-development",
-  "author": "David Pfahler <david@excellenteasy.com>",
+  "author": "Randy Tarampi <randy.tarampi@gmail.com>",
   "bin": "./bin/android-icon-resize.js",
   "main": "index.js",
-  "bugs": "https://github.com/excellenteasy/android-icon-resize/issues",
-  "homepage": "https://github.com/excellenteasy/android-icon-resize",
+  "bugs": "https://github.com/randytarampi/android-icon-resize/issues",
+  "homepage": "https://github.com/randytarampi/android-icon-resize",
   "dependencies": {
+    "@randy.tarampi/android-icons": "^2.1.0",
     "@randy.tarampi/lwip": "^0.0.18",
     "abbrev": "^1.0.5",
-    "android-icons": "^2.0.1",
     "colors": "^1.0.3",
     "q": "^1.1.2",
     "yargs": "^3.7.0"
   },
   "devDependencies": {
+    "@semantic-release/changelog": "^3.0.2",
+    "@semantic-release/git": "^7.0.8",
     "mkdirp": "^0.5.0",
     "rimraf": "^2.2.8",
-    "semantic-release": "^6.3.2",
+    "semantic-release": "^15.13.3",
     "standard": "^3.3.2",
     "tape": "^4.0.0"
   },
   "engines": {
-    "node": "^4",
-    "npm": "^2"
+    "node": "^6",
+    "npm": "^3"
   },
   "scripts": {
-    "test": "standard && node test.js",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+    "test": "standard && node test.js"
   },
   "files": [
     "index.js",
     "bin/android-icon-resize.js"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/excellenteasy/android-icon-resize"
+    "url": "https://github.com/randytarampi/android-icon-resize"
   },
   "license": "MIT",
   "keywords": [

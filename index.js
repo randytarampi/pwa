@@ -1,5 +1,5 @@
 'use strict'
-var icons = require('android-icons')
+var icons = require('@randy.tarampi/android-icons')
 var lwip = require('@randy.tarampi/lwip')
 var Q = require('q')
 var path = require('path')
