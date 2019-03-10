@@ -8,10 +8,10 @@
   "bugs": "https://github.com/excellenteasy/android-icon-resize/issues",
   "homepage": "https://github.com/excellenteasy/android-icon-resize",
   "dependencies": {
+    "@randy.tarampi/lwip": "^0.0.18",
     "abbrev": "^1.0.5",
     "android-icons": "^2.0.1",
     "colors": "^1.0.3",
-    "lwip": "0.0.9",
     "q": "^1.1.2",
     "yargs": "^3.7.0"
   },
@@ -23,7 +23,7 @@
     "tape": "^4.0.0"
   },
   "engines": {
-    "node": "^0.10",
+    "node": "^4",
     "npm": "^2"
   },
   "scripts": {
