@@ -1,0 +1,94 @@
+{
+  "name": "@randy.tarampi/generic-icon-splash-generate",
+  "description": "Generate PWA icons and splash screens using sharp",
+  "version": "0.0.0",
+  "author": {
+    "name": "Randy Tarampi",
+    "email": "rt@randytarampi.ca",
+    "url": "https://www.randytarampi.ca"
+  },
+  "bugs": "https://github.com/randytarampi/generic-icon-splash-generate/issues",
+  "dependencies": {
+    "colors": "^1.3.3",
+    "mkdirp": "^0.5.1",
+    "sharp": "^0.21.3"
+  },
+  "devDependencies": {
+    "@semantic-release/changelog": "^3.0.2",
+    "@semantic-release/git": "^7.0.8",
+    "chai": "^4.2.0",
+    "coveralls": "^3.0.3",
+    "eslint-plugin-import": "^2.16.0",
+    "gulp": "^4.0.0",
+    "gulp-eslint": "^5.0.0",
+    "gulp-if": "^2.0.2",
+    "gulp-mocha": "^6.0.0",
+    "mocha": "^6.0.2",
+    "nyc": "^13.3.0",
+    "rimraf": "^2.6.3",
+    "semantic-release": "^15.13.3",
+    "sinon": "^7.2.7"
+  },
+  "directories": {
+    "bin": "./bin",
+    "lib": "./src/lib",
+    "test": "./test"
+  },
+  "engines": {
+    "node": ">=6"
+  },
+  "files": [
+    "./src"
+  ],
+  "greenkeeper": {
+    "commitMessages": {
+      "initialBadge": "docs(greenkeeper): Add Greenkeeper badge.",
+      "initialDependencies": "chore(greenkeeper): Update dependencies.",
+      "initialBranches": "chore(greenkeeper): Whitelist greenkeeper branches.",
+      "dependencyUpdate": "chore(greenkeeper): ${dependency}@${version}.",
+      "devDependencyUpdate": "chore(greenkeeper): ${dependency}@${version}.",
+      "dependencyPin": "fix(greenkeeper): Pin ${dependency}@${oldVersion}.",
+      "devDependencyPin": "fix(greenkeeper): Pin ${dependency}@${oldVersion}."
+    },
+    "prTitles": {
+      "initialPR": "chore(greenkeeper): Update dependencies and enable Greenkeeper",
+      "initialPrBadge": "docs(greenkeeper): Add Greenkeeper badge and enable Greenkeeper",
+      "initialPrBadgeOnly": "docs(greenkeeper): Add Greenkeeper badge",
+      "initialSubgroupPR": "chore(greenkeeper): Update dependencies for ${group}",
+      "basicPR": "chore(greenkeeper): Update ${dependency}",
+      "groupPR": "chore(greenkeeper): Update ${dependency} for ${group}"
+    }
+  },
+  "keywords": [
+    "android",
+    "asset",
+    "bin",
+    "cli",
+    "cordova",
+    "create",
+    "crop",
+    "generate",
+    "generator",
+    "icon",
+    "ios",
+    "phonegap",
+    "pwa",
+    "resize",
+    "screen",
+    "splash"
+  ],
+  "license": "MIT",
+  "main": "./src/index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": "randytarampi/generic-icon-splash-generate.git",
+  "scripts": {
+    "cover": "rm -rf coverage/ .nyc_output/; NODE_ENV=test nyc gulp -LLLL --color test",
+    "coveralls": "cat coverage/lcov.info | coveralls",
+    "prepublishOnly": "npm shrinkwrap",
+    "pretest": "gulp -LLLL --color lint",
+    "test": "NODE_ENV=test gulp -LLLL --color test"
+  },
+  "sideEffects": false
+}
