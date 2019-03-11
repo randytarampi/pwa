@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/randytarampi/generic-icon-splash-generate/compare/v1.0.0...v1.0.1) (2019-03-11)
+
+
+### Bug Fixes
+
+* **package:** Actually include the package `./src` contents. ([7f8b8bb](https://github.com/randytarampi/generic-icon-splash-generate/commit/7f8b8bb))
+
 # 1.0.0 (2019-03-11)
 
 
