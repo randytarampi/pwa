@@ -9,9 +9,8 @@
   "homepage": "https://github.com/randytarampi/android-icon-resize",
   "dependencies": {
     "@randy.tarampi/android-icons": "^3.0.0",
-    "@randy.tarampi/lwip": "^0.0.19",
+    "@randy.tarampi/generic-icon-splash-generate": "^1.0.1",
     "abbrev": "^1.1.1",
-    "colors": "^1.3.3",
     "yargs": "^13.2.2"
   },
   "devDependencies": {
