@@ -1,7 +1,7 @@
 {
   "name": "@randy.tarampi/generic-icon-splash-generate",
   "description": "Generate PWA icons and splash screens using sharp",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "author": {
     "name": "Randy Tarampi",
     "email": "rt@randytarampi.ca",
