@@ -9,9 +9,7 @@ const generateAssetDestination = (output, template) => path.join(output, templat
 
 const generateIcon = (image, output, iconTemplate) => image
     .clone()
-    .resize(iconTemplate.width, iconTemplate.height || iconTemplate.width, {
-        fit: "contain",
-    })
+    .resize(iconTemplate.width, iconTemplate.height || iconTemplate.width)
     .toFile(generateAssetDestination(output, iconTemplate))
     .then(() => {
         console.info(colors.green("OK"), "Image resized to", iconTemplate.width, "x", // eslint-disable-line no-console
