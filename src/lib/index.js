@@ -15,32 +15,17 @@ const generateAssetDestination = (outputDirectory, template, format) => {
     return path.join(outputDirectory, path.basename(template.name, path.extname(template.name)) + "." + format);
 };
 
-const generateIcon = (image, outputDirectory, iconTemplate, format) => {
-    const outputFormat = format || getFileFormatFromFilename(iconTemplate.name);
+const generateImageForTemplate = (image, outputDirectory, template, format) => {
+    const outputFormat = format || getFileFormatFromFilename(template.name);
 
     return image
         .clone()
-        .resize(iconTemplate.width, iconTemplate.height || iconTemplate.width)
+        .resize(template.width, template.height || template.width)
         .toFormat(outputFormat)
-        .toFile(generateAssetDestination(outputDirectory, iconTemplate, outputFormat))
+        .toFile(generateAssetDestination(outputDirectory, template, outputFormat))
         .then(() => {
-            logMessage("Image resized to", iconTemplate.width, "x", iconTemplate.height || iconTemplate.width,
-                "and written to", outputDirectory);
-        })
-        .catch(errorMessage);
-};
-
-const generateSplashScreen = (image, outputDirectory, splashScreenTemplate, format) => {
-    const outputFormat = format || getFileFormatFromFilename(splashScreenTemplate.name);
-
-    return image
-        .clone()
-        .resize(splashScreenTemplate.width, splashScreenTemplate.height || splashScreenTemplate.width)
-        .toFormat(outputFormat)
-        .toFile(generateAssetDestination(outputDirectory, splashScreenTemplate, outputFormat))
-        .then(() => {
-            logMessage("Image scaled and cropped to", splashScreenTemplate.width, "x",
-                splashScreenTemplate.height || splashScreenTemplate.width, "and written to", outputDirectory);
+            logMessage("Image resized to", template.width, "x", template.height || template.width, "and written to",
+                outputDirectory);
         })
         .catch(errorMessage);
 };
@@ -63,6 +48,6 @@ const generateAssetsGenerator = generator => (templates, input, outputDirectory,
 module.exports = {
     errorMessage,
     logMessage,
-    iconsGenerator: generateAssetsGenerator(generateIcon),
-    splashScreensGenerator: generateAssetsGenerator(generateSplashScreen),
+    iconsGenerator: generateAssetsGenerator(generateImageForTemplate),
+    splashScreensGenerator: generateAssetsGenerator(generateImageForTemplate),
 };
