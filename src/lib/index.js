@@ -4,6 +4,7 @@ const path = require("path");
 const colors = require("colors");
 
 const errorMessage = error => console.error(colors.red("ERROR"), typeof error === "string" ? error : error.message); // eslint-disable-line no-console
+const logMessage = (...args) => console.log(colors.green("OK"), ...args); // eslint-disable-line no-console
 
 const getFileFormatFromFilename = filename => {
     const extname = path.extname(filename);
@@ -23,8 +24,8 @@ const generateIcon = (image, outputDirectory, iconTemplate, format) => {
         .toFormat(outputFormat)
         .toFile(generateAssetDestination(outputDirectory, iconTemplate, outputFormat))
         .then(() => {
-            console.info(colors.green("OK"), "Image resized to", iconTemplate.width, "x", // eslint-disable-line no-console
-                iconTemplate.height || iconTemplate.width, "and written to", outputDirectory);
+            logMessage("Image resized to", iconTemplate.width, "x", iconTemplate.height || iconTemplate.width,
+                "and written to", outputDirectory);
         })
         .catch(errorMessage);
 };
@@ -38,7 +39,7 @@ const generateSplashScreen = (image, outputDirectory, splashScreenTemplate, form
         .toFormat(outputFormat)
         .toFile(generateAssetDestination(outputDirectory, splashScreenTemplate, outputFormat))
         .then(() => {
-            console.info(colors.green("OK"), "Image scaled and cropped to", splashScreenTemplate.width, "x", // eslint-disable-line no-console
+            logMessage("Image scaled and cropped to", splashScreenTemplate.width, "x",
                 splashScreenTemplate.height || splashScreenTemplate.width, "and written to", outputDirectory);
         })
         .catch(errorMessage);
@@ -61,6 +62,7 @@ const generateAssetsGenerator = generator => (templates, input, outputDirectory,
 
 module.exports = {
     errorMessage,
+    logMessage,
     iconsGenerator: generateAssetsGenerator(generateIcon),
     splashScreensGenerator: generateAssetsGenerator(generateSplashScreen),
 };
