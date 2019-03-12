@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/randytarampi/generic-icon-splash-generate/compare/v1.1.0...v1.2.0) (2019-03-12)
+
+
+### Features
+
+* Also export `logMessage`. ([fba8c9e](https://github.com/randytarampi/generic-icon-splash-generate/commit/fba8c9e))
+
 # [1.1.0](https://github.com/randytarampi/generic-icon-splash-generate/compare/v1.0.1...v1.1.0) (2019-03-12)
 
 
