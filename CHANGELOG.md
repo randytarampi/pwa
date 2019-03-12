@@ -1,3 +1,11 @@
+# [1.1.0](https://github.com/randytarampi/generic-icon-splash-generate/compare/v1.0.1...v1.1.0) (2019-03-12)
+
+
+### Features
+
+* `generateIcon` should resize with `cover`, not `contain`. ([31fcdb9](https://github.com/randytarampi/generic-icon-splash-generate/commit/31fcdb9))
+* Support exporting to types that aren't `png`, or what the template is. ([ddc62b6](https://github.com/randytarampi/generic-icon-splash-generate/commit/ddc62b6))
+
 ## [1.0.1](https://github.com/randytarampi/generic-icon-splash-generate/compare/v1.0.0...v1.0.1) (2019-03-11)
 
 
