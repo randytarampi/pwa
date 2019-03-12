@@ -1,14 +1,17 @@
 const fs = require("fs");
 const path = require("path");
+const mkdirp = require("mkdirp");
 const rimraf = require("rimraf");
 const { expect } = require("chai");
 const { iconsGenerator, splashScreensGenerator } = require("../../../../src");
 
 describe("lib", function () {
+    this.timeout(60000);
+
     const output = path.join(__dirname, "../../../tmp");
 
     beforeEach(function (done) {
-        rimraf(output, done);
+        mkdirp(output, done);
     });
 
     afterEach(function (done) {
@@ -68,8 +71,8 @@ describe("lib", function () {
         });
     });
 
-    describe("iconsGenerator", function () {
-        it("generates icons for templates", function () {
+    describe("splashScreensGenerator", function () {
+        it("generates splash screens for templates", function () {
             const templates = [
                 { name: "woof.splash.png", width: 900, height: 1600 },
                 { name: "meow.splash.png", width: 1600, height: 1000 },
