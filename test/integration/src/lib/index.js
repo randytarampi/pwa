@@ -31,6 +31,41 @@ describe("lib", function () {
                     });
                 });
         });
+
+        it("supports a different format", function () {
+            const templates = [
+                { name: "woof.icon.png", width: 100, height: 100 },
+                { name: "meow.icon.png", width: 1000, height: 1000 },
+                { name: "grr.splash.png", width: 1000 },
+            ];
+            const input = path.join(__dirname, "../../../resources/com.appbusinesspodcast.www.icon.png");
+            const format = "webp";
+
+            return iconsGenerator(templates, input, output, format)
+                .then(() => {
+                    templates.forEach(template => {
+                        expect(fs.existsSync(path.join(output, path.basename(template.name, path.extname(template.name)) + "." + format))).to.eql(true);
+                    });
+                });
+        });
+
+        it("throws on an unsupported format", function () {
+            const templates = [
+                { name: "woof.icon.png", width: 100, height: 100 },
+                { name: "meow.icon.png", width: 1000, height: 1000 },
+                { name: "grr.splash.png", width: 1000 },
+            ];
+            const input = path.join(__dirname, "../../../resources/com.appbusinesspodcast.www.icon.png");
+            const format = "woof";
+
+            return iconsGenerator(templates, input, output, format)
+                .then(() => {
+                    throw new Error("Wtf? This should've thrown");
+                })
+                .catch(error => {
+                    expect(error.message).to.eql("Unsupported output format" + " " + format);
+                });
+        });
     });
 
     describe("iconsGenerator", function () {
@@ -47,6 +82,41 @@ describe("lib", function () {
                     templates.forEach(template => {
                         expect(fs.existsSync(path.join(output, template.name))).to.eql(true);
                     });
+                });
+        });
+
+        it("supports a different format", function () {
+            const templates = [
+                { name: "woof.splash.png", width: 900, height: 1600 },
+                { name: "meow.splash.png", width: 1600, height: 1000 },
+                { name: "grr.splash.png", width: 1600 },
+            ];
+            const input = path.join(__dirname, "../../../resources/com.appbusinesspodcast.www.splash.png");
+            const format = "jpeg";
+
+            return splashScreensGenerator(templates, input, output, format)
+                .then(() => {
+                    templates.forEach(template => {
+                        expect(fs.existsSync(path.join(output, path.basename(template.name, path.extname(template.name)) + "." + format))).to.eql(true);
+                    });
+                });
+        });
+
+        it("throws on an unsupported format", function () {
+            const templates = [
+                { name: "woof.splash.png", width: 900, height: 1600 },
+                { name: "meow.splash.png", width: 1600, height: 1000 },
+                { name: "grr.splash.png", width: 1600 },
+            ];
+            const input = path.join(__dirname, "../../../resources/com.appbusinesspodcast.www.splash.png");
+            const format = "woof";
+
+            return splashScreensGenerator(templates, input, output, format)
+                .then(() => {
+                    throw new Error("Wtf? This should've thrown");
+                })
+                .catch(error => {
+                    expect(error.message).to.eql("Unsupported output format" + " " + format);
                 });
         });
     });
