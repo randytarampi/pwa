@@ -1,3 +1,4 @@
+const {Buffer} = require("buffer");
 const fs = require("fs");
 const path = require("path");
 const mkdirp = require("mkdirp");
@@ -19,7 +20,7 @@ describe("lib", function () {
     });
 
     describe("iconsGenerator", function () {
-        it("generates icons for templates", function () {
+        it("generates icons for templates (to file)", function () {
             const templates = [
                 { name: "woof.icon.png", width: 100, height: 100 },
                 { name: "meow.icon.png", width: 1000, height: 1000 },
@@ -31,6 +32,24 @@ describe("lib", function () {
                 .then(() => {
                     templates.forEach(template => {
                         expect(fs.existsSync(path.join(output, template.name))).to.eql(true);
+                    });
+                });
+        });
+
+        it("generates icons for templates (to buffer)", function () {
+            const templates = [
+                { name: "woof.icon.png", width: 100, height: 100 },
+                { name: "meow.icon.png", width: 1000, height: 1000 },
+                { name: "grr.splash.png", width: 1000 },
+            ];
+            const input = path.join(__dirname, "../../../resources/com.appbusinesspodcast.www.icon.png");
+
+            return iconsGenerator(templates, input, output, undefined, "buffer")
+                .then(buffers => {
+                    expect(buffers).to.have.length(templates.length);
+
+                    buffers.forEach(buffer => {
+                        expect(buffer).to.be.instanceOf(Buffer);
                     });
                 });
         });
@@ -72,7 +91,7 @@ describe("lib", function () {
     });
 
     describe("splashScreensGenerator", function () {
-        it("generates splash screens for templates", function () {
+        it("generates splash screens for templates (to file)", function () {
             const templates = [
                 { name: "woof.splash.png", width: 900, height: 1600 },
                 { name: "meow.splash.png", width: 1600, height: 1000 },
@@ -84,6 +103,24 @@ describe("lib", function () {
                 .then(() => {
                     templates.forEach(template => {
                         expect(fs.existsSync(path.join(output, template.name))).to.eql(true);
+                    });
+                });
+        });
+
+        it("generates splash screens for templates (to buffer)", function () {
+            const templates = [
+                { name: "woof.splash.png", width: 900, height: 1600 },
+                { name: "meow.splash.png", width: 1600, height: 1000 },
+                { name: "grr.splash.png", width: 1600 },
+            ];
+            const input = path.join(__dirname, "../../../resources/com.appbusinesspodcast.www.splash.png");
+
+            return splashScreensGenerator(templates, input, output, undefined, "buffer")
+                .then(buffers => {
+                    expect(buffers).to.have.length(templates.length);
+
+                    buffers.forEach(buffer => {
+                        expect(buffer).to.be.instanceOf(Buffer);
                     });
                 });
         });
