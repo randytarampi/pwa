@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/randytarampi/generic-icon-splash-generate/compare/v1.2.0...v1.3.0) (2019-03-17)
+
+
+### Features
+
+* Support generation of assets to plain `Buffer`s. ([d954ebc](https://github.com/randytarampi/generic-icon-splash-generate/commit/d954ebc))
+
 # [1.2.0](https://github.com/randytarampi/generic-icon-splash-generate/compare/v1.1.0...v1.2.0) (2019-03-12)
 
 
