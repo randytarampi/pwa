@@ -1,16 +1,16 @@
 # android-icon-resize 
-[![Build Status](https://travis-ci.org/excellenteasy/android-icon-resize.svg?branch=master)](https://travis-ci.org/excellenteasy/android-icon-resize)
-[![Dependency Status](https://david-dm.org/excellenteasy/android-icon-resize.svg)](https://david-dm.org/excellenteasy/android-icon-resize)
-[![devDependency Status](https://david-dm.org/excellenteasy/android-icon-resize/dev-status.svg)](https://david-dm.org/excellenteasy/android-icon-resize#info=devDependencies)
+[![Build Status](https://travis-ci.com/randytarampi/android-icon-resize.svg?branch=master)](https://travis-ci.com/randytarampi/android-icon-resize)
+[![Dependency Status](https://david-dm.org/randytarampi/android-icon-resize.svg)](https://david-dm.org/randytarampi/android-icon-resize)
+[![devDependency Status](https://david-dm.org/randytarampi/android-icon-resize/dev-status.svg)](https://david-dm.org/randytarampi/android-icon-resize#info=devDependencies)
 [![Semantically Released](https://img.shields.io/badge/versioning-semantically%20released-brightgreen.svg)](https://github.com/boennemann/semantic-release) [![Greenkeeper badge](https://badges.greenkeeper.io/randytarampi/android-icon-resize.svg)](https://greenkeeper.io/)
 
 > Create all required icons from one icon. Right size, right file name.
 
-The default icon file names and required sizes for android are retrieved from the [android-icons](http://github.com/excellenteasy/android-icons) module. 
+The default icon file names and required sizes for android are retrieved from the [android-icons](http://github.com/randytarampi/android-icons) module. 
 
 The files created have the default names as you might want to use them, for example, in [`config.xml`](http://docs.phonegap.com/en/3.5.0/config_ref_images.md.html) of a PhoneGap/Cordova project.
 
-[This also exists for iOS](https://github.com/excellenteasy/ios-icon-resize).
+[This also exists for iOS](https://github.com/randytarampi/ios-icon-resize).
 
 ## Install
 
