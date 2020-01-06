@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/randytarampi/generic-icon-splash-generate/compare/v1.3.0...v1.4.0) (2020-01-06)
+
+
+### Features
+
+* **package:** Blindly upgrade our dependencies for the new year and support node@10, node@12 and beyond. ([5dab0c1](https://github.com/randytarampi/generic-icon-splash-generate/commit/5dab0c15b7490f35f3f51be22f34d5b901cc1f42))
+
 # [1.3.0](https://github.com/randytarampi/generic-icon-splash-generate/compare/v1.2.0...v1.3.0) (2019-03-17)
 
 
