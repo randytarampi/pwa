@@ -1,3 +1,10 @@
+# [2.1.0](https://github.com/randytarampi/android-splash/compare/v2.0.1...v2.1.0) (2020-01-06)
+
+
+### Features
+
+* **package:** Blindly upgrade our dependencies for the new year and support node@10, node@12 and beyond. ([0ead6de](https://github.com/randytarampi/android-splash/commit/0ead6dee4c59e2b5420bca76a1732173d4d0e663))
+
 ## [2.0.1](https://github.com/randytarampi/android-splash/compare/v2.0.0...v2.0.1) (2019-04-15)
 
 
