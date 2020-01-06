@@ -85,7 +85,7 @@ describe("lib", function () {
                     throw new Error("Wtf? This should've thrown");
                 })
                 .catch(error => {
-                    expect(error.message).to.eql("Unsupported output format" + " " + format);
+                    expect(error.message).to.contain(`for format but received ${format} of type string`);
                 });
         });
     });
@@ -156,7 +156,7 @@ describe("lib", function () {
                     throw new Error("Wtf? This should've thrown");
                 })
                 .catch(error => {
-                    expect(error.message).to.eql("Unsupported output format" + " " + format);
+                    expect(error.message).to.contain(`for format but received ${format} of type string`);
                 });
         });
     });

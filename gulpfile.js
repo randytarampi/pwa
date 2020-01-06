@@ -9,7 +9,7 @@ gulp.task("eslint", () => {
     const eslint = require("gulp-eslint");
     const gulpIf = require("gulp-if");
 
-    return gulp.src(["**/*.js"])
+    return gulp.src(["**/*.js", "!node_modules/**"])
                .pipe(eslint({ fix: true, ignorePath: path.join(__dirname, ".eslintignore") }))
                .pipe(eslint.format())
                .pipe(gulpIf(isFixed, gulp.dest("./")))
