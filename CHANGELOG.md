@@ -1,3 +1,10 @@
+## [2.1.1](https://github.com/randytarampi/android-splash/compare/v2.1.0...v2.1.1) (2020-04-19)
+
+
+### Bug Fixes
+
+* package.json & package-lock.json to reduce vulnerabilities ([8c7e81f](https://github.com/randytarampi/android-splash/commit/8c7e81f6ea4015828f82de4840b5bcf553fcad25))
+
 # [2.1.0](https://github.com/randytarampi/android-splash/compare/v2.0.1...v2.1.0) (2020-01-06)
 
 
