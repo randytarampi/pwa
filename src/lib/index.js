@@ -61,15 +61,7 @@ const generateImageForTemplate = (image, outputDirectory, template, format, type
 const generateAssetsGenerator = generator => (templates, input, outputDirectory, format, type = "file") => {
     const image = sharp(input);
 
-    return new Promise((resolve, reject) => {
-        mkdirp(path.resolve(outputDirectory), error => {
-            if (error) {
-                return reject(error);
-            }
-
-            resolve();
-        });
-    })
+    return mkdirp(path.resolve(outputDirectory))
         .then(() => Promise.all(templates.map(template => generator(image, outputDirectory, template, format, type))));
 };
 

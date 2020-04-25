@@ -10,7 +10,7 @@
   "bugs": "https://github.com/randytarampi/generic-icon-splash-generate/issues",
   "dependencies": {
     "colors": "^1.4.0",
-    "mkdirp": "^0.5.1",
+    "mkdirp": "^1.0.4",
     "sharp": "^0.25.2"
   },
   "devDependencies": {
@@ -35,7 +35,7 @@
     "test": "./test"
   },
   "engines": {
-    "node": ">=6"
+    "node": ">=8"
   },
   "files": [
     "src"
