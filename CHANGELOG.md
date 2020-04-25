@@ -1,3 +1,15 @@
+# [2.0.0](https://github.com/randytarampi/generic-icon-splash-generate/compare/v1.4.0...v2.0.0) (2020-04-25)
+
+
+### chore
+
+* **package:** Fix tests for mkdirp@1.0.4. ([863f819](https://github.com/randytarampi/generic-icon-splash-generate/commit/863f819a774b22cb1b993ce01ca01cf55ce7dfbc))
+
+
+### BREAKING CHANGES
+
+* **package:** Drop support for node<8.
+
 # [1.4.0](https://github.com/randytarampi/generic-icon-splash-generate/compare/v1.3.0...v1.4.0) (2020-01-06)
 
 
