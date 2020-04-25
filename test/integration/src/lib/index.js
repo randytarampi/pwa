@@ -11,8 +11,8 @@ describe("lib", function () {
 
     const output = path.join(__dirname, "../../../tmp");
 
-    beforeEach(function (done) {
-        mkdirp(output, done);
+    beforeEach(function () {
+        return mkdirp(output);
     });
 
     afterEach(function (done) {
