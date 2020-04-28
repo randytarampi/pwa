@@ -2,7 +2,7 @@
 [![Build Status](https://travis-ci.com/randytarampi/android-splash.svg?branch=master)](https://travis-ci.com/randytarampi/android-splash)
 [![Dependency Status](https://david-dm.org/randytarampi/android-splash.svg)](https://david-dm.org/randytarampi/android-splash)
 [![devDependency Status](https://david-dm.org/randytarampi/android-splash/dev-status.svg)](https://david-dm.org/randytarampi/android-splash#info=devDependencies)
-[![Semantically Released](https://img.shields.io/badge/versioning-semantically%20released-brightgreen.svg)](https://github.com/boennemann/semantic-release) [![Greenkeeper badge](https://badges.greenkeeper.io/randytarampi/android-splash.svg)](https://greenkeeper.io/)
+[![Semantically Released](https://img.shields.io/badge/versioning-semantically%20released-brightgreen.svg)](https://github.com/boennemann/semantic-release) 
 
 > Get android splash screen files names and dimensions
 
