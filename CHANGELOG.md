@@ -1,3 +1,19 @@
+## [2.0.1](https://github.com/randytarampi/generic-icon-splash-generate/compare/v2.0.0...v2.0.1) (2020-04-29)
+
+
+### Bug Fixes
+
+* package.json & package-lock.json to reduce vulnerabilities ([39e028a](https://github.com/randytarampi/generic-icon-splash-generate/commit/39e028aecaa3f54858006ef66d93703c55b96dbf))
+* package.json & package-lock.json to reduce vulnerabilities ([1850ac6](https://github.com/randytarampi/generic-icon-splash-generate/commit/1850ac62becf6dd8681c7963fa5af3100042950b))
+* upgrade coveralls from 3.0.9 to 3.1.0 ([77fae28](https://github.com/randytarampi/generic-icon-splash-generate/commit/77fae2832e2e58246320e332826a934ac6c13104))
+* upgrade coveralls from 3.0.9 to 3.1.0 ([bfbef80](https://github.com/randytarampi/generic-icon-splash-generate/commit/bfbef80a37ad75d7b9955c783fa364f173e25146))
+* upgrade eslint-plugin-import from 2.19.1 to 2.20.2 ([7c010b6](https://github.com/randytarampi/generic-icon-splash-generate/commit/7c010b66fc2b56ff87ad6ae3fca81f6c28eab8b2))
+* upgrade eslint-plugin-import from 2.19.1 to 2.20.2 ([581cf27](https://github.com/randytarampi/generic-icon-splash-generate/commit/581cf27eb052a4c7de6b0fd2c601e3b271e9807d))
+* upgrade rimraf from 3.0.0 to 3.0.2 ([3e4c1fb](https://github.com/randytarampi/generic-icon-splash-generate/commit/3e4c1fb52cbedd5deffb1ec220a6173803b7e242))
+* upgrade rimraf from 3.0.0 to 3.0.2 ([7608acc](https://github.com/randytarampi/generic-icon-splash-generate/commit/7608acc78a51729753408d56f77dbbc6c134f396))
+* upgrade semantic-release from 17.0.0 to 17.0.7 ([f4a5d7b](https://github.com/randytarampi/generic-icon-splash-generate/commit/f4a5d7b6ca5b34a2a257de9bc9bb00574c19471d))
+* upgrade semantic-release from 17.0.0 to 17.0.7 ([2a8b67b](https://github.com/randytarampi/generic-icon-splash-generate/commit/2a8b67b65eecdcf4190f4408d94bbbab947f0d47))
+
 # [2.0.0](https://github.com/randytarampi/generic-icon-splash-generate/compare/v1.4.0...v2.0.0) (2020-04-25)
 
 
