@@ -1,3 +1,17 @@
+## [2.1.2](https://github.com/randytarampi/android-splash/compare/v2.1.1...v2.1.2) (2020-04-30)
+
+
+### Bug Fixes
+
+* upgrade @semantic-release/changelog from 5.0.0 to 5.0.1 ([b3f0f32](https://github.com/randytarampi/android-splash/commit/b3f0f323ec0f7645590e7faeda9afb8992784012))
+* upgrade @semantic-release/changelog from 5.0.0 to 5.0.1 ([7b2f58f](https://github.com/randytarampi/android-splash/commit/7b2f58f04408937ed7c87b1edc600790fad33d65))
+* upgrade semantic-release from 17.0.0 to 17.0.7 ([6ecac6e](https://github.com/randytarampi/android-splash/commit/6ecac6e8e90aba62acdc43371143443549778ca2))
+* upgrade semantic-release from 17.0.0 to 17.0.7 ([bc33014](https://github.com/randytarampi/android-splash/commit/bc3301421ea0fe45b1437679cddb75344e24feac))
+* upgrade standard from 14.3.1 to 14.3.3 ([bf59d5a](https://github.com/randytarampi/android-splash/commit/bf59d5a4253702f499eb9eb3575ade84818387ba))
+* upgrade standard from 14.3.1 to 14.3.3 ([bc6c3c3](https://github.com/randytarampi/android-splash/commit/bc6c3c35739cb7de97cb264c3954674982bf0b20))
+* upgrade yargs from 15.3.0 to 15.3.1 ([3f0266d](https://github.com/randytarampi/android-splash/commit/3f0266d8f109cc03b529d55ae6fdaa0bfa8292be))
+* upgrade yargs from 15.3.0 to 15.3.1 ([b960eda](https://github.com/randytarampi/android-splash/commit/b960eda9d81403dfe6fd23fd53551f3f1882f03f))
+
 ## [2.1.1](https://github.com/randytarampi/android-splash/compare/v2.1.0...v2.1.1) (2020-04-19)
 
 
