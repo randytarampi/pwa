@@ -1,3 +1,15 @@
+## [2.0.3](https://github.com/randytarampi/generic-icon-splash-generate/compare/v2.0.2...v2.0.3) (2020-05-01)
+
+
+### Bug Fixes
+
+* upgrade @semantic-release/changelog from 5.0.0 to 5.0.1 ([4b236d7](https://github.com/randytarampi/generic-icon-splash-generate/commit/4b236d71ededc2aa23db33f9e01cda9bae2649df))
+* upgrade @semantic-release/changelog from 5.0.0 to 5.0.1 ([d258c74](https://github.com/randytarampi/generic-icon-splash-generate/commit/d258c74dea06766e367b16842519fee8c3446b51))
+* upgrade mocha from 7.1.1 to 7.1.2 ([46b4221](https://github.com/randytarampi/generic-icon-splash-generate/commit/46b4221489e10d541faadb6c4847b9e40f530f63))
+* upgrade mocha from 7.1.1 to 7.1.2 ([de2545f](https://github.com/randytarampi/generic-icon-splash-generate/commit/de2545f8b7abe4b085600288f8074a3949ee988b))
+* upgrade nyc from 15.0.0 to 15.0.1 ([beed81b](https://github.com/randytarampi/generic-icon-splash-generate/commit/beed81b5bfe4c23048f8ac24b779e4d066ad75a8))
+* upgrade nyc from 15.0.0 to 15.0.1 ([9605193](https://github.com/randytarampi/generic-icon-splash-generate/commit/9605193c59e7b4bd15eddfd110fe1266de1f7609))
+
 ## [2.0.2](https://github.com/randytarampi/generic-icon-splash-generate/compare/v2.0.1...v2.0.2) (2020-05-01)
 
 
