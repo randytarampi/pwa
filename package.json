@@ -11,8 +11,8 @@
     "@randy.tarampi/android-icons": "^3.1.0",
     "@randy.tarampi/generic-icon-splash-generate": "^2.0.0",
     "abbrev": "^1.1.1",
-    "yargs": "^15.3.0",
-    "snyk": "^1.316.1"
+    "snyk": "^1.316.1",
+    "yargs": "^15.3.1"
   },
   "devDependencies": {
     "@semantic-release/changelog": "^5.0.1",
