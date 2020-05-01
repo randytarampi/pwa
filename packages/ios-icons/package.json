@@ -1,0 +1,44 @@
+{
+  "name": "@randy.tarampi/ios-icons",
+  "description": "Get iOS icon file names and dimensions (width)",
+  "version": "4.2.2",
+  "author": "Randy Tarampi <randy.tarampi@gmail.com>",
+  "bin": "./bin/ios-icons.js",
+  "dependencies": {
+    "abbrev": "^1.1.1",
+    "yargs": "^15.3.1"
+  },
+  "devDependencies": {
+    "@semantic-release/changelog": "^5.0.1",
+    "@semantic-release/git": "^9.0.0",
+    "semantic-release": "^17.0.0",
+    "standard": "^14.3.3",
+    "tape": "^5.0.0"
+  },
+  "engines": {
+    "node": ">=6",
+    "npm": ">=3"
+  },
+  "files": [
+    "bin/ios-icons.js",
+    "icons.json",
+    "index.js"
+  ],
+  "keywords": [
+    "bin",
+    "cli",
+    "cordova",
+    "icon",
+    "ios",
+    "phonegap"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": "randytarampi/ios-icons.git",
+  "scripts": {
+    "test": "standard && node test.js"
+  }
+}
