@@ -1,0 +1,85 @@
+group "serverless-kotlin-node"
+version "0.0.0"
+
+buildscript {
+    repositories {
+        mavenCentral()
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+    }
+
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "com.moowork.gradle:gradle-node-plugin:$gradle_node_version"
+    }
+}
+
+apply plugin: "kotlin2js"
+apply plugin: "kotlin-dce-js"
+apply plugin: "com.moowork.node"
+
+repositories {
+    mavenCentral()
+    maven {
+        url  "https://kotlin.bintray.com/kotlin-js-wrappers"
+    }
+    maven {
+        url  "https://kotlin.bintray.com/kotlinx.html"
+    }
+}
+
+dependencies {
+    compile "org.jetbrains.kotlin:kotlin-stdlib-js:$kotlin_version"
+    compile "org.jetbrains:kotlin-extensions:$kotlin_extensions_version"
+    compile "org.jetbrains:kotlin-mocha:$kotlin_mocha_version"
+    compile "org.jetbrains.kotlinx:kotlinx-coroutines-core-js:$kotlinx_coroutines_version"
+    testCompile "org.jetbrains.kotlin:kotlin-test-js:$kotlin_version"
+}
+
+node {
+    download = false
+    version = node_version
+}
+
+compileKotlin2Js.kotlinOptions {
+    sourceMap = true
+    moduleKind = "commonjs"
+}
+compileTestKotlin2Js.kotlinOptions {
+    sourceMap = true
+    moduleKind = "commonjs"
+}
+
+assemble.dependsOn npm_ci
+
+task populateNodeModules(type: Copy, dependsOn: [compileKotlin2Js]) {
+    from compileKotlin2Js.destinationDir
+
+    configurations.testCompile.each {
+        from zipTree(it.absolutePath).matching { include "*.js" }
+    }
+
+    into "${buildDir}/node_modules"
+}
+
+task testMocha(type: NodeTask, dependsOn: [populateNodeModules]) {
+    script = file("node_modules/mocha/bin/mocha")
+    args = [compileTestKotlin2Js.outputFile]
+}
+
+test.dependsOn testMocha
+
+clean.dependsOn npm_uninstall
+
+task start(type: NpmTask, dependsOn: [build]) {
+    args = ["start"]
+}
+
+task deploy(type: NpmTask, dependsOn: [build]) {
+    args = ["deploy"]
+}
+
+task remove(type: NpmTask) {
+    args = ["remove"]
+}
