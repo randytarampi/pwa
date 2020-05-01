@@ -1,0 +1,62 @@
+{
+  "name": "@randy.tarampi/ios-icon-resize",
+  "description": "Create all required icons from one icon. Right size, right file name.",
+  "version": "0.0.0-development",
+  "author": "Randy Tarampi <randy.tarampi@gmail.com>",
+  "bin": "./bin/ios-icon-resize.js",
+  "main": "index.js",
+  "bugs": "https://github.com/randytarampi/ios-icon-resize/issues",
+  "homepage": "https://github.com/randytarampi/ios-icon-resize",
+  "dependencies": {
+    "@randy.tarampi/generic-icon-splash-generate": "^2.0.0",
+    "@randy.tarampi/ios-icons": "^4.2.1",
+    "abbrev": "^1.1.1",
+    "minimist": "^1.2.5",
+    "snyk": "^1.316.1"
+  },
+  "devDependencies": {
+    "@semantic-release/changelog": "^5.0.1",
+    "@semantic-release/git": "^9.0.0",
+    "mkdirp": "^1.0.4",
+    "rimraf": "^3.0.2",
+    "semantic-release": "^17.0.7",
+    "standard": "^14.3.3",
+    "tape": "^5.0.0"
+  },
+  "engines": {
+    "node": ">=8",
+    "npm": ">=3"
+  },
+  "scripts": {
+    "test": "standard && node test.js",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
+  },
+  "files": [
+    "index.js",
+    "bin/ios-icon-resize.js"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/randytarampi/ios-icon-resize"
+  },
+  "release": {
+    "branch": "master"
+  },
+  "license": "MIT",
+  "keywords": [
+    "cli",
+    "bin",
+    "icon",
+    "ios",
+    "cordova",
+    "phonegap",
+    "generator",
+    "create",
+    "resize"
+  ],
+  "snyk": true
+}
