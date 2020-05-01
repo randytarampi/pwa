@@ -1,3 +1,12 @@
+## [2.0.2](https://github.com/randytarampi/generic-icon-splash-generate/compare/v2.0.1...v2.0.2) (2020-05-01)
+
+
+### Bug Fixes
+
+* package.json, package-lock.json & .snyk to reduce vulnerabilities ([ca6f43b](https://github.com/randytarampi/generic-icon-splash-generate/commit/ca6f43b584485d17967dca5c7d778bc2531bda4e))
+* package.json, package-lock.json & .snyk to reduce vulnerabilities ([7e0c7c6](https://github.com/randytarampi/generic-icon-splash-generate/commit/7e0c7c6fc75acd0650e2395598b422184e2a61a9))
+* package.json, package-lock.json & .snyk to reduce vulnerabilities ([9ecc145](https://github.com/randytarampi/generic-icon-splash-generate/commit/9ecc145423f4d68a260fa6fcdfb04ab3e7ffcfa5))
+
 ## [2.0.1](https://github.com/randytarampi/generic-icon-splash-generate/compare/v2.0.0...v2.0.1) (2020-04-29)
 
 
