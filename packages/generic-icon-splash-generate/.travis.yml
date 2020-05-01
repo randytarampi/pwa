@@ -1,0 +1,40 @@
+language: node_js
+notifications:
+  email: false
+os: linux
+dist: bionic
+matrix:
+  fast_finish: true
+  allow_failures:
+    - node_js: node
+    - node_js: lts/*
+node_js:
+  - 8
+  - 10
+  - 12
+  - lts/*
+  - node
+before_script:
+  - npm run pretest
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter && chmod +x ./cc-test-reporter && ./cc-test-reporter before-build
+script: npm run cover
+after_script:
+  - npm run coveralls
+  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT;
+before_deploy:
+  - git config --local user.name "$TRAVIS_AUTHOR_NAME"
+  - git config --local user.email "$TRAVIS_AUTHOR_EMAIL"
+deploy:
+  provider: script
+  script: npx semantic-release
+  skip_cleanup: true
+  on:
+    branch: master
+    node: 10
+    os: linux
+sudo: false
+env:
+  global:
+    - secure: i967hEPDGCztc3HJifQdNqAPHXyeF8qCNIYCtoYLeK1egyLdFNuhSkwTAeeCCrr0DpUn/p8FB4cKsIQ1rKH0hxy1oGOgjdaMmKiC8N6Lh1ikXCY3sErWcmmM122u3gPey5wwjfUt+dNC+Y/G1sG5v2zL1h+Hsard5cCVU5n2J+XiQImekd9ZlCLacdeYkd4LkVW7t4/N9i9ZSDQNQhzsObvG65hzd1d4+TrAtVFPYW+YkSc8QO96vAsQv90B8ghP5gX+iEQcmyIYwkhmThEF2rsQQAFkzkxGteFWht8cV68nnlpI4VIai/xFRWIoYoNczv3apFSC5jqx0lzIGIBnCYPgSpUQIG/0sP3Z0X89i/p5pFO2u5tVlHRwo2Gp2b4Ga3Ulx78kKGUj7s175tFxcbRQHFugK99/oeC33aAgCt3Pb9pggpS8AjjJ0VD5ii5XpLZMoubZeuaCDCIASI1ENzjhVJtOuMHqSUx6PY3XnZcpx9wxTVG+YjiFaRPPZkwCgTQXYU8N0Ny/52OMO5YykSDbQxfiUPwzQHgtDBgG4Pw2VDtK7WtAaU/UjpSTdDmYOGV05mkd6W5uhl99Uu6ru31aSNttGHm+HBnu6wZZcXtf6+OFn4Cf0gTAKL/0/dNsIrTLu1/H9TZYhFRULicCm/9Oo9qfZfcVYVON2LQqwBk=
+    - secure: LfVVkDA+iV5e1pfgBGsRa+JZCkTKWNQmTUR8ZOIwMvLo4zGnA0K4k3mFRUxNnp3zgwcu3GSAx39mu/rMXWok6TLWgVnx4PmBWfuqy9uVeWQYsTzhEcP/tqPG0HF9KULRr7vkRrmJdBJGX5iY5MvFVWA7Cj94SRXuHTYHJCmLNud1kY0EMkHVOtfEAgB2T00DPplAs2dr344GtLmCag6+B7lw4jksKCPFnh9XTMggDvh+OHbMEEHrWlrf9Bf/qX7hsTRL6+x5XHR3lbc9RPTuVMQfJWKaLYXEGSJRVZ0c5fVnZtaxkWwnXInrTuoozd9GPlrzAUG6bg7qrADZrsJ+dd2BPAJXKcK2VpsqbAgpuEhtyqWJ3nuFCdX0zyRrqdApRfHNluTQs+r/xUiQB8zBFGO+Lesg47G6CiUToHS8yqL8T43iFS+OWXU6lm386MwKICmhHSdlxq6MLXEzT5kFxcMSbAmydH+Fb/Lb1XFej7Nn7cSx9pEJopbghsl8qk87Q38wOPza1wN1v6dpexNZM0h7J7luulyQtJQOJ8F5ZACKRlgUKYUMz4PrafMK2dxFV6TcZJYxN3TMdyiuCHwTh7/x1Y72QeTlrLtT/EvPHK1/fubhSCdhIWLTuOPg5PJ1ujqZnNQNGDVjtHjTUD1DpxCWV5bSr3n16ebRyAMF7lc=
+    - secure: u2A8Ddx087UwkfPqmHVr07MS/LCWrqmu5t/Y8QawEGDnjgHpKIWJoAFLB9ZmOahO71cOmDcwtUUuWXs/PzGg3KXqryC3yB2T+cHdhCI77ILqfYfgqNcLf5nMzXtibD4BHLHsCTKdjBZIoURXMFav88spLdjPt5hFMGygNmlxlew0KmVKPSq/ADmFaP7fRFM+L2qL6mS8I5ZqpGO7lIaJOOxC/uXTwu/goBJXhlyLffr9ILlo5tO8DDuwLJP5uauMkMO+kMIOqgsflZ7EO+qDIDNYAVuObVKjse3hJEHYbkfOh5p4M0qlBXJkBIXPuvyomYh0EPLVAANBimjopxREw6FegTkfeqqBmwWTFWDo3qf1d6+zSoVDJQfl+U73p3P5IjTR/4BbzuwB/4xyvCg1TZb3UY8Tj/ZTpPRsco6xkRODSrSrlY5CvDv5h7rOZaWfvEkqir653PiJO7lSCS0n8n+hWpnGh+0ooXWYaCtymw1Y8pLQggdjAxoGXfvRU8Y9gD3l1JnuWOmTWQMcFxyGfgBGx/CoeoiKNwKrpZrPeBu1c4J1TVlD44l44vxNNlUms9avjWBVnwDnzK85loZE+mQrA9MXF4vp0cWdoGRM8KSfolJO75YwrG0WV8J+t1FFfCI7/N4j3AwPZ1JFfA9CjGHs1cnaILOJzSHbAY/7l/o=
