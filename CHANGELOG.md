@@ -1,3 +1,10 @@
+## [2.0.4](https://github.com/randytarampi/generic-icon-splash-generate/compare/v2.0.3...v2.0.4) (2020-05-01)
+
+
+### Bug Fixes
+
+* .snyk to reduce vulnerabilities ([88642ff](https://github.com/randytarampi/generic-icon-splash-generate/commit/88642ff01e092daee71e03101dda3f47d2fee20f))
+
 ## [2.0.3](https://github.com/randytarampi/generic-icon-splash-generate/compare/v2.0.2...v2.0.3) (2020-05-01)
 
 
