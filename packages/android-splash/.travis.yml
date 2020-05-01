@@ -1,0 +1,34 @@
+language: node_js
+notifications:
+  email: false
+os: linux
+dist: bionic
+matrix:
+  fast_finish: true
+  allow_failures:
+    - node_js: 6
+    - node_js: node
+    - node_js: lts/*
+node_js:
+  - 6
+  - 8
+  - 10
+  - 12
+  - lts/*
+  - node
+before_deploy:
+- git config --local user.name "$TRAVIS_AUTHOR_NAME"
+- git config --local user.email "$TRAVIS_AUTHOR_EMAIL"
+deploy:
+  provider: script
+  script: npx semantic-release
+  skip_cleanup: true
+  on:
+    branch: master
+    node: 10
+    os: linux
+sudo: false
+env:
+  global:
+  - secure: W+MwSqCs9VAe/cNrYvyrLvTzRbBUbWF8rVX3jQB0yLBLA0WbO74iIMrFnkyUyOcaa3tEsdzZwAwbHse5t1fmPruGXsdnM2P2ugUZJFUvOfNCn1zV4fyxJZfD3uzqDaGr3Nx2D6nyFLZBVaNrMVKnIgRVJaR1aSUCPabQt5RtkKi8Ei+ta665GhV6LpPIZvQbgUgNOI0fBN3zg1opxxPteqPIKY+KezvVUvO+PDfzRgp6uoJvd7k8xx0wsbwaflQWg0VuyTKshU2AsJ3+DYr55Fg9PkELOLEWNNTldpiaCTl4zuw7GnAKaK1h8HFv1LNXGR+D7Rl6e0tHp8WW+aNc597yZk9twEwBAr1X9AnEV/qmoe0nYTk5fkObga3losFTw/j2SUjXKtAQ4vC4+2hMXJ6WpsrTKpeFBsxEY+89ZmClCgkL5R/G5Fq2aZ2oITiEghkR6yUDmucdFgq4RVuvqFVXOvJ4VFdj0Pt2hZHJmfU74NyTmVxLqtSp94SPZ4QKcxAmHgVq3VVx6ifv48+VAb7iQT7FMveeIYl2o64SDqbUXnvQOkNKlEROCVKFqkLoYOUT4/F2M20ysS/8gIBS6H++dax+sGwxJI4fwrivME3SKwFyus/jGBX9J+AgUcqkefXB6TdJZ7qAtDHXGvdbaO59cHejsvyqs6eLNbJf9zM=
+  - secure: l8muANeFABA9W831AbB2OmOXORKT3d4OAI6JSZBr18x67VFTcUInlt/4KZ76H5KXDXQbai8yf5MRyMszavP0LQj84+qhQvtmW7yfo2Rw/zCe0OkNTg777/LCvwTHMm3IjyK2fpC1l1oPcOgWOUhc5a9SkEY2e2pU2J2q1Ja1Sv3vekDkj5uy1A1akQgYTNq0p0ISqcb8cOuxG6dpmCWrEYIQzxUtEpZmR7jHKH9wcBENLkQUV+znWgqpVtAod3/ChRvGQ7+o9VuVmZkcl9veKCHU7x8NiSj0ljqSuM5vfsEIjzMaelrbP7+VptQFfinUL11MNbHN6GVzHz2pyXBytejH6gNxDyjivhodXXWoc2aWlq6Z0lubIhphw8Q+pSoxwHtbnSIG1dkKVaxGG9/JR3B7WvmQWMt4Qd8D0YJJXSFaFcdCbGcJqtedbSCRJIyqYvjZVbOCTPTp9hFQ8zf/ATbOui+tiLA0aYB3au53cQQ9gv3DZDEcZCBkmQtbHPK2CjcVGbycDysfcj40FEXT7zA938YKDWAoITALtpFvWATHsagusURPxtyBLo8l55mOVuf/kcaOrxAex9Gnp2FHUY0cVccaafOQbSUltG49c9ZPCPW119ZCbJig++oxNgSSbWhj4hpD9jgSVW1a5yNr1WdgQgsLdV0lLtu/6L5m3ds=
