@@ -1,0 +1,17 @@
+{
+  "packages": [
+    "packages/*"
+  ],
+  "version": "independent",
+  "command": {
+    "publish": {
+      "allowBranch": "master"
+    }
+  },
+  "npmClient": "yarn",
+  "npmClientArgs": [
+    "--frozen-lockfile",
+    "--ignore-engines"
+  ],
+  "useWorkspaces": true
+}
