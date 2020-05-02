@@ -1,3 +1,16 @@
+# Change Log
+
+All notable changes to this project will be documented in this file.
+See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+## 0.0.1 (2020-05-02)
+
+**Note:** Version bump only for package @randy.tarampi/pwa-asset-service
+
+
+
+
+
 ## [2.0.1](https://github.com/randytarampi/pwa-asset-service/compare/v2.0.0...v2.0.1) (2020-01-09)
 
 
