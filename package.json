@@ -1,44 +1,66 @@
 {
-  "name": "@randy.tarampi/android-icons",
-  "description": "Get android icon file names and dimensions (width)",
-  "version": "3.1.2",
-  "author": "Randy Tarampi <randy.tarampi@gmail.com>",
-  "bin": "./bin/android-icons.js",
-  "dependencies": {
-    "abbrev": "^1.1.1",
-    "yargs": "^15.3.1"
+  "name": "pwa",
+  "description": "A monorepo for all my `*-icon*` and `*-splash*` modules, etc. 'cause Snyk was being a pain with PRs",
+  "version": "0.0.1",
+  "author": {
+    "name": "Randy Tarampi",
+    "email": "pwa@randytarampi.ca",
+    "url": "https://www.randytarampi.ca"
   },
+  "bugs": "https://github.com/randytarampi/pwa/issues",
   "devDependencies": {
-    "@semantic-release/changelog": "^5.0.1",
-    "@semantic-release/git": "^9.0.0",
-    "semantic-release": "^17.0.7",
-    "standard": "^14.3.3",
-    "tape": "^5.0.0"
+    "coveralls": "^3.1.0",
+    "codeclimate-test-reporter": "^0.5.1",
+    "junit-merge": "^2.0.0",
+    "lerna": "^3.20.2",
+    "npm-check-updates": "^4.1.2",
+    "syncpack": "^5.0.1"
   },
   "engines": {
-    "node": ">=6",
-    "npm": ">=3"
+    "node": ">=8",
+    "yarn": ">=1"
   },
-  "files": [
-    "bin/android-icons.js",
-    "icons.json",
-    "index.js"
-  ],
   "keywords": [
     "android",
     "bin",
     "cli",
     "cordova",
+    "create",
+    "generator",
     "icon",
-    "phonegap"
+    "ios",
+    "phonegap",
+    "pwa",
+    "resize",
+    "screen",
+    "splash"
   ],
   "license": "MIT",
-  "main": "index.js",
+  "private": true,
   "publishConfig": {
     "access": "public"
   },
-  "repository": "randytarampi/android-icons.git",
+  "repository": "randytarampi/pwa.git",
   "scripts": {
-    "test": "standard && node test.js"
+    "bootstrap": "lerna bootstrap",
+    "cover": "yarn run cover:actual; yarn run cover:collect",
+    "cover:actual": "rm -rf .nyc_output/ coverage/ && lerna run cover --no-bail --concurrency $(node -p \"require(\\\"os\\\").cpus().length\")",
+    "cover:actual:collect:lcov": "mkdir -p .nyc_output/ coverage/ && lerna exec -- \"if [ -d \"./.nyc_output\" ]; then cp -r .nyc_output ../..; fi;\" && nyc report --reporter=lcov",
+    "cover:collect": "yarn run test:collect; yarn run cover:actual:collect:lcov",
+    "coveralls": "cat coverage/lcov.info | coveralls",
+    "prepare": "yarn run snyk-protect",
+    "pretest": "lerna run pretest --no-bail --concurrency $(node -p \"require(\\\"os\\\").cpus().length\")",
+    "snyk-protect": "snyk protect",
+    "test": "yarn run test:actual; yarn run test:collect",
+    "test:actual": "lerna run test --no-bail --concurrency $(node -p \"require(\\\"os\\\").cpus().length\")",
+    "test:actual:collect": "junit-merge $(ls packages/*/test-results.xml) --out ./test-results.xml",
+    "test:collect": "yarn run test:actual:collect"
+  },
+  "snyk": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "dependencies": {
+    "snyk": "^1.316.2"
   }
 }

@@ -1,59 +1,63 @@
 {
   "name": "@randy.tarampi/android-icon-resize",
   "description": "Create all required icons from one icon. Right size, right file name.",
-  "version": "0.0.0-development",
+  "version": "0.0.0",
   "author": "Randy Tarampi <randy.tarampi@gmail.com>",
   "bin": "./bin/android-icon-resize.js",
-  "main": "index.js",
   "bugs": "https://github.com/randytarampi/android-icon-resize/issues",
-  "homepage": "https://github.com/randytarampi/android-icon-resize",
   "dependencies": {
-    "@randy.tarampi/android-icons": "^3.1.1",
-    "@randy.tarampi/generic-icon-splash-generate": "^2.0.0",
+    "@randy.tarampi/android-icons": "^3.1.2",
+    "@randy.tarampi/generic-icon-splash-generate": "^2.0.4",
     "abbrev": "^1.1.1",
-    "snyk": "^1.316.1",
+    "snyk": "^1.316.2",
     "yargs": "^15.3.1"
   },
   "devDependencies": {
     "@semantic-release/changelog": "^5.0.1",
     "@semantic-release/git": "^9.0.0",
     "mkdirp": "^1.0.4",
+    "nyc": "^15.0.1",
     "rimraf": "^3.0.2",
-    "semantic-release": "^17.0.0",
+    "semantic-release": "^17.0.7",
     "standard": "^14.3.3",
+    "tap-junit": "^3.1.2",
+    "tap-nyc": "^1.0.3",
     "tape": "^5.0.0"
   },
   "engines": {
     "node": ">=8",
     "npm": ">=3"
   },
-  "scripts": {
-    "test": "standard && node test.js",
-    "snyk-protect": "snyk protect",
-    "prepare": "npm run snyk-protect"
-  },
   "files": [
-    "index.js",
-    "bin/android-icon-resize.js"
+    "bin/android-icon-resize.js",
+    "index.js"
   ],
+  "homepage": "https://github.com/randytarampi/android-icon-resize",
+  "keywords": [
+    "android",
+    "bin",
+    "cli",
+    "cordova",
+    "create",
+    "generator",
+    "icon",
+    "phonegap",
+    "resize"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "private": true,
   "publishConfig": {
     "access": "public"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/randytarampi/android-icon-resize"
+  "repository": "randytarampi/android-icon-resize",
+  "scripts": {
+    "prepare": "yarn run snyk-protect",
+    "pretest": "standard",
+    "snyk-protect": "snyk protect",
+    "test": "yarn test:actual",
+    "test:actual": "nyc tape test.js | tee >(tap-junit --output ./ --name test-results.xml) >(tap-nyc)",
+    "cover": "rm -rf coverage/ .nyc_output/; yarn test:actual"
   },
-  "license": "MIT",
-  "keywords": [
-    "cli",
-    "bin",
-    "icon",
-    "android",
-    "cordova",
-    "phonegap",
-    "generator",
-    "create",
-    "resize"
-  ],
   "snyk": true
 }

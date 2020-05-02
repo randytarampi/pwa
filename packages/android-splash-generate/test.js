@@ -11,7 +11,7 @@ test('creates all icons in tmp directory', function (t) {
   t.plan(13)
   rimraf('tmp', function () {
     return mkdirp('tmp').then(function () {
-      resize('test/com.appbusinesspodcast.www.png', 'tmp/').then(function () {
+      return resize('test/com.appbusinesspodcast.www.png', 'tmp/').then(function () {
         t.ok(fs.existsSync('tmp/splash-port-hdpi.png'), 'splash-port-hdpi.png' + ' created')
         t.ok(fs.existsSync('tmp/splash-port-mdpi.png'), 'splash-port-mdpi.png' + ' created')
         t.ok(fs.existsSync('tmp/splash-port-ldpi.png'), 'splash-port-ldpi.png' + ' created')
@@ -27,6 +27,7 @@ test('creates all icons in tmp directory', function (t) {
         t.ok(fs.existsSync('tmp/GooglePlayFeature.png'), 'GooglePlayFeature.png' + ' created')
       })
     })
+      .catch(t.end)
   })
 })
 
@@ -50,5 +51,6 @@ test('cli creates all icons in tmp directory', function (t) {
         t.ok(fs.existsSync('tmp/GooglePlayFeature.png'), 'GooglePlayFeature.png' + ' created')
       })
     })
+      .catch(t.end)
   })
 })

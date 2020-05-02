@@ -6,29 +6,69 @@ dist: bionic
 matrix:
   fast_finish: true
   allow_failures:
-    - node_js: 6
-    - node_js: node
-    - node_js: lts/*
+  - node_js: node
+  - node_js: lts/*
 node_js:
-  - 6
-  - 8
-  - 10
-  - 12
-  - lts/*
-  - node
+- 8
+- 10
+- 12
+- lts/*
+- node
+before_install:
+- uname -a
+- lscpu
+- yarn config set script-shell $(which bash)
+install:
+- yarn install --frozen-lockfile --ignore-engines
+before_script:
+- curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64
+  > ./cc-test-reporter
+- chmod +x ./cc-test-reporter
+- "./cc-test-reporter before-build"
+script:
+- yarn run pretest
+- yarn run cover:actual
+after_script:
+- "./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT"
+- yarn run cover:collect
+- if [ "$PULL_REQUEST" ]; then yarn run check-run-reporter:test; fi;
+- CODECLIMATE_API_HOST=https://codebeat.co/webhooks/code_coverage CODECLIMATE_REPO_TOKEN=8d1d019a-0b63-49be-b5aa-2262519aaa4f
+  yarn codeclimate-test-reporter < coverage/lcov.info
+- yarn run coveralls
 before_deploy:
 - git config --local user.name "$TRAVIS_AUTHOR_NAME"
 - git config --local user.email "$TRAVIS_AUTHOR_EMAIL"
+- echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
 deploy:
   provider: script
-  script: npx semantic-release
+  script: git checkout master; git remote set-url origin https://${GH_TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git; yarn lerna publish --conventional-commits --yes
   skip_cleanup: true
   on:
     branch: master
     node: 10
     os: linux
 sudo: false
+cache:
+  yarn: true
+  npm: false
+  directories:
+  - ".yarn/cache"
+  - node_modules
+  - packages/android-icon-resize/node_modules
+  - packages/android-icons/node_modules
+  - packages/android-splash-generate/node_modules
+  - packages/android-splash/node_modules
+  - packages/asset-generator/node_modules
+  - packages/asset-service/node_modules
+  - packages/generic-icon-splash-generate/node_modules
+  - packages/ios-icon-resize/node_modules
+  - packages/ios-icons/node_modules
+  - packages/ios-splash-generate/node_modules
+  - packages/ios-splash/node_modules
 env:
   global:
-  - secure: ctoJlGv6yNHk2aZlx/mI0kCfwKu/wDqvvV29jP+xYZc4FETUj2qgvNR7BDAGZCQf3bhDREztjgb9WHc63okoCGIgMMzHPlPlQKpKXTvzeyKl80Z3UI6/U/IphPG/zLKIQBDSiDnShNp4DVeqlJ5yaptITdUVqvm3otusegGGFB3NqCFpB4JsAlC47lwgyVcuZ7zGv7KMjPZrukdUd9ZocC8NMhDOo6iE/cx8ZRKnBnws71KsT8bJgnQUdyHLKrbUhL4rvXLMNndhZZlTA6eL2dZXkSI+ppZZZPK6sbOSQB/Ej+GCJSxVWVxktD3CrtqsoKShNyx6zEP3qsHg6ruxBL9REtktW/4Jd6Bju1xtP2dU19q4W7L5Qvs0KIg7m7Hb8mV/gYs8Z0Nh/XL0VkmH8WbfsdGQ/oZF0zRVbVqwt45QFsl2bUrM08FC0LnVtaQw0+64niSKYZQMQSaEwrEA6RB/ygoYDoB/Cl3t6zMfohG521o5OJSzSHDxcpVSW7jYH6JaeVsDJC7TWdXxy/fq/voxFUpOtbpX9usfNCt+gLjQXW6gtlG4h3Yx19K9biJ7SpZLv/kxBx691Ii5pBdEuWHrTjn77Jr9d2lFKekb6mFlhV1tHz4g/cRMugNf78U81IzrAME69+38+yMRMk9NAWucxnpkb+CHzTT3+fuJOYc=
-  - secure: HJ5YLysOuAp0uAVbr1mZ8H9IeU3XBI/JeSQmRZ9MNrF8h9r+RbnGJwItyLj3R94+15MbQFyMxhpKm45GdwJu0b1gcU1pJOdDTtppHvY4gp6nMSxtiIYgH57j2kFbtvG8BA15wZOUQTkNIx6GjoNcPMQjI9PbvuPVJyczbUfojQwvPvRym5sBiUxwH223ZrH6a5Kfc4aQYKpEHGBp1GSEnB0xb7f4FBH35XBJQalD8le09uiUcN8cW9tMejJk/t6Ggrfkbloa0G9B/QavCUb/mfbkrRpWAMXwNp73tgIrQyXcNUblHu4nNEO1d39nn+JZp9oDF9nAxENWhgxFNBGCmPuAdATxiG8evM5y9mxX735oN8/dNEs3CQDLkCnx/kJhBkJ3SBki3QekMysubpsmmZZANV/6BRMN30mKyvG/JhfA+Rp3Ks6zgHpdG8595sc2/ehysLxxgd3/klZVCP6SsW4Fa6IQGdJVFrVuHSKBUIZsjqO5GQ9SLR1NYiJjracByuh0Jv7By/1lmAqXgJHFIcizV7omxgMDAytYDCzp8LwksmJALPFjXn9ezK+RLbk2jAWPIIqurwIzS+ocfv6syuSPlLJJmSBf5yC4Jx7KkU0LwDLOpUKXzXoo7N9dFgouI5KDoGSDJEBCF1sbPeHEsskgyaIVsQhz8dmRKrAWdN4=
+  - TRAVIS_AUTHOR_EMAIL=travis@randytarampi.ca
+  - TRAVIS_AUTHOR_NAME=Travis
+  - secure: Ac/5lrXzjOgVAhgFov9gaP/7Y/E87lBke8s43qXnOHgtUM5X4QYcd+smc036vWIxPyFXxM923jylPI4gVvBLx2Dz1gEzcSQGbypoRa31opivB1etVwztku8h30izaOxGMzfa5bxx/ydwH5h+I4CIO5jXjCrtpMKseyZBEO8voRhw626pzkBo2PvgoOQfThpzItNQ0ZI5b1tqDDdQGQ18IWYNTY7MVhaTzFQUeJNJWRmWf6Fq/nwt1PuD4EpfpViirio+JVJYQE63cb35BSDOhinUSb76bFcYWMLU9M8BP6OV5xer833YtR7QkVqCII1AI/GJWubFi/JaviPwqi14RPSTnHXbvd6sagHZERfyaBmPNyLLxkVyYvg7tBqyimKUMCSs4IsGXPuVXY6E2S4JZzZWxUBPqehfv3yEkx4MefJ9KWUcXUU8qRjdT3YkJqaFTTF0Q81fUdU/e16JMYlxfwmIJm6u9gwABa1y4VrHKRQy6PbSCqDRiX4r1KafX7p/cHGlYAUvoXp29feY6J3W2G8UoXbyLhFj/v19CjKZwby19gNIU79MjIlnnOacXyNXVBlnuC/WEQIBDoQxp9nkc7V7xXnKtu+Ji65n0/IoDPCG+JM67gQTTIlGLXSJvMQ+lKJxleCUg4BkXPdGO5ox4PP2dUJG+vDGwKjTrF4+VHs=
+  - secure: Zo4VUh0ViTUefECXN+oRyqmGqvwpT/HGeXfe5G4pMikxoJtqAZLskQldDExWfI9m0gzuzaVEYlzHXHg9cOoFpDw4liC5UgtTNnNyufoyMKhSaeJS0R2j9D7uNU8k9jE2FgcLaBPVA+YZQrrPGw/8Gzxrj5RVF00PY3/+dcbXQoD7mkUTWeh/UyCu8RugsThGsHrwaO4Okq0xkUA85oRofkOddGevXiclYqVmEt91ydDEmbIE9QlBxntmwLPI6IkGvts0QFkRCKeVId6kRD2KAxQTpcy4KrfSD7rOQhqWs6cH3uTWH2r/MW5aOJHriExz8Cycd8PenZwOJGZMVaxNUfAXmPbNw5+6vaOtvRb7yoc9R88YFwuHASQ5b6gHSGM5MO6CaUVglvmK8KD/gfUGuGGzz45eIKZv/x+KdHx8B1lI8b1q+TsZ9VWqrl7d4aN1L3biLdY6hJNxJHSSsBpTr4qWkrGNeMogqRkflu/gINZYAKkw72eAZ+HHely/Dwe7SKi8v9FXgCD8g4FUB8SvZWzT4Fz4K538VMHBgCLvAM1A8p0bLWEofzb2ZQCsYcEf+wfg7vZgIIHE3OoO3JrXCUNsBroZjzYNGryXwSlyBaTe32PqfQiJeMwJUambZ91l5Wjy1fPWAy4M2bdp8aH435ZBPj52FzHNqj582dJXZL4=
+  - secure: sRn+d+yC8v6/uric9UEn+6NMtFtv4Yb4uGwpAKEjvieEEB+C7oFFbh3U41jyZiZ9wuz2kVmxLsWIkJzc765KzjxYNLwanCHN+yPWS8P0PeFSYQt5+DyCx+HMnajECyKH5GgrDm0Qt9M9uBvqhAMGSM/kHJ/GAjUnudv6aqEgYZomoyF65LCTRaU09VQbV4Y7HXvTIc8XT4T1Azvc4dpy8URxi9pQbvMVTIwwgjdvM8KhJ91l2+d7sla9Hy5tQnVAojLw1ZJSnKoyxryGNZESgMAZhXP0ZRKpwLausv1h1GGzwq+x9Z6iy9F5ATSkaerTgNVh9xBkii+CGO444B1o/xQuREy1YwWCilC6NWQdtHUO5VETKntPUjUdaaV7EEkuUif96qSe5th2kTaULbkKjY9T7x5Yfw3waq/C0M33yN5ydcRABKBpaow2XdF9lVkXKkPYV56/PMTtQkOnmNnpc0L9TDzbyt3x7On0sZv0Z64xhe4NT3WWKrMhbcWdWC8xtI4O5cEpTrtUkwxCjSGvnQwbG2ydghJm9piTsYFoIE1UDLOgfrIaozELuig/HQq17tq3TblSCBdq8wwRS34Iy6Ql22q1cqMpjJta8lkrRjD94vwcPgzqRU8WPOd0QMYj0Vcts9B4aCaWwd3/RIPOw2xraa4dlABMHyMwSQtq/PM=

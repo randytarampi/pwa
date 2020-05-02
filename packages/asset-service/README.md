@@ -1,9 +1,9 @@
 pwa-asset-service
 ---
 
-[![Build status](https://img.shields.io/travis/com/randytarampi/pwa-asset-service.svg?style=flat-square)](https://travis-ci.com/randytarampi/pwa-asset-service)
-[![Coverage status](https://img.shields.io/codeclimate/coverage/randytarampi/pwa-asset-service.svg?style=flat-square)](https://coveralls.io/github/randytarampi/pwa-asset-service?branch=master)
-[![Maintainability status](https://img.shields.io/codeclimate/maintainability-percentage/randytarampi/pwa-asset-service.svg?style=flat-square)](https://codeclimate.com/github/randytarampi/pwa-asset-service/maintainability)
+[![Build status](https://img.shields.io/travis/com/randytarampi/pwa.svg?style=flat-square)](https://travis-ci.com/randytarampi/pwa)
+[![Coverage status](https://img.shields.io/coveralls/randytarampi/pwa.svg?style=flat-square)](https://coveralls.io/github/randytarampi/pwa?branch=master)
+[![Maintainability status](https://img.shields.io/codeclimate/maintainability-percentage/randytarampi/pwa.svg?style=flat-square)](https://codeclimate.com/github/randytarampi/pwa/maintainability)
 [![Analytics](https://ga-beacon.appspot.com/UA-50921068-1/beacon/github/randytarampi/pwa-asset-service/?flat&useReferrer)](https://github.com/igrigorik/ga-beacon)
 
 
@@ -42,5 +42,5 @@ curl --form icon=@./src/main/resources/icon.png --form splash=@./src/main/resour
 
 ```bash
 # If you're me, run the equivalent of `npx sls deploy`
-npm run deploy
+yarn run deploy
 ```

@@ -1,0 +1,430 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.13.5
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  'npm:debug:20170905':
+    - serverless > @serverless/components > @serverless/platform-client-china > @serverless/utils-china > socket.io-stream > debug:
+        patched: '2020-05-02T15:51:40.350Z'
+    - '@serverless/components > @serverless/platform-client-china > @serverless/utils-china > socket.io-stream > debug':
+        patched: '2020-05-02T15:51:40.350Z'
+  SNYK-JS-LODASH-567746:
+    - '@randy.tarampi/js > lodash':
+        patched: '2020-05-02T15:51:40.350Z'
+    - '@semantic-release/changelog > lodash':
+        patched: '2020-05-02T15:51:40.350Z'
+    - '@semantic-release/commit-analyzer > lodash':
+        patched: '2020-05-02T15:51:40.350Z'
+    - '@semantic-release/git > lodash':
+        patched: '2020-05-02T15:51:40.350Z'
+    - '@semantic-release/github > lodash':
+        patched: '2020-05-02T15:51:40.350Z'
+    - '@semantic-release/npm > lodash':
+        patched: '2020-05-02T15:51:40.350Z'
+    - '@semantic-release/release-notes-generator > lodash':
+        patched: '2020-05-02T15:51:40.350Z'
+    - '@serverless/enterprise-plugin > lodash':
+        patched: '2020-05-02T15:51:40.350Z'
+    - archiver > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - eslint > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - semantic-release > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - serverless > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - '@babel/core > @babel/types > lodash':
+        patched: '2020-05-02T15:51:40.350Z'
+    - '@babel/core > @babel/generator > lodash':
+        patched: '2020-05-02T15:51:40.350Z'
+    - '@babel/core > @babel/traverse > lodash':
+        patched: '2020-05-02T15:51:40.350Z'
+    - istanbul-lib-instrument > @babel/traverse > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - '@babel/core > @babel/helper-module-transforms > lodash':
+        patched: '2020-05-02T15:51:40.350Z'
+    - istanbul-lib-instrument > @babel/core > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - '@randy.tarampi/pwa-asset-service > @randy.tarampi/js > lodash':
+        patched: '2020-05-02T15:51:40.350Z'
+    - '@semantic-release/commit-analyzer > conventional-commits-parser > lodash':
+        patched: '2020-05-02T15:51:40.350Z'
+    - '@semantic-release/release-notes-generator > conventional-commits-parser > lodash':
+        patched: '2020-05-02T15:51:40.350Z'
+    - semantic-release > @semantic-release/commit-analyzer > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - semantic-release > @semantic-release/github > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - semantic-release > @semantic-release/npm > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - '@semantic-release/release-notes-generator > conventional-changelog-writer > lodash':
+        patched: '2020-05-02T15:51:40.350Z'
+    - semantic-release > @semantic-release/release-notes-generator > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - '@serverless/components > graphlib > lodash':
+        patched: '2020-05-02T15:51:40.350Z'
+    - json-refs > graphlib > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - '@serverless/cli > prettyoutput > lodash':
+        patched: '2020-05-02T15:51:40.350Z'
+    - '@serverless/components > prettyoutput > lodash':
+        patched: '2020-05-02T15:51:40.350Z'
+    - eslint > inquirer > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - archiver > async > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - '@serverless/enterprise-plugin > @serverless/event-mocks > lodash':
+        patched: '2020-05-02T15:51:40.350Z'
+    - serverless > @serverless/enterprise-plugin > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - archiver > archiver-utils > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - archiver > zip-stream > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - serverless > archiver > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - eslint > table > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - gulp-eslint > eslint > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - standard > eslint > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - mocha > yargs-unparser > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - serverless > inquirer > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - '@babel/core > @babel/generator > @babel/types > lodash':
+        patched: '2020-05-02T15:51:40.350Z'
+    - '@babel/core > @babel/template > @babel/types > lodash':
+        patched: '2020-05-02T15:51:40.350Z'
+    - istanbul-lib-instrument > @babel/template > @babel/types > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - '@babel/core > @babel/traverse > @babel/types > lodash':
+        patched: '2020-05-02T15:51:40.350Z'
+    - istanbul-lib-instrument > @babel/traverse > @babel/types > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - '@babel/core > @babel/helper-module-transforms > @babel/types > lodash':
+        patched: '2020-05-02T15:51:40.350Z'
+    - '@babel/core > @babel/helpers > @babel/types > lodash':
+        patched: '2020-05-02T15:51:40.350Z'
+    - istanbul-lib-instrument > @babel/core > @babel/types > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - '@babel/core > @babel/traverse > @babel/generator > lodash':
+        patched: '2020-05-02T15:51:40.350Z'
+    - istanbul-lib-instrument > @babel/traverse > @babel/generator > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - istanbul-lib-instrument > @babel/core > @babel/generator > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - '@babel/core > @babel/helpers > @babel/traverse > lodash':
+        patched: '2020-05-02T15:51:40.350Z'
+    - istanbul-lib-instrument > @babel/core > @babel/traverse > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - nyc > istanbul-lib-instrument > @babel/traverse > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - nyc > istanbul-lib-instrument > @babel/core > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - '@randy.tarampi/pwa-asset-service > @randy.tarampi/serverless > @randy.tarampi/js > lodash':
+        patched: '2020-05-02T15:51:40.350Z'
+    - semantic-release > @semantic-release/commit-analyzer > conventional-commits-parser > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - semantic-release > @semantic-release/release-notes-generator > conventional-commits-parser > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - semantic-release > @semantic-release/release-notes-generator > conventional-changelog-writer > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - '@serverless/cli > @serverless/template > graphlib > lodash':
+        patched: '2020-05-02T15:51:40.350Z'
+    - serverless > @serverless/components > graphlib > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - serverless > json-refs > graphlib > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - serverless > @serverless/cli > prettyoutput > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - serverless > @serverless/components > prettyoutput > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - '@serverless/components > @serverless/inquirer > inquirer > lodash':
+        patched: '2020-05-02T15:51:40.350Z'
+    - gulp-eslint > eslint > inquirer > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - standard > eslint > inquirer > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - serverless > archiver > async > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - serverless > @serverless/enterprise-plugin > @serverless/event-mocks > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - archiver > zip-stream > archiver-utils > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - serverless > archiver > archiver-utils > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - serverless > archiver > zip-stream > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - gulp-eslint > eslint > table > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - standard > eslint > table > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - gulp-mocha > mocha > yargs-unparser > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - serverless > tabtab > inquirer > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - '@babel/core > @babel/traverse > @babel/generator > @babel/types > lodash':
+        patched: '2020-05-02T15:51:40.350Z'
+    - istanbul-lib-instrument > @babel/traverse > @babel/generator > @babel/types > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - istanbul-lib-instrument > @babel/core > @babel/generator > @babel/types > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - '@babel/core > @babel/helper-module-transforms > @babel/helper-module-imports > @babel/types > lodash':
+        patched: '2020-05-02T15:51:40.350Z'
+    - '@babel/core > @babel/helper-module-transforms > @babel/template > @babel/types > lodash':
+        patched: '2020-05-02T15:51:40.350Z'
+    - '@babel/core > @babel/helpers > @babel/template > @babel/types > lodash':
+        patched: '2020-05-02T15:51:40.350Z'
+    - istanbul-lib-instrument > @babel/core > @babel/template > @babel/types > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - nyc > istanbul-lib-instrument > @babel/template > @babel/types > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - '@babel/core > @babel/traverse > @babel/helper-function-name > @babel/types > lodash':
+        patched: '2020-05-02T15:51:40.350Z'
+    - istanbul-lib-instrument > @babel/traverse > @babel/helper-function-name > @babel/types > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - '@babel/core > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash':
+        patched: '2020-05-02T15:51:40.350Z'
+    - istanbul-lib-instrument > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - '@babel/core > @babel/helper-module-transforms > @babel/helper-split-export-declaration > @babel/types > lodash':
+        patched: '2020-05-02T15:51:40.350Z'
+    - '@babel/core > @babel/helpers > @babel/traverse > @babel/types > lodash':
+        patched: '2020-05-02T15:51:40.350Z'
+    - istanbul-lib-instrument > @babel/core > @babel/traverse > @babel/types > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - nyc > istanbul-lib-instrument > @babel/traverse > @babel/types > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - '@babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/types > lodash':
+        patched: '2020-05-02T15:51:40.350Z'
+    - '@babel/core > @babel/helper-module-transforms > @babel/helper-simple-access > @babel/types > lodash':
+        patched: '2020-05-02T15:51:40.350Z'
+    - istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/types > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - istanbul-lib-instrument > @babel/core > @babel/helpers > @babel/types > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - nyc > istanbul-lib-instrument > @babel/core > @babel/types > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - '@babel/core > @babel/helpers > @babel/traverse > @babel/generator > lodash':
+        patched: '2020-05-02T15:51:40.350Z'
+    - istanbul-lib-instrument > @babel/core > @babel/traverse > @babel/generator > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - nyc > istanbul-lib-instrument > @babel/traverse > @babel/generator > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - nyc > istanbul-lib-instrument > @babel/core > @babel/generator > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - '@babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > lodash':
+        patched: '2020-05-02T15:51:40.350Z'
+    - istanbul-lib-instrument > @babel/core > @babel/helpers > @babel/traverse > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - nyc > istanbul-lib-instrument > @babel/core > @babel/traverse > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - nyc > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - serverless > @serverless/cli > @serverless/template > graphlib > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - serverless > @serverless/components > @serverless/inquirer > inquirer > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - serverless > archiver > zip-stream > archiver-utils > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - '@babel/core > @babel/helpers > @babel/traverse > @babel/generator > @babel/types > lodash':
+        patched: '2020-05-02T15:51:40.350Z'
+    - istanbul-lib-instrument > @babel/core > @babel/traverse > @babel/generator > @babel/types > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - nyc > istanbul-lib-instrument > @babel/traverse > @babel/generator > @babel/types > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - nyc > istanbul-lib-instrument > @babel/core > @babel/generator > @babel/types > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-module-imports > @babel/types > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - '@babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/helper-member-expression-to-functions > @babel/types > lodash':
+        patched: '2020-05-02T15:51:40.350Z'
+    - '@babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/helper-optimise-call-expression > @babel/types > lodash':
+        patched: '2020-05-02T15:51:40.350Z'
+    - '@babel/core > @babel/traverse > @babel/helper-function-name > @babel/helper-get-function-arity > @babel/types > lodash':
+        patched: '2020-05-02T15:51:40.350Z'
+    - istanbul-lib-instrument > @babel/traverse > @babel/helper-function-name > @babel/helper-get-function-arity > @babel/types > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - '@babel/core > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash':
+        patched: '2020-05-02T15:51:40.350Z'
+    - istanbul-lib-instrument > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - '@babel/core > @babel/helper-module-transforms > @babel/helper-simple-access > @babel/template > @babel/types > lodash':
+        patched: '2020-05-02T15:51:40.350Z'
+    - istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/template > @babel/types > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - istanbul-lib-instrument > @babel/core > @babel/helpers > @babel/template > @babel/types > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - nyc > istanbul-lib-instrument > @babel/core > @babel/template > @babel/types > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - '@babel/core > @babel/helpers > @babel/traverse > @babel/helper-function-name > @babel/types > lodash':
+        patched: '2020-05-02T15:51:40.350Z'
+    - istanbul-lib-instrument > @babel/core > @babel/traverse > @babel/helper-function-name > @babel/types > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - nyc > istanbul-lib-instrument > @babel/traverse > @babel/helper-function-name > @babel/types > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - '@babel/core > @babel/helpers > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash':
+        patched: '2020-05-02T15:51:40.350Z'
+    - istanbul-lib-instrument > @babel/core > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - nyc > istanbul-lib-instrument > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-split-export-declaration > @babel/types > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - '@babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/types > lodash':
+        patched: '2020-05-02T15:51:40.350Z'
+    - istanbul-lib-instrument > @babel/core > @babel/helpers > @babel/traverse > @babel/types > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - nyc > istanbul-lib-instrument > @babel/core > @babel/traverse > @babel/types > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/types > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-simple-access > @babel/types > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - nyc > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/types > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - nyc > istanbul-lib-instrument > @babel/core > @babel/helpers > @babel/types > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - '@babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/generator > lodash':
+        patched: '2020-05-02T15:51:40.350Z'
+    - istanbul-lib-instrument > @babel/core > @babel/helpers > @babel/traverse > @babel/generator > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - nyc > istanbul-lib-instrument > @babel/core > @babel/traverse > @babel/generator > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - nyc > istanbul-lib-instrument > @babel/core > @babel/helpers > @babel/traverse > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - '@serverless/components > @serverless/platform-client-china > @serverless/utils-china > winston > async > lodash':
+        patched: '2020-05-02T15:51:40.350Z'
+    - '@serverless/enterprise-plugin > dependency-tree > precinct > detective-typescript > @typescript-eslint/typescript-estree > lodash':
+        patched: '2020-05-02T15:51:40.350Z'
+    - '@babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/generator > @babel/types > lodash':
+        patched: '2020-05-02T15:51:40.350Z'
+    - istanbul-lib-instrument > @babel/core > @babel/helpers > @babel/traverse > @babel/generator > @babel/types > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - nyc > istanbul-lib-instrument > @babel/core > @babel/traverse > @babel/generator > @babel/types > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - nyc > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-module-imports > @babel/types > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/helper-member-expression-to-functions > @babel/types > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/helper-optimise-call-expression > @babel/types > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - '@babel/core > @babel/helpers > @babel/traverse > @babel/helper-function-name > @babel/helper-get-function-arity > @babel/types > lodash':
+        patched: '2020-05-02T15:51:40.350Z'
+    - istanbul-lib-instrument > @babel/core > @babel/traverse > @babel/helper-function-name > @babel/helper-get-function-arity > @babel/types > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - nyc > istanbul-lib-instrument > @babel/traverse > @babel/helper-function-name > @babel/helper-get-function-arity > @babel/types > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - '@babel/core > @babel/helpers > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash':
+        patched: '2020-05-02T15:51:40.350Z'
+    - istanbul-lib-instrument > @babel/core > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - nyc > istanbul-lib-instrument > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-simple-access > @babel/template > @babel/types > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - nyc > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/template > @babel/types > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - nyc > istanbul-lib-instrument > @babel/core > @babel/helpers > @babel/template > @babel/types > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - '@babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/types > lodash':
+        patched: '2020-05-02T15:51:40.350Z'
+    - istanbul-lib-instrument > @babel/core > @babel/helpers > @babel/traverse > @babel/helper-function-name > @babel/types > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - nyc > istanbul-lib-instrument > @babel/core > @babel/traverse > @babel/helper-function-name > @babel/types > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - '@babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash':
+        patched: '2020-05-02T15:51:40.350Z'
+    - istanbul-lib-instrument > @babel/core > @babel/helpers > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - nyc > istanbul-lib-instrument > @babel/core > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - nyc > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-split-export-declaration > @babel/types > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/types > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - nyc > istanbul-lib-instrument > @babel/core > @babel/helpers > @babel/traverse > @babel/types > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - nyc > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/types > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - nyc > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-simple-access > @babel/types > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/generator > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - nyc > istanbul-lib-instrument > @babel/core > @babel/helpers > @babel/traverse > @babel/generator > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - nyc > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - '@serverless/components > @serverless/platform-client-china > @serverless/utils-china > @tencent-sdk/capi > request-promise-native > request-promise-core > lodash':
+        patched: '2020-05-02T15:51:40.350Z'
+    - serverless > @serverless/components > @serverless/platform-client-china > @serverless/utils-china > winston > async > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - serverless > @serverless/enterprise-plugin > dependency-tree > precinct > detective-typescript > @typescript-eslint/typescript-estree > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/generator > @babel/types > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - nyc > istanbul-lib-instrument > @babel/core > @babel/helpers > @babel/traverse > @babel/generator > @babel/types > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - nyc > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/helper-member-expression-to-functions > @babel/types > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - nyc > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/helper-optimise-call-expression > @babel/types > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - '@babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/helper-get-function-arity > @babel/types > lodash':
+        patched: '2020-05-02T15:51:40.350Z'
+    - istanbul-lib-instrument > @babel/core > @babel/helpers > @babel/traverse > @babel/helper-function-name > @babel/helper-get-function-arity > @babel/types > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - nyc > istanbul-lib-instrument > @babel/core > @babel/traverse > @babel/helper-function-name > @babel/helper-get-function-arity > @babel/types > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - '@babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash':
+        patched: '2020-05-02T15:51:40.350Z'
+    - istanbul-lib-instrument > @babel/core > @babel/helpers > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - nyc > istanbul-lib-instrument > @babel/core > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - nyc > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-simple-access > @babel/template > @babel/types > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/types > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - nyc > istanbul-lib-instrument > @babel/core > @babel/helpers > @babel/traverse > @babel/helper-function-name > @babel/types > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - nyc > istanbul-lib-instrument > @babel/core > @babel/helpers > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - nyc > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/types > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - nyc > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/generator > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - serverless > @serverless/components > @serverless/platform-client-china > @serverless/utils-china > @tencent-sdk/capi > request-promise-native > request-promise-core > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - nyc > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/generator > @babel/types > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/helper-get-function-arity > @babel/types > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - nyc > istanbul-lib-instrument > @babel/core > @babel/helpers > @babel/traverse > @babel/helper-function-name > @babel/helper-get-function-arity > @babel/types > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - nyc > istanbul-lib-instrument > @babel/core > @babel/helpers > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - nyc > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/types > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - nyc > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - nyc > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/helper-get-function-arity > @babel/types > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - nyc > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash:
+        patched: '2020-05-02T15:51:40.350Z'
+    - '@babel/core > lodash':
+        patched: '2020-05-02T15:51:40.350Z'
+  'npm:ms:20170412':
+    - serverless > @serverless/components > @serverless/platform-client-china > @serverless/utils-china > socket.io-stream > debug > ms:
+        patched: '2020-05-02T15:51:40.350Z'
+    - '@serverless/components > @serverless/platform-client-china > @serverless/utils-china > socket.io-stream > debug > ms':
+        patched: '2020-05-02T15:51:40.350Z'

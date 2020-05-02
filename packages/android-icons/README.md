@@ -1,13 +1,20 @@
 # android-icons
-[![Build Status](https://travis-ci.com/randytarampi/android-icons.svg?branch=master)](https://travis-ci.com/randytarampi/android-icons)
-[![Dependency Status](https://david-dm.org/randytarampi/android-icons.svg)](https://david-dm.org/randytarampi/android-icons)
-[![devDependency Status](https://david-dm.org/randytarampi/android-icons/dev-status.svg)](https://david-dm.org/randytarampi/android-icons#info=devDependencies)
-[![Semantically Released](https://img.shields.io/badge/versioning-semantically%20released-brightgreen.svg)](https://github.com/boennemann/semantic-release) 
+
+[![npm versions](https://img.shields.io/npm/v/@randy.tarampi/android-icons.svg?style=flat-square)](https://www.npmjs.org/package/@randy.tarampi/android-icons)
+[![npm downloads](https://img.shields.io/npm/dt/@randy.tarampi/android-icons.svg?style=flat-square)](https://www.npmjs.com/package/@randy.tarampi/android-icons)
+[![npm license](https://img.shields.io/npm/l/@randy.tarampi/android-icons.svg?registry_uri=https%3A%2F%2Fregistry.npmjs.com&style=flat-square)](https://www.npmjs.com/package/@randy.tarampi/android-icons)
+[![Build status](https://img.shields.io/travis/com/randytarampi/pwa.svg?style=flat-square)](https://travis-ci.com/randytarampi/pwa)
+[![Coverage status](https://img.shields.io/coveralls/randytarampi/pwa.svg?style=flat-square)](https://coveralls.io/github/randytarampi/pwa?branch=master)
+[![Maintainability status](https://img.shields.io/codeclimate/maintainability-percentage/randytarampi/pwa.svg?style=flat-square)](https://codeclimate.com/github/randytarampi/pwa/maintainability)
+[![Analytics](https://ga-beacon.appspot.com/UA-50921068-1/beacon/github/randytarampi/android-icons/?flat&useReferrer)](https://github.com/igrigorik/ga-beacon)
+
+
+[![Install @randy.tarampi/android-icons](https://nodeico.herokuapp.com/@randy.tarampi/android-icons.svg)](https://www.npmjs.com/package/@randy.tarampi/android-icons) 
 
 > Get android icon file names and dimensions (width)
 
 The default icon file names (as used by [cordova](https://cordova.apache.org/docs/en/4.0.0/config_ref_images.md.html#Icons%20and%20Splash%20Screens)) and required sizes for android are listed in a [JSON file](icons.json). This information is useful, for example, when you want to generate icons with the required sizes or to create a [`config.xml`](http://docs.phonegap.com/en/3.5.0/config_ref_images.md.html) file for a PhoneGap/Cordova project or if you just need to create the icons for your android project from one source icon.
-This information also exists for [iOS icons](https://github.com/randytarampi/ios-icons).
+This information also exists for [iOS icons](../ios-icons).
 
 
 ## Install
@@ -85,4 +92,4 @@ Examples:
 This module is being [semantically released](https://github.com/boennemann/semantic-release). You can safely use `"^1.0.0"` in your `package.json`.
 
 ## License
-MIT © [David Pfahler](http://excellenteasy.com)
+MIT © [David Pfahler](http://excellenteasy.com), [Randy Tarampi](http://randytarampi.ca)
