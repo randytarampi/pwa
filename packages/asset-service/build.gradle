@@ -51,7 +51,7 @@ compileTestKotlin2Js.kotlinOptions {
     moduleKind = "commonjs"
 }
 
-assemble.dependsOn npm_ci
+assemble.dependsOn yarn_install
 
 task populateNodeModules(type: Copy, dependsOn: [compileKotlin2Js]) {
     from compileKotlin2Js.destinationDir
@@ -64,7 +64,7 @@ task populateNodeModules(type: Copy, dependsOn: [compileKotlin2Js]) {
 }
 
 task testMocha(type: NodeTask, dependsOn: [populateNodeModules]) {
-    script = file("node_modules/mocha/bin/mocha")
+    script = file("../../node_modules/mocha/bin/mocha")
     args = [compileTestKotlin2Js.outputFile]
 }
 
@@ -72,14 +72,14 @@ test.dependsOn testMocha
 
 clean.dependsOn npm_uninstall
 
-task start(type: NpmTask, dependsOn: [build]) {
+task start(type: YarnTask, dependsOn: [build]) {
     args = ["start"]
 }
 
-task deploy(type: NpmTask, dependsOn: [build]) {
+task deploy(type: YarnTask, dependsOn: [build]) {
     args = ["deploy"]
 }
 
-task remove(type: NpmTask) {
+task remove(type: YarnTask) {
     args = ["remove"]
 }
