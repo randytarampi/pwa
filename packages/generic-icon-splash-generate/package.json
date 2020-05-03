@@ -32,7 +32,6 @@
     "sinon": "^9.0.2"
   },
   "directories": {
-    "bin": "./bin",
     "lib": "./src/lib",
     "test": "./test"
   },
