@@ -29,9 +29,9 @@ script:
 - yarn run pretest
 - yarn run cover:actual
 after_script:
-- "./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT"
 - yarn run cover:collect
 - if [ "$PULL_REQUEST" ]; then yarn run check-run-reporter:test; fi;
+- "./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT"
 - CODECLIMATE_API_HOST=https://codebeat.co/webhooks/code_coverage CODECLIMATE_REPO_TOKEN=8d1d019a-0b63-49be-b5aa-2262519aaa4f
   yarn codeclimate-test-reporter < coverage/lcov.info
 - yarn run coveralls
