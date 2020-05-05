@@ -12,7 +12,7 @@
     "colors": "^1.4.0",
     "mkdirp": "^1.0.4",
     "sharp": "^0.25.2",
-    "snyk": "^1.316.2"
+    "snyk": "^1.319.0"
   },
   "devDependencies": {
     "@semantic-release/changelog": "^5.0.1",

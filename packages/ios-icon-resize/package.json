@@ -10,7 +10,7 @@
     "@randy.tarampi/ios-icons": "^4.2.3",
     "abbrev": "^1.1.1",
     "minimist": "^1.2.5",
-    "snyk": "^1.316.2"
+    "snyk": "^1.319.0"
   },
   "devDependencies": {
     "@semantic-release/changelog": "^5.0.1",
@@ -55,12 +55,12 @@
   },
   "repository": "randytarampi/ios-icon-resize",
   "scripts": {
+    "cover": "rm -rf coverage/ .nyc_output/; yarn test:actual",
     "prepare": "yarn run snyk-protect",
     "pretest": "standard",
     "snyk-protect": "snyk protect",
     "test": "yarn test:actual",
-    "test:actual": "nyc tape test.js | tee >(tap-junit --output ./ --name test-results.xml) >(tap-nyc)",
-    "cover": "rm -rf coverage/ .nyc_output/; yarn test:actual"
+    "test:actual": "nyc tape test.js | tee >(tap-junit --output ./ --name test-results.xml) >(tap-nyc)"
   },
   "snyk": true
 }
