@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.8](https://github.com/randytarampi/generic-icon-splash-generate/compare/@randy.tarampi/generic-icon-splash-generate@2.0.7...@randy.tarampi/generic-icon-splash-generate@2.0.8) (2020-05-05)
+
+
+### Bug Fixes
+
+* Apply some Snyk patches. ([6b8e8c5](https://github.com/randytarampi/generic-icon-splash-generate/commit/6b8e8c5e3e08ffacfaacc92ea3d8de16da186fc4))
+
+
+
+
+
 ## [2.0.7](https://github.com/randytarampi/generic-icon-splash-generate/compare/@randy.tarampi/generic-icon-splash-generate@2.0.6...@randy.tarampi/generic-icon-splash-generate@2.0.7) (2020-05-03)
 
 **Note:** Version bump only for package @randy.tarampi/generic-icon-splash-generate

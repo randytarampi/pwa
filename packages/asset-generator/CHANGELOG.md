@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.6](https://github.com/randytarampi/pwa-asset-generator/compare/@randy.tarampi/pwa-asset-generator@2.0.5...@randy.tarampi/pwa-asset-generator@2.0.6) (2020-05-05)
+
+
+### Bug Fixes
+
+* Apply some Snyk patches. ([6b8e8c5](https://github.com/randytarampi/pwa-asset-generator/commit/6b8e8c5e3e08ffacfaacc92ea3d8de16da186fc4))
+
+
+
+
+
 ## [2.0.5](https://github.com/randytarampi/pwa-asset-generator/compare/@randy.tarampi/pwa-asset-generator@2.0.4...@randy.tarampi/pwa-asset-generator@2.0.5) (2020-05-03)
 
 **Note:** Version bump only for package @randy.tarampi/pwa-asset-generator

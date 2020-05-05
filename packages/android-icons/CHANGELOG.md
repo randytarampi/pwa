@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.1.4](https://github.com/randytarampi/android-icons/compare/@randy.tarampi/android-icons@3.1.3...@randy.tarampi/android-icons@3.1.4) (2020-05-05)
+
+
+### Bug Fixes
+
+* Apply some Snyk patches. ([6b8e8c5](https://github.com/randytarampi/android-icons/commit/6b8e8c5e3e08ffacfaacc92ea3d8de16da186fc4))
+
+
+
+
+
 ## 3.1.3 (2020-05-02)
 
 **Note:** Version bump only for package @randy.tarampi/android-icons
