@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.5](https://github.com/randytarampi/ios-splash-generate/compare/@randy.tarampi/ios-splash-generate@0.0.4...@randy.tarampi/ios-splash-generate@0.0.5) (2020-05-06)
+
+**Note:** Version bump only for package @randy.tarampi/ios-splash-generate
+
+
+
+
+
 ## [0.0.4](https://github.com/randytarampi/ios-splash-generate/compare/@randy.tarampi/ios-splash-generate@0.0.3...@randy.tarampi/ios-splash-generate@0.0.4) (2020-05-05)
 
 
