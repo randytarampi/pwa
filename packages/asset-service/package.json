@@ -26,7 +26,6 @@
     "mocha": "^7.1.2",
     "semantic-release": "^17.0.7",
     "serverless": "^1.69.0",
-    "serverless-api-compression": "^1.0.1",
     "serverless-apigw-binary": "^0.4.4",
     "serverless-apigwy-binary": "^1.0.0",
     "serverless-domain-manager": "^3.3.2",

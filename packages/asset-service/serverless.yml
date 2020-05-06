@@ -6,6 +6,9 @@ provider:
   name: aws
   runtime: nodejs10.x
 
+  apiGateway:
+    minimumCompressionSize: 1024
+
   stage: ${opt:stage, 'local'}
   region: ${opt:region, 'us-east-1'}
   baseDomainName: ${file(config/env.yml):${self:provider.stage}.baseDomainName}
@@ -21,7 +24,6 @@ package:
   individually: true
 
 plugins:
-  - serverless-api-compression
   - serverless-offline
   - serverless-domain-manager
   - serverless-plugin-tracing
@@ -29,7 +31,6 @@ plugins:
   - serverless-apigwy-binary
 
 custom:
-  contentCompression: 1024
   alarmTopic: ${file(config/env.yml):${self:provider.stage}.alarmTopic}
   customDomain:
     domainName: ${file(config/env.yml):${self:provider.stage}.domainName}

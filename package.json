@@ -14,7 +14,7 @@
     "junit-merge": "^2.0.0",
     "lerna": "^3.20.2",
     "npm-check-updates": "^4.1.2",
-    "snyk": "^1.319.0",
+    "snyk": "^1.319.1",
     "syncpack": "^5.0.1"
   },
   "engines": {
