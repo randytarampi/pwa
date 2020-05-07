@@ -73,7 +73,7 @@
   },
   "repository": "randytarampi/pwa-asset-generator.git",
   "scripts": {
-    "cover": "rm -rf coverage/ .nyc_output/; nyc gulp -LLLL --color test",
+    "cover": "nyc gulp -LLLL --color test",
     "coveralls": "cat coverage/lcov.info | coveralls",
     "prepare": "yarn run snyk-protect",
     "prepublishOnly": "npm shrinkwrap",

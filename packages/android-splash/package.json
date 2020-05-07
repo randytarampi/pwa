@@ -43,7 +43,7 @@
   },
   "repository": "randytarampi/android-splash",
   "scripts": {
-    "cover": "rm -rf coverage/ .nyc_output/; yarn test:actual",
+    "cover": "yarn test:actual",
     "pretest": "standard",
     "test": "yarn test:actual",
     "test:actual": "nyc tape test.js | tee >(tap-junit --output ./ --name test-results.xml) >(tap-nyc)"

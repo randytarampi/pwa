@@ -52,7 +52,7 @@
   },
   "repository": "randytarampi/android-icon-resize",
   "scripts": {
-    "cover": "rm -rf coverage/ .nyc_output/; yarn test:actual",
+    "cover": "yarn test:actual",
     "prepare": "yarn run snyk-protect",
     "pretest": "standard",
     "snyk-protect": "snyk protect",
