@@ -16,7 +16,8 @@
     "busboy": "^0.3.1",
     "kotlin": "^1.3.72",
     "temp": "^0.9.1",
-    "zip-dir": "^1.0.2"
+    "zip-dir": "^1.0.2",
+    "snyk": "^1.327.0"
   },
   "devDependencies": {
     "@jetbrains/ts2kt-automator": "^2.0.0",
@@ -66,6 +67,9 @@
     "dev:serverless": "sls offline start",
     "preuninstall": "rm -rf .serverless/",
     "remove": "sls remove --stage deploy",
-    "start": "yarn run dev"
-  }
+    "start": "yarn run dev",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true
 }
