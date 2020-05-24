@@ -1,7 +1,7 @@
 {
   "name": "@randy.tarampi/android-splash",
   "description": "Get android splash screen files names and dimensions",
-  "version": "2.1.7",
+  "version": "2.1.8",
   "author": "Randy Tarampi <randy.tarampi@gmail.com>",
   "bin": "./bin/android-splash.js",
   "dependencies": {
