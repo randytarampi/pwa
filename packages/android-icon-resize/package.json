@@ -9,7 +9,7 @@
     "@randy.tarampi/android-icons": "^3.1.7",
     "@randy.tarampi/generic-icon-splash-generate": "^2.0.11",
     "abbrev": "^1.1.1",
-    "snyk": "^1.319.0",
+    "snyk": "^1.327.0",
     "yargs": "^15.3.1"
   },
   "devDependencies": {
@@ -19,7 +19,7 @@
     "nyc": "^15.0.1",
     "rimraf": "^3.0.2",
     "semantic-release": "^17.0.7",
-    "standard": "^14.3.3",
+    "standard": "^14.3.4",
     "tap-junit": "^3.1.2",
     "tap-nyc": "^1.0.3",
     "tape": "^5.0.0"

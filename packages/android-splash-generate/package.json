@@ -9,7 +9,7 @@
     "@randy.tarampi/android-splash": "^2.1.7",
     "@randy.tarampi/generic-icon-splash-generate": "^2.0.11",
     "minimist": "^1.2.5",
-    "snyk": "^1.319.0"
+    "snyk": "^1.327.0"
   },
   "devDependencies": {
     "@semantic-release/changelog": "^5.0.1",
@@ -18,7 +18,7 @@
     "nyc": "^15.0.1",
     "rimraf": "^3.0.2",
     "semantic-release": "^17.0.7",
-    "standard": "^14.3.3",
+    "standard": "^14.3.4",
     "tap-junit": "^3.1.2",
     "tap-nyc": "^1.0.3",
     "tape": "^5.0.0"
