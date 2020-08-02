@@ -6,7 +6,7 @@ dist: bionic
 matrix:
   fast_finish: true
   allow_failures:
-  - 8
+  - node_js: 8
   - node_js: node
   - node_js: lts/*
 node_js:
