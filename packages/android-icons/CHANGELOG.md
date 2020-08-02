@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.1.9](https://github.com/randytarampi/android-icons/compare/@randy.tarampi/android-icons@3.1.8...@randy.tarampi/android-icons@3.1.9) (2020-08-02)
+
+**Note:** Version bump only for package @randy.tarampi/android-icons
+
+
+
+
+
 ## [3.1.8](https://github.com/randytarampi/android-icons/compare/@randy.tarampi/android-icons@3.1.7...@randy.tarampi/android-icons@3.1.8) (2020-05-24)
 
 **Note:** Version bump only for package @randy.tarampi/android-icons
