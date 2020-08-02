@@ -9,20 +9,20 @@
     "@randy.tarampi/android-icons": "^3.1.8",
     "@randy.tarampi/generic-icon-splash-generate": "^2.0.12",
     "abbrev": "^1.1.1",
-    "snyk": "^1.327.0",
-    "yargs": "^15.3.1"
+    "snyk": "^1.369.2",
+    "yargs": "^15.4.1"
   },
   "devDependencies": {
     "@semantic-release/changelog": "^5.0.1",
     "@semantic-release/git": "^9.0.0",
     "mkdirp": "^1.0.4",
-    "nyc": "^15.0.1",
+    "nyc": "^15.1.0",
     "rimraf": "^3.0.2",
-    "semantic-release": "^17.0.7",
+    "semantic-release": "^17.1.1",
     "standard": "^14.3.4",
     "tap-junit": "^3.1.2",
     "tap-nyc": "^1.0.3",
-    "tape": "^5.0.0"
+    "tape": "^5.0.1"
   },
   "engines": {
     "node": ">=8",
