@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.0.0](https://github.com/randytarampi/generic-icon-splash-generate/compare/@randy.tarampi/generic-icon-splash-generate@2.0.13...@randy.tarampi/generic-icon-splash-generate@3.0.0) (2020-08-02)
+
+
+### Features
+
+* **package:** Ignore node@8 test failures. ([e811f4e](https://github.com/randytarampi/generic-icon-splash-generate/commit/e811f4e0734170f86df01d83417377c7aefbe7dc))
+
+
+### BREAKING CHANGES
+
+* **package:** And also formally drop node@8 support. It *should* still work on node@8 though. This is just a `devDependencies` incompatibility but bump this anyways...
+
+
+
+
+
 ## [2.0.13](https://github.com/randytarampi/generic-icon-splash-generate/compare/@randy.tarampi/generic-icon-splash-generate@2.0.12...@randy.tarampi/generic-icon-splash-generate@2.0.13) (2020-08-02)
 
 **Note:** Version bump only for package @randy.tarampi/generic-icon-splash-generate

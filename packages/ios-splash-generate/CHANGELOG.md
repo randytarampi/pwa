@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.1.0](https://github.com/randytarampi/ios-splash-generate/compare/@randy.tarampi/ios-splash-generate@0.0.9...@randy.tarampi/ios-splash-generate@0.1.0) (2020-08-02)
+
+
+### Features
+
+* **package:** Ignore node@8 test failures. ([e811f4e](https://github.com/randytarampi/ios-splash-generate/commit/e811f4e0734170f86df01d83417377c7aefbe7dc))
+
+
+### BREAKING CHANGES
+
+* **package:** And also formally drop node@8 support. It *should* still work on node@8 though. This is just a `devDependencies` incompatibility but bump this anyways...
+
+
+
+
+
 ## [0.0.9](https://github.com/randytarampi/ios-splash-generate/compare/@randy.tarampi/ios-splash-generate@0.0.8...@randy.tarampi/ios-splash-generate@0.0.9) (2020-08-02)
 
 **Note:** Version bump only for package @randy.tarampi/ios-splash-generate
