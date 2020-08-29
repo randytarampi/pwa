@@ -1,12 +1,12 @@
 {
   "name": "@randy.tarampi/ios-splash-generate",
   "description": "Generate all required splash screen images from one source. Right size, right file name.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Randy Tarampi <randy.tarampi@gmail.com>",
   "bin": "./bin/ios-splash-generate.js",
   "bugs": "https://github.com/randytarampi/ios-splash-generate/issues",
   "dependencies": {
-    "@randy.tarampi/generic-icon-splash-generate": "^3.0.0",
+    "@randy.tarampi/generic-icon-splash-generate": "^3.0.1",
     "@randy.tarampi/ios-splash": "^3.1.9",
     "abbrev": "^1.1.1",
     "minimist": "^1.2.5",

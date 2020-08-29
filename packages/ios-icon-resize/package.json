@@ -1,12 +1,12 @@
 {
   "name": "@randy.tarampi/ios-icon-resize",
   "description": "Create all required icons from one icon. Right size, right file name.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Randy Tarampi <randy.tarampi@gmail.com>",
   "bin": "./bin/ios-icon-resize.js",
   "bugs": "https://github.com/randytarampi/ios-icon-resize/issues",
   "dependencies": {
-    "@randy.tarampi/generic-icon-splash-generate": "^3.0.0",
+    "@randy.tarampi/generic-icon-splash-generate": "^3.0.1",
     "@randy.tarampi/ios-icons": "^4.2.9",
     "abbrev": "^1.1.1",
     "minimist": "^1.2.5",
