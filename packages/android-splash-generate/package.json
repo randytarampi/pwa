@@ -9,7 +9,7 @@
     "@randy.tarampi/android-splash": "^2.1.9",
     "@randy.tarampi/generic-icon-splash-generate": "^3.0.0",
     "minimist": "^1.2.5",
-    "snyk": "^1.369.2"
+    "snyk": "^1.386.0"
   },
   "devDependencies": {
     "@semantic-release/changelog": "^5.0.1",

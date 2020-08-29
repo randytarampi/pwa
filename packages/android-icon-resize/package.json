@@ -9,7 +9,7 @@
     "@randy.tarampi/android-icons": "^3.1.9",
     "@randy.tarampi/generic-icon-splash-generate": "^3.0.0",
     "abbrev": "^1.1.1",
-    "snyk": "^1.369.2",
+    "snyk": "^1.386.0",
     "yargs": "^15.4.1"
   },
   "devDependencies": {
