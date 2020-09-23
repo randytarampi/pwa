@@ -10,7 +10,7 @@
     "@randy.tarampi/ios-splash": "^3.1.9",
     "abbrev": "^1.1.1",
     "minimist": "^1.2.5",
-    "snyk": "^1.386.0"
+    "snyk": "^1.399.1"
   },
   "devDependencies": {
     "@semantic-release/changelog": "^5.0.1",
@@ -18,7 +18,7 @@
     "mkdirp": "^1.0.4",
     "nyc": "^15.1.0",
     "rimraf": "^3.0.2",
-    "semantic-release": "^17.1.1",
+    "semantic-release": "^17.1.2",
     "standard": "^14.3.4",
     "tap-junit": "^3.1.2",
     "tap-nyc": "^1.0.3",
