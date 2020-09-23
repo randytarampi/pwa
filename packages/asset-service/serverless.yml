@@ -20,9 +20,6 @@ provider:
 
   environment: ${file(config/env.yml):${self:provider.stage}.environment}
 
-package:
-  individually: true
-
 plugins:
   - serverless-offline
   - serverless-domain-manager
