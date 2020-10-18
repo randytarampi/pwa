@@ -61,5 +61,5 @@
     "test": "yarn test:actual",
     "test:actual": "nyc tape test.js | tee >(tap-junit --output ./ --name test-results.xml) >(tap-nyc)"
   },
-  "snyk": true
+  "snyk": false
 }

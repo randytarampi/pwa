@@ -82,5 +82,5 @@
     "test": "gulp -LLLL --color test"
   },
   "sideEffects": false,
-  "snyk": true
+  "snyk": false
 }

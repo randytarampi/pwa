@@ -57,7 +57,7 @@
     "test:actual:collect": "junit-merge $(ls packages/*/test-results.xml) --out ./test-results.xml",
     "test:collect": "yarn run test:actual:collect"
   },
-  "snyk": true,
+  "snyk": false,
   "workspaces": [
     "packages/*"
   ]
