@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.4](https://github.com/randytarampi/android-icon-resize/compare/@randy.tarampi/android-icon-resize@0.1.3...@randy.tarampi/android-icon-resize@0.1.4) (2020-11-22)
+
+**Note:** Version bump only for package @randy.tarampi/android-icon-resize
+
+
+
+
+
 ## [0.1.3](https://github.com/randytarampi/android-icon-resize/compare/@randy.tarampi/android-icon-resize@0.1.2...@randy.tarampi/android-icon-resize@0.1.3) (2020-10-18)
 
 **Note:** Version bump only for package @randy.tarampi/android-icon-resize

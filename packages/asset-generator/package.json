@@ -1,7 +1,7 @@
 {
   "name": "@randy.tarampi/pwa-asset-generator",
   "description": "Generate icons and splash screens for Progressive Web Applications",
-  "version": "3.0.3",
+  "version": "3.0.4",
   "author": {
     "name": "Randy Tarampi",
     "email": "rt@randytarampi.ca",
@@ -10,11 +10,11 @@
   "bin": "./bin/pwa-asset-generator.js",
   "bugs": "https://github.com/randytarampi/pwa-asset-generator/issues",
   "dependencies": {
-    "@randy.tarampi/android-icons": "^3.1.10",
-    "@randy.tarampi/android-splash": "^2.1.10",
-    "@randy.tarampi/generic-icon-splash-generate": "^3.0.3",
-    "@randy.tarampi/ios-icons": "^4.2.10",
-    "@randy.tarampi/ios-splash": "^3.1.10",
+    "@randy.tarampi/android-icons": "^3.1.11",
+    "@randy.tarampi/android-splash": "^2.1.11",
+    "@randy.tarampi/generic-icon-splash-generate": "^3.0.4",
+    "@randy.tarampi/ios-icons": "^4.2.11",
+    "@randy.tarampi/ios-splash": "^3.1.11",
     "commander": "^6.2.0",
     "snyk": "^1.430.0"
   },

@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.1.11](https://github.com/randytarampi/android-splash/compare/@randy.tarampi/android-splash@2.1.10...@randy.tarampi/android-splash@2.1.11) (2020-11-22)
+
+**Note:** Version bump only for package @randy.tarampi/android-splash
+
+
+
+
+
 ## [2.1.10](https://github.com/randytarampi/android-splash/compare/@randy.tarampi/android-splash@2.1.9...@randy.tarampi/android-splash@2.1.10) (2020-09-23)
 
 

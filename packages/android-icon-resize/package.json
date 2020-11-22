@@ -1,13 +1,13 @@
 {
   "name": "@randy.tarampi/android-icon-resize",
   "description": "Create all required icons from one icon. Right size, right file name.",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "author": "Randy Tarampi <randy.tarampi@gmail.com>",
   "bin": "./bin/android-icon-resize.js",
   "bugs": "https://github.com/randytarampi/android-icon-resize/issues",
   "dependencies": {
-    "@randy.tarampi/android-icons": "^3.1.10",
-    "@randy.tarampi/generic-icon-splash-generate": "^3.0.3",
+    "@randy.tarampi/android-icons": "^3.1.11",
+    "@randy.tarampi/generic-icon-splash-generate": "^3.0.4",
     "abbrev": "^1.1.1",
     "snyk": "^1.430.0",
     "yargs": "^16.1.1"
