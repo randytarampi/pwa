@@ -9,8 +9,8 @@
     "@randy.tarampi/android-icons": "^3.1.10",
     "@randy.tarampi/generic-icon-splash-generate": "^3.0.3",
     "abbrev": "^1.1.1",
-    "snyk": "^1.399.1",
-    "yargs": "^16.0.3"
+    "snyk": "^1.430.0",
+    "yargs": "^16.1.1"
   },
   "devDependencies": {
     "@semantic-release/changelog": "^5.0.1",
@@ -18,8 +18,8 @@
     "mkdirp": "^1.0.4",
     "nyc": "^15.1.0",
     "rimraf": "^3.0.2",
-    "semantic-release": "^17.1.2",
-    "standard": "^14.3.4",
+    "semantic-release": "^17.2.4",
+    "standard": "^16.0.3",
     "tap-junit": "^3.1.2",
     "tap-nyc": "^1.0.3",
     "tape": "^5.0.1"
