@@ -12,7 +12,7 @@
     "codeclimate-test-reporter": "^0.5.1",
     "coveralls": "^3.1.0",
     "junit-merge": "^2.0.0",
-    "lerna": "^3.22.1",
+    "lerna": "^4.0.0",
     "npm-check-updates": "^10.2.2",
     "snyk": "^1.430.0",
     "syncpack": "^5.6.10"
