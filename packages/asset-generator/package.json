@@ -30,7 +30,7 @@
     "gulp-if": "^3.0.0",
     "gulp-mocha": "^7.0.2",
     "mkdirp": "^1.0.4",
-    "mocha": "^8.2.1",
+    "mocha": "^10.1.0",
     "nyc": "^15.1.0",
     "rimraf": "^3.0.2",
     "semantic-release": "^17.2.4",
