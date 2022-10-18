@@ -25,7 +25,7 @@
     "@semantic-release/git": "^9.0.0",
     "cross-env": "^7.0.2",
     "kotlin-test": "^1.4.20",
-    "mocha": "^8.2.1",
+    "mocha": "^10.1.0",
     "semantic-release": "^17.2.4",
     "serverless": "^2.12.0",
     "serverless-apigw-binary": "^0.4.4",
