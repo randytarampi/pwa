@@ -11,7 +11,7 @@
   "dependencies": {
     "colors": "^1.4.0",
     "mkdirp": "^1.0.4",
-    "sharp": "^0.28.0",
+    "sharp": "^0.29.3",
     "snyk": "^1.430.0"
   },
   "devDependencies": {
@@ -28,7 +28,7 @@
     "mocha": "^8.2.1",
     "nyc": "^15.1.0",
     "rimraf": "^3.0.2",
-    "semantic-release": "^17.2.4",
+    "semantic-release": "^21.0.2",
     "sinon": "^9.2.1"
   },
   "directories": {
