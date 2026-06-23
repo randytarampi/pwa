@@ -19,7 +19,7 @@ A single solution that wholly replaces [`@randy.tarampi/android-icon-resize`](ht
 # Dependencies
 ```bash
 brew install nvm
-nvm install 8
+nvm install 20
 npm install -g npm
 ```
 

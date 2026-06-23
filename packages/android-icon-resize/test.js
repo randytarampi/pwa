@@ -9,8 +9,8 @@ var exec = require('child_process').exec
 
 test('creates all icons in tmp directory', function (t) {
   t.plan(5)
-  rimraf('tmp', function () {
-    return mkdirp('tmp').then(function () {
+  rimraf.rimraf('tmp').then(function () {
+    return mkdirp.mkdirp('tmp').then(function () {
       return resize('test/com.appbusinesspodcast.www.png', 'tmp/').then(function () {
         t.ok(fs.existsSync('tmp/mdpi.png'), 'mdpi.png created')
         t.ok(fs.existsSync('tmp/hdpi.png'), 'hdpi.png created')
@@ -25,8 +25,8 @@ test('creates all icons in tmp directory', function (t) {
 
 test('cli all icons in tmp directory', function (t) {
   t.plan(15)
-  rimraf('tmp', function () {
-    return mkdirp('tmp').then(function () {
+  rimraf.rimraf('tmp').then(function () {
+    return mkdirp.mkdirp('tmp').then(function () {
       exec(pkg.bin + ' --input test/com.appbusinesspodcast.www.png --output tmp', function (error, stdout, stderr) {
         var err = error || (stderr && new Error(stderr))
         if (err) {
@@ -39,8 +39,8 @@ test('cli all icons in tmp directory', function (t) {
         t.ok(fs.existsSync('tmp/xxhdpi.png'), 'xxhdpi.png created')
         t.ok(fs.existsSync('tmp/xxxhdpi.png'), 'xxxhdpi.png created')
 
-        rimraf('tmp', function () {
-          return mkdirp('tmp').then(function () {
+        rimraf.rimraf('tmp').then(function () {
+          return mkdirp.mkdirp('tmp').then(function () {
             exec(pkg.bin + ' --in test/com.appbusinesspodcast.www.png --ou tmp', function (error, stdout, stderr) {
               var err = error || (stderr && new Error(stderr))
               if (err) {
@@ -53,8 +53,8 @@ test('cli all icons in tmp directory', function (t) {
               t.ok(fs.existsSync('tmp/xxhdpi.png'), 'xxhdpi.png created')
               t.ok(fs.existsSync('tmp/xxxhdpi.png'), 'xxxhdpi.png created')
 
-              rimraf('tmp', function () {
-                return mkdirp('tmp').then(function () {
+              rimraf.rimraf('tmp').then(function () {
+                return mkdirp.mkdirp('tmp').then(function () {
                   exec(pkg.bin + ' -i test/com.appbusinesspodcast.www.png -o tmp', function (error, stdout, stderr) {
                     var err = error || (stderr && new Error(stderr))
                     if (err) {

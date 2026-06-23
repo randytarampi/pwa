@@ -12,12 +12,10 @@ describe("lib", function () {
     const output = path.join(__dirname, "../../../tmp");
 
     beforeEach(function () {
-        return mkdirp(output);
+        return mkdirp.mkdirp(output);
     });
 
-    afterEach(function (done) {
-        rimraf(output, done);
-    });
+    afterEach(function () { return rimraf.rimraf(output); });
 
     describe("iconsGenerator", function () {
         it("generates icons for templates (to file)", function () {

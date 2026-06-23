@@ -10,10 +10,10 @@ pwa-asset-service
 Use [`@randy.tarampi/pwa-asset-generator`](https://www.npmjs.com/package/@randy.tarampi/pwa-asset-generator) to quickly generate image assets for a Progressive Web Application.
 
 # Dependencies
-```bash
-brew cask install oracle-jdk
-brew install gradle
-```
+
+- **Node.js**: `>=20`
+- **Java Development Kit (JDK)**: Java 11 - 21 is required to compile and run the project using the Gradle wrapper.
+- **Gradle**: The project includes the Gradle `8.5` wrapper (`./gradlew`), so there is no need to install Gradle manually.
 
 # Installation
 

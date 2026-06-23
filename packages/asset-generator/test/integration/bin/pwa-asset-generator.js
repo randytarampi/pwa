@@ -14,11 +14,11 @@ describe("pwa-asset-generator", function () {
     const binPath = path.join(__dirname, "../../../bin/pwa-asset-generator.js");
 
     beforeEach(function () {
-        return mkdirp(outputImageDirectoryPath);
+        return mkdirp.mkdirp(outputImageDirectoryPath);
     });
 
     afterEach(function (done) {
-        rimraf(outputImageDirectoryPath, done);
+        rimraf.rimraf(outputImageDirectoryPath).then(() => done());
     });
 
     it("requires an `inputImagePath`", function (done) {
@@ -49,8 +49,8 @@ describe("pwa-asset-generator", function () {
         };
 
         execFile(binPath, args, options, (error, stdout, stderr) => {
-            console.log(stdout); // eslint-disable-line no-console
-            console.error(stderr); // eslint-disable-line no-console
+            console.log(stdout);  
+            console.error(stderr);  
 
             if (error) {
                 return done(error);
@@ -73,8 +73,8 @@ describe("pwa-asset-generator", function () {
         };
 
         execFile(binPath, args, options, (error, stdout, stderr) => {
-            console.log(stdout); // eslint-disable-line no-console
-            console.error(stderr); // eslint-disable-line no-console
+            console.log(stdout);  
+            console.error(stderr);  
 
             if (error) {
                 return done(error);

@@ -1,4 +1,5 @@
-import ca.randytarampi.configureEnvironment
+package ca.randytarampi
+
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.async
 import kotlin.test.Test

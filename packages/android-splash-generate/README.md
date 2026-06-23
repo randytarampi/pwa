@@ -19,7 +19,7 @@ The files created have the default names as you might want to use them, for exam
 
 ## Important
 
-Require node.js v0.10.46 and npm v2.15.1
+Requires Node.js >=20 and npm >=3
 
 ## How does it work?
 
