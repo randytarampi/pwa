@@ -1,7 +1,9 @@
 #!/usr/bin/env node
 'use strict'
 var abbrev = require('abbrev')
-var argv = require('yargs')
+var yargs = require('yargs/yargs')
+var hideBin = require('yargs/helpers').hideBin
+var argv = yargs(hideBin(process.argv))
 var icons = require('../')
 
 // help
