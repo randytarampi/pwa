@@ -26,7 +26,7 @@ Just read the `packages/*/README.md`s already. 😛
 # Dependencies
 ```
 brew install nvm
-nvm install 12
+nvm install 20
 npm install -g yarn
 ```
 
