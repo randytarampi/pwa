@@ -10,16 +10,14 @@
   "bugs": "https://github.com/randytarampi/pwa/issues",
   "dependencies": {
     "codeclimate-test-reporter": "^0.5.1",
-    "coveralls": "^3.1.0",
+    "coveralls": "^3.1.1",
     "junit-merge": "^2.0.0",
     "lerna": "^4.0.0",
-    "npm-check-updates": "^10.2.2",
-    "snyk": "^1.518.0",
-    "syncpack": "^5.6.10"
+    "npm-check-updates": "^22.1.1",
+    "syncpack": "^15.1.2"
   },
   "engines": {
-    "node": ">=10",
-    "yarn": ">=1"
+    "node": ">=20"
   },
   "keywords": [
     "android",
@@ -43,22 +41,23 @@
   },
   "repository": "randytarampi/pwa.git",
   "scripts": {
-    "bootstrap": "lerna bootstrap",
+    "bootstrap": "yarn install",
     "cover": "yarn run cover:actual; yarn run cover:collect",
-    "cover:actual": "rm -rf .nyc_output/ coverage/ && lerna run cover --no-bail --concurrency $(node -p \"require(\\\"os\\\").cpus().length\")",
+    "cover:actual": "rm -rf .nyc_output/ coverage/ && lerna run cover --no-bail",
     "cover:actual:collect:lcov": "mkdir -p .nyc_output/ coverage/ && lerna exec -- \"if [ -d \"./.nyc_output\" ]; then cp -r .nyc_output ../..; fi;\" && nyc report --reporter=lcov",
     "cover:collect": "yarn run test:collect; yarn run cover:actual:collect:lcov",
     "coveralls": "cat coverage/lcov.info | coveralls",
-    "prepare": "yarn run snyk-protect",
-    "pretest": "lerna run pretest --no-bail --concurrency $(node -p \"require(\\\"os\\\").cpus().length\")",
-    "snyk-protect": "snyk protect",
+    "pretest": "lerna run pretest --no-bail",
     "test": "yarn run test:actual; yarn run test:collect",
-    "test:actual": "lerna run test --no-bail --concurrency $(node -p \"require(\\\"os\\\").cpus().length\")",
-    "test:actual:collect": "junit-merge $(ls packages/*/test-results.xml) --out ./test-results.xml",
+    "test:actual": "lerna run test --no-bail",
+    "test:actual:collect": "junit-merge packages/*/test-results.xml --out ./test-results.xml",
     "test:collect": "yarn run test:actual:collect"
   },
-  "snyk": false,
+  "packageManager": "yarn@4.17.0",
   "workspaces": [
     "packages/*"
-  ]
+  ],
+  "resolutions": {
+    "immutable": "5.1.5"
+  }
 }

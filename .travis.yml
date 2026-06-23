@@ -9,9 +9,7 @@ matrix:
   - node_js: node
   - node_js: lts/*
 node_js:
-- 10
-- 12
-- 14
+- 20
 - lts/*
 - node
 before_install:
@@ -48,7 +46,7 @@ deploy:
   skip_cleanup: true
   on:
     branch: master
-    node: 10
+    node: 20
     os: linux
 sudo: false
 cache:
