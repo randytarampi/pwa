@@ -1,10 +1,10 @@
 const sharp = require("sharp");
-const mkdirp = require("mkdirp");
+const {mkdirp} = require("mkdirp");
 const path = require("path");
 const colors = require("colors");
 
-const errorMessage = error => console.error(colors.red("ERROR"), typeof error === "string" ? error : error.message); // eslint-disable-line no-console
-const logMessage = (...args) => console.log(colors.green("OK"), ...args); // eslint-disable-line no-console
+const errorMessage = error => console.error(colors.red("ERROR"), typeof error === "string" ? error : error.message);  
+const logMessage = (...args) => console.log(colors.green("OK"), ...args);  
 
 const getFileFormatFromFilename = filename => {
     const extname = path.extname(filename);

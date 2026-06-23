@@ -19,7 +19,7 @@ Underpins [`@randy.tarampi/android-icon-resize`](https://www.npmjs.com/package/@
 # Dependencies
 ```
 brew install nvm
-nvm install 8
+nvm install 20
 npm install -g npm
 ```
 

@@ -1,11 +1,13 @@
-import ca.randytarampi.callbackOnWarmup
+package ca.randytarampi
+
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertNull
+import kotlin.test.assertNotNull
 
 class CallbackOnWarmupTest {
     @Test
-    fun worksAsExpected() = {
+    fun worksAsExpected() {
         val stubEvent = object {
             val body: String = "woof"
             val headers = object {
@@ -28,7 +30,7 @@ class CallbackOnWarmupTest {
     }
 
     @Test
-    fun handlesErrors() = {
+    fun handlesErrors() {
         val stubEvent = object {
             val body: String = "woof"
             val headers = object {
@@ -39,8 +41,8 @@ class CallbackOnWarmupTest {
         }
         val stubContext = null
         val stubCallback = { error: Throwable?, response: String? ->
-            assertNull(error, "`error` is null")
-            assertEquals("Lambda is warm!", response, "`message` is not `\"Lambda is warm!\"`")
+            assertNotNull(error, "`error` is not null")
+            assertEquals("Lambda warmup failed", response, "`message` is not `\"Lambda warmup failed\"`")
         }
 
         callbackOnWarmup(stubEvent, stubContext, stubCallback)

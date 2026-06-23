@@ -12,11 +12,11 @@ describe("lib", function () {
     const inputFile = path.join(__dirname, "../../../resources/ʕつ•ᴥ•ʔつ.png");
 
     beforeEach(function () {
-        return mkdirp(outputDirectory);
+        return mkdirp.mkdirp(outputDirectory);
     });
 
     afterEach(function (done) {
-        rimraf(outputDirectory, done);
+        rimraf.rimraf(outputDirectory).then(() => done());
     });
 
     describe("generateIcons", function () {

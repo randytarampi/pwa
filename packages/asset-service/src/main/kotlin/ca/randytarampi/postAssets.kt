@@ -1,7 +1,6 @@
 import ca.randytarampi.*
 import ext._randytarampi.js.RequestError
 import ext._randytarampi.serverless.responseBuilder
-import kotlinext.js.Object
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.async
 import kotlinx.coroutines.await

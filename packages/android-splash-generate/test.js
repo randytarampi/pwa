@@ -9,8 +9,8 @@ var exec = require('child_process').exec
 
 test('creates all icons in tmp directory', function (t) {
   t.plan(13)
-  rimraf('tmp', function () {
-    return mkdirp('tmp').then(function () {
+  rimraf.rimraf('tmp').then(function () {
+    return mkdirp.mkdirp('tmp').then(function () {
       return resize('test/com.appbusinesspodcast.www.png', 'tmp/').then(function () {
         t.ok(fs.existsSync('tmp/splash-port-hdpi.png'), 'splash-port-hdpi.png' + ' created')
         t.ok(fs.existsSync('tmp/splash-port-mdpi.png'), 'splash-port-mdpi.png' + ' created')
@@ -33,8 +33,8 @@ test('creates all icons in tmp directory', function (t) {
 
 test('cli creates all icons in tmp directory', function (t) {
   t.plan(13)
-  rimraf('tmp', function () {
-    return mkdirp('tmp').then(function () {
+  rimraf.rimraf('tmp').then(function () {
+    return mkdirp.mkdirp('tmp').then(function () {
       exec(pkg.bin + ' --input test/com.appbusinesspodcast.www.png --output tmp', function () {
         t.ok(fs.existsSync('tmp/splash-port-hdpi.png'), 'splash-port-hdpi.png' + ' created')
         t.ok(fs.existsSync('tmp/splash-port-mdpi.png'), 'splash-port-mdpi.png' + ' created')

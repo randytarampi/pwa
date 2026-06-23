@@ -12,12 +12,7 @@ open external class Logger(options: Logger.LoggerOptions) : EventEmitter {
     open fun reopenFileStreams(): Unit = definedExternally
     open fun level(): Number = definedExternally
     open fun level(value: Number): Unit = definedExternally
-    open fun level(value: String /* "trace" */): Unit = definedExternally
-    open fun level(value: String /* "debug" */): Unit = definedExternally
-    open fun level(value: String /* "info" */): Unit = definedExternally
-    open fun level(value: String /* "warn" */): Unit = definedExternally
-    open fun level(value: String /* "error" */): Unit = definedExternally
-    open fun level(value: String /* "fatal" */): Unit = definedExternally
+    open fun level(value: String): Unit = definedExternally
     open fun levels(): Array<Number> = definedExternally
     open fun levels(name: String): Number = definedExternally
     open fun levels(name: Number): Number = definedExternally
@@ -122,11 +117,6 @@ open external class Logger(options: Logger.LoggerOptions) : EventEmitter {
         fun createLogger(options: LoggerOptions): Logger = definedExternally
         fun safeCycles(): (key: String, value: Any) -> Any = definedExternally
         fun resolveLevel(value: Number): Number = definedExternally
-        fun resolveLevel(value: String /* "trace" */): Number = definedExternally
-        fun resolveLevel(value: String /* "debug" */): Number = definedExternally
-        fun resolveLevel(value: String /* "info" */): Number = definedExternally
-        fun resolveLevel(value: String /* "warn" */): Number = definedExternally
-        fun resolveLevel(value: String /* "error" */): Number = definedExternally
-        fun resolveLevel(value: String /* "fatal" */): Number = definedExternally
+        fun resolveLevel(value: String): Number = definedExternally
     }
 }
