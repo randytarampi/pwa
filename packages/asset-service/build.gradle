@@ -1,6 +1,7 @@
 plugins {
-    id "org.jetbrains.kotlin.js" version "1.9.25"
+    id "org.jetbrains.kotlin.js" version "2.1.21"
     id "com.github.node-gradle.node" version "7.0.2"
+    id "org.jlleitschuh.gradle.ktlint" version "12.1.1"
 }
 
 group "serverless-kotlin-node"
@@ -37,7 +38,23 @@ kotlin {
 }
 
 node {
-    download = false
+    download = true
+    version = node_version
+    yarnVersion = "1.22.22"
+}
+
+ktlint {
+    ignoreFailures = true
+    disabledRules = ["filename"]
+
+    filter {
+        exclude("src/main/kotlin/ext/**")
+        exclude("src/test/kotlin/ext/**")
+    }
+}
+
+tasks.named("check") {
+    dependsOn "ktlintCheck"
 }
 
 import com.github.gradle.node.yarn.task.YarnTask
