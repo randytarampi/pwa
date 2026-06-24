@@ -2,8 +2,8 @@ package ca.randytarampi
 
 import kotlin.test.Test
 import kotlin.test.assertEquals
-import kotlin.test.assertNull
 import kotlin.test.assertNotNull
+import kotlin.test.assertNull
 
 class CallbackOnWarmupTest {
     @Test
@@ -21,9 +21,13 @@ class CallbackOnWarmupTest {
             val functionVersion: String = "ugh"
             val awsRequestId: String = "ahh"
         }
-        val stubCallback = { error: Throwable?, response: String? ->
+        val stubCallback: (Throwable?, String?) -> Unit = { error, response ->
             assertNull(error, "`error` is null")
-            assertEquals("Lambda is warm!", response, "`message` is not `\"Lambda is warm!\"`")
+            assertEquals(
+                "Lambda is warm!",
+                response,
+                "`message` is not `\"Lambda is warm!\"`",
+            )
         }
 
         callbackOnWarmup(stubEvent, stubContext, stubCallback)
@@ -40,9 +44,13 @@ class CallbackOnWarmupTest {
             val source: String = "rawr"
         }
         val stubContext = null
-        val stubCallback = { error: Throwable?, response: String? ->
+        val stubCallback: (Throwable?, String?) -> Unit = { error, response ->
             assertNotNull(error, "`error` is not null")
-            assertEquals("Lambda warmup failed", response, "`message` is not `\"Lambda warmup failed\"`")
+            assertEquals(
+                "Lambda warmup failed",
+                response,
+                "`message` is not `\"Lambda warmup failed\"`",
+            )
         }
 
         callbackOnWarmup(stubEvent, stubContext, stubCallback)
