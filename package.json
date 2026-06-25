@@ -42,11 +42,13 @@
   "repository": "randytarampi/pwa.git",
   "scripts": {
     "bootstrap": "yarn install",
+    "clean": "rm -rf node_modules dist .nyc_output coverage",
     "cover": "yarn run cover:actual; yarn run cover:collect",
     "cover:actual": "rm -rf .nyc_output/ coverage/ && lerna run cover --no-bail",
     "cover:actual:collect:lcov": "mkdir -p .nyc_output/ coverage/ && lerna exec -- \"if [ -d \"./.nyc_output\" ]; then cp -r .nyc_output ../..; fi;\" && nyc report --reporter=lcov",
     "cover:collect": "yarn run test:collect; yarn run cover:actual:collect:lcov",
     "coveralls": "cat coverage/lcov.info | coveralls",
+    "lint": "eslint .",
     "pretest": "lerna run pretest --no-bail",
     "test": "yarn run test:actual; yarn run test:collect",
     "test:actual": "lerna run test --no-bail",
