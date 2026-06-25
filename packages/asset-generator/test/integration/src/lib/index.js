@@ -1,9 +1,13 @@
-const fs = require("fs");
-const path = require("path");
-const mkdirp = require("mkdirp");
-const rimraf = require("rimraf");
-const { expect } = require("chai");
-const { icons, splashes, generateIcons, generateSplashScreens } = require("../../../../src");
+import fs from "node:fs";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+import { mkdirp } from "mkdirp";
+import { rimraf } from "rimraf";
+import { expect } from "chai";
+import { icons, splashes, generateIcons, generateSplashScreens } from "../../../../src/index.js";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 describe("lib", function () {
     this.timeout(60000);
@@ -12,11 +16,11 @@ describe("lib", function () {
     const inputFile = path.join(__dirname, "../../../resources/ʕつ•ᴥ•ʔつ.png");
 
     beforeEach(function () {
-        return mkdirp.mkdirp(outputDirectory);
+        return mkdirp(outputDirectory);
     });
 
-    afterEach(function (done) {
-        rimraf.rimraf(outputDirectory).then(() => done());
+    afterEach(function () {
+        return rimraf(outputDirectory);
     });
 
     describe("generateIcons", function () {

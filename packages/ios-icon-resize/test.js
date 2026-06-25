@@ -1,16 +1,17 @@
-'use strict'
-var test = require('tape')
-var resize = require('./')
-var fs = require('fs')
-var rimraf = require('rimraf')
-var mkdirp = require('mkdirp')
-var pkg = require('./package.json')
-var exec = require('child_process').exec
+import test from 'tape'
+import resize from './index.js'
+import fs from 'node:fs'
+import { rimraf } from 'rimraf'
+import { mkdirp } from 'mkdirp'
+import { createRequire } from 'node:module'
+import { exec } from 'node:child_process'
+const require = createRequire(import.meta.url)
+const pkg = require('./package.json')
 
 test('creates all icons in tmp directory', function (t) {
   t.plan(15)
-  rimraf.rimraf('tmp').then(function () {
-    return mkdirp.mkdirp('tmp').then(function () {
+  rimraf('tmp').then(function () {
+    return mkdirp('tmp').then(function () {
       return resize('test/com.appbusinesspodcast.www.png', 'tmp/').then(function () {
         t.ok(fs.existsSync('tmp/icon-60@3x.png'), 'icon-60@3x.png created')
         t.ok(fs.existsSync('tmp/icon-60.png'), 'icon-60.png created')
@@ -35,10 +36,10 @@ test('creates all icons in tmp directory', function (t) {
 
 test('cli all icons in tmp directory', function (t) {
   t.plan(45)
-  rimraf.rimraf('tmp').then(function () {
-    return mkdirp.mkdirp('tmp').then(function () {
+  rimraf('tmp').then(function () {
+    return mkdirp('tmp').then(function () {
       exec(pkg.bin + ' --input test/com.appbusinesspodcast.www.png --output tmp', function (error, stdout, stderr) {
-        var err = error || (stderr && new Error(stderr))
+        const err = error || (stderr && new Error(stderr))
         if (err) {
           t.end(err)
           throw err
@@ -59,10 +60,10 @@ test('cli all icons in tmp directory', function (t) {
         t.ok(fs.existsSync('tmp/icon-50.png'), 'icon-50.png created')
         t.ok(fs.existsSync('tmp/icon-50@2x.png'), 'icon-50@2x.png created')
 
-        rimraf.rimraf('tmp').then(function () {
-          return mkdirp.mkdirp('tmp').then(function () {
+        rimraf('tmp').then(function () {
+          return mkdirp('tmp').then(function () {
             exec(pkg.bin + ' --in test/com.appbusinesspodcast.www.png --ou tmp', function (error, stdout, stderr) {
-              var err = error || (stderr && new Error(stderr))
+              const err = error || (stderr && new Error(stderr))
               if (err) {
                 t.fail(err)
                 throw err
@@ -83,10 +84,10 @@ test('cli all icons in tmp directory', function (t) {
               t.ok(fs.existsSync('tmp/icon-50.png'), 'icon-50.png created')
               t.ok(fs.existsSync('tmp/icon-50@2x.png'), 'icon-50@2x.png created')
 
-              rimraf.rimraf('tmp').then(function () {
-                return mkdirp.mkdirp('tmp').then(function () {
+              rimraf('tmp').then(function () {
+                return mkdirp('tmp').then(function () {
                   exec(pkg.bin + ' -i test/com.appbusinesspodcast.www.png -o tmp', function (error, stdout, stderr) {
-                    var err = error || (stderr && new Error(stderr))
+                    const err = error || (stderr && new Error(stderr))
                     if (err) {
                       t.fail(err)
                       throw err

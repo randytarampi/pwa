@@ -1,7 +1,7 @@
-const splash = require('@randy.tarampi/android-splash')
-const { errorMessage, splashScreensGenerator: generator } = require('@randy.tarampi/generic-icon-splash-generate')
+import splash from '@randy.tarampi/android-splash'
+import { errorMessage, splashScreensGenerator as generator } from '@randy.tarampi/generic-icon-splash-generate'
 
-module.exports = (input, output = process.cwd()) => {
+export default function generate (input, output = process.cwd()) {
   if (!input) {
     errorMessage(new Error('`input` parameter is required.'))
   }

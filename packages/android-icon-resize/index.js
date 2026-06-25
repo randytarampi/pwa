@@ -1,7 +1,7 @@
-const icons = require('@randy.tarampi/android-icons')
-const { errorMessage, iconsGenerator: generator } = require('@randy.tarampi/generic-icon-splash-generate')
+import icons from '@randy.tarampi/android-icons'
+import { errorMessage, iconsGenerator as generator } from '@randy.tarampi/generic-icon-splash-generate'
 
-module.exports = (input, output = process.cwd()) => {
+export default function resize (input, output = process.cwd()) {
   if (!input) {
     errorMessage(new Error('`input` parameter is required.'))
   }

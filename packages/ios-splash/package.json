@@ -47,5 +47,6 @@
     "pretest": "standard",
     "test": "yarn test:actual",
     "test:actual": "nyc tape test.js | tap-junit --output ./ --name test-results.xml"
-  }
+  },
+  "type": "module"
 }

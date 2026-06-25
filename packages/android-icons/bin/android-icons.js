@@ -1,43 +1,42 @@
 #!/usr/bin/env node
-'use strict'
-var abbrev = require('abbrev')
-var yargs = require('yargs/yargs')
-var hideBin = require('yargs/helpers').hideBin
-var argv = yargs(hideBin(process.argv))
-var icons = require('../')
+import abbrev from 'abbrev'
+import yargs from 'yargs/yargs'
+import { hideBin } from 'yargs/helpers'
+import icons from '../index.js'
+
+const parser = yargs(hideBin(process.argv))
 
 // help
-argv.help('help')
-argv.alias('h', 'help')
+parser.help('help')
+parser.alias('h', 'help')
 
 // register abbreviated aliases
-var abbrevs = abbrev(['help', 'size', 'format'])
-var aliases = Object.keys(abbrevs)
-aliases.forEach(function (alias) {
+const abbrevs = abbrev(['help', 'size', 'format'])
+Object.keys(abbrevs).forEach(function (alias) {
   if (alias !== abbrevs[alias]) {
-    argv.alias(alias, abbrevs[alias])
+    parser.alias(alias, abbrevs[alias])
   }
 })
 
 // document options
-argv.option('size', {
+parser.option('size', {
   description: 'number of pixels (width) or string identifiying the icon image'
 })
-argv.option('format', {
+parser.option('format', {
   description: 'format of the output to stdout (csv or json)'
 })
 
 // will show up in help
-argv.usage('Usage: android-icons [options]')
+parser.usage('Usage: android-icons [options]')
 
-argv.example('$ android-icons --size 48', 'mdpi.png,48')
-argv.example('$ android-icons --size 48 --format json', '{"name":"mdpi.png","width":48}')
-argv.example('$ android-icons --size xhdpi', 'xhdpi.png,96')
+parser.example('$ android-icons --size 48', 'mdpi.png,48')
+parser.example('$ android-icons --size 48 --format json', '{"name":"mdpi.png","width":48}')
+parser.example('$ android-icons --size xhdpi', 'xhdpi.png,96')
 
-argv = argv.argv
+const argv = parser.argv
 
 function formatLog (icons, argv) {
-  var format = (argv.format || 'csv').toLowerCase()
+  const format = (argv.format || 'csv').toLowerCase()
   if (format === 'json') {
     return JSON.stringify(icons)
   }
@@ -50,11 +49,11 @@ function formatLog (icons, argv) {
 }
 
 function cli () {
-  var options = {
+  const options = {
     size: argv.size
   }
 
-  var output = icons(options)
+  const output = icons(options)
   if (output) console.log(formatLog(output, argv))
 }
 

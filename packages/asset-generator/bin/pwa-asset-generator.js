@@ -1,8 +1,11 @@
 #!/usr/bin/env node
 
-const { program } = require("commander");
-const { errorMessage } = require("@randy.tarampi/generic-icon-splash-generate");
-const { generateIcons, generateSplashScreens } = require("../src");
+import { createRequire } from "node:module";
+import { program } from "commander";
+import { errorMessage } from "@randy.tarampi/generic-icon-splash-generate";
+import { generateIcons, generateSplashScreens } from "../src/index.js";
+
+const require = createRequire(import.meta.url);
 const packageJson = require("../package.json");
 
 program

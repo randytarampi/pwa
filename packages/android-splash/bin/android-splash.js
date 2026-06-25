@@ -1,37 +1,36 @@
 #!/usr/bin/env node
-'use strict'
-var abbrev = require('abbrev')
-var yargs = require('yargs/yargs')
-var hideBin = require('yargs/helpers').hideBin
-var argv = yargs(hideBin(process.argv))
-var splash = require('../')
+import abbrev from 'abbrev'
+import yargs from 'yargs/yargs'
+import { hideBin } from 'yargs/helpers'
+import splash from '../index.js'
+
+const parser = yargs(hideBin(process.argv))
 
 // help
-argv.help('help')
-argv.alias('h', 'help')
+parser.help('help')
+parser.alias('h', 'help')
 
 // register abbreviated aliases
-var abbrevs = abbrev(['format', 'help'])
-var aliases = Object.keys(abbrevs)
-aliases.forEach(function (alias) {
+const abbrevs = abbrev(['format', 'help'])
+Object.keys(abbrevs).forEach(function (alias) {
   if (alias !== abbrevs[alias]) {
-    argv.alias(alias, abbrevs[alias])
+    parser.alias(alias, abbrevs[alias])
   }
 })
 
 // document options
-argv.option('format', {
+parser.option('format', {
   description: 'format of the output to stdout (csv or json)'
 })
 
-argv.usage('Usage: android-splash [options]')
+parser.usage('Usage: android-splash [options]')
 
-argv.example('$ android-splash', 'GooglePlayFeature.png,1024,500 ...')
+parser.example('$ android-splash', 'GooglePlayFeature.png,1024,500 ...')
 
-argv = argv.argv
+const argv = parser.argv
 
 function formatLog (splash, argv) {
-  var format = argv.format
+  let format = argv.format
   if (format === 'json') {
     return JSON.stringify(splash)
   }
@@ -45,7 +44,7 @@ function formatLog (splash, argv) {
 }
 
 function cli () {
-  var output = splash()
+  const output = splash()
   if (output) console.log(formatLog(output, argv))
 }
 

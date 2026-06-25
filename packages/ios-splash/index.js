@@ -1,13 +1,15 @@
-'use strict'
-var splash = require('./splash.json')
-var idRegEx = /^Default-?(.*)\.png$/
-var widths = splash.map(function (image) {
+import { createRequire } from 'node:module'
+
+const require = createRequire(import.meta.url)
+const splash = require('./splash.json')
+const idRegEx = /^Default-?(.*)\.png$/
+const widths = splash.map(function (image) {
   return image.width
 })
-var heights = splash.map(function (image) {
+const heights = splash.map(function (image) {
   return image.height
 })
-var ids = splash.map(function (image) {
+const ids = splash.map(function (image) {
   return image.name.match(idRegEx)[1]
 })
 
@@ -28,7 +30,7 @@ function getWidthForSize (size) {
   if (typeof size === 'number') {
     return size
   }
-  var width = Number(size)
+  let width = Number(size)
   if (!isNaN(width) && size !== '') {
     return width
   }
@@ -36,7 +38,7 @@ function getWidthForSize (size) {
   if (width) {
     return width
   }
-  var id = size.match(idRegEx)
+  const id = size.match(idRegEx)
   if (id && id[1]) {
     return widths[ids.indexOf(id[1])]
   }
@@ -44,17 +46,20 @@ function getWidthForSize (size) {
   return null
 }
 
-module.exports = function (options) {
-  options = options || {}
-  var size = options.size
-  var width = options.width
-  var height = options.height
+function iosSplash (options = {}) {
+  const size = options.size
+  const width = options.width
+  const height = options.height
+
   if (!width && !height && !size) {
     return splash
   }
   return getSplashForSize(width || size, height)
 }
 
-module.exports.splash = splash
-module.exports.getSplashForSize = getSplashForSize
-module.exports.getWidthForSize = getWidthForSize
+iosSplash.splash = splash
+iosSplash.getSplashForSize = getSplashForSize
+iosSplash.getWidthForSize = getWidthForSize
+
+export default iosSplash
+export { splash, getSplashForSize, getWidthForSize }

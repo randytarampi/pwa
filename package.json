@@ -2,6 +2,7 @@
   "name": "pwa",
   "description": "A monorepo for all my `*-icon*` and `*-splash*` modules, etc. 'cause Snyk was being a pain with PRs",
   "version": "0.0.1",
+  "type": "module",
   "author": {
     "name": "Randy Tarampi",
     "email": "pwa@randytarampi.ca",
