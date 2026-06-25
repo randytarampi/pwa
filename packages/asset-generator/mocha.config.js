@@ -1,4 +1,4 @@
-module.exports = {
+export default {
     globals: ["expect"],
     sort: true,
     fullTrace: true,

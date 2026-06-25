@@ -1,38 +1,39 @@
 #!/usr/bin/env node
-'use strict'
-var abbrev = require('abbrev')
-var yargs = require('yargs/yargs')
-var hideBin = require('yargs/helpers').hideBin
-var argv = yargs(hideBin(process.argv))
-var pkg = require('../package.json')
-var resize = require('../')
+import abbrev from 'abbrev'
+import yargs from 'yargs/yargs'
+import { hideBin } from 'yargs/helpers'
+import { createRequire } from 'node:module'
+import resize from '../index.js'
+
+const require = createRequire(import.meta.url)
+const pkg = require('../package.json')
+const parser = yargs(hideBin(process.argv))
 
 // help
-argv.help('help')
-argv.alias('h', 'help')
+parser.help('help')
+parser.alias('h', 'help')
 
 // register abbreviated aliases
-var abbrevs = abbrev(['input', 'output', 'help'])
-var aliases = Object.keys(abbrevs)
-aliases.forEach(function (alias) {
+const abbrevs = abbrev(['input', 'output', 'help'])
+Object.keys(abbrevs).forEach(function (alias) {
   if (alias !== abbrevs[alias]) {
-    argv.alias(alias, abbrevs[alias])
+    parser.alias(alias, abbrevs[alias])
   }
 })
 
 // document options
-argv.option('input', {
+parser.option('input', {
   description: 'input path for the original icon file'
 })
-argv.option('output', {
+parser.option('output', {
   description: 'output directory'
 })
 
-argv.usage('Usage: $ android-icon-resize [options]')
+parser.usage('Usage: $ android-icon-resize [options]')
 
-argv.example('$ android-icon-resize -i path/to/icon.png -o path/to/output/')
+parser.example('$ android-icon-resize -i path/to/icon.png -o path/to/output/')
 
-argv = argv.argv
+const argv = parser.argv
 
 function cli (argv) {
   if (argv.version) {

@@ -1,10 +1,14 @@
-const {Buffer} = require("buffer");
-const fs = require("fs");
-const path = require("path");
-const mkdirp = require("mkdirp");
-const rimraf = require("rimraf");
-const { expect } = require("chai");
-const { iconsGenerator, splashScreensGenerator } = require("../../../../src");
+import { Buffer } from "node:buffer";
+import fs from "node:fs";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+import { mkdirp } from "mkdirp";
+import { rimraf } from "rimraf";
+import { expect } from "chai";
+import { iconsGenerator, splashScreensGenerator } from "../../../../src/index.js";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 describe("lib", function () {
     this.timeout(60000);
@@ -12,10 +16,10 @@ describe("lib", function () {
     const output = path.join(__dirname, "../../../tmp");
 
     beforeEach(function () {
-        return mkdirp.mkdirp(output);
+        return mkdirp(output);
     });
 
-    afterEach(function () { return rimraf.rimraf(output); });
+    afterEach(function () { return rimraf(output); });
 
     describe("iconsGenerator", function () {
         it("generates icons for templates (to file)", function () {

@@ -1,10 +1,14 @@
-const { execFile } = require("child_process");
-const fs = require("fs");
-const path = require("path");
-const mkdirp = require("mkdirp");
-const rimraf = require("rimraf");
-const { expect } = require("chai");
-const { images } = require("../../../src");
+import { execFile } from "node:child_process";
+import fs from "node:fs";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+import { mkdirp } from "mkdirp";
+import { rimraf } from "rimraf";
+import { expect } from "chai";
+import { images } from "../../../src/index.js";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 describe("pwa-asset-generator", function () {
     this.timeout(60000);
@@ -14,11 +18,11 @@ describe("pwa-asset-generator", function () {
     const binPath = path.join(__dirname, "../../../bin/pwa-asset-generator.js");
 
     beforeEach(function () {
-        return mkdirp.mkdirp(outputImageDirectoryPath);
+        return mkdirp(outputImageDirectoryPath);
     });
 
     afterEach(function (done) {
-        rimraf.rimraf(outputImageDirectoryPath).then(() => done());
+        rimraf(outputImageDirectoryPath).then(() => done());
     });
 
     it("requires an `inputImagePath`", function (done) {
@@ -49,9 +53,6 @@ describe("pwa-asset-generator", function () {
         };
 
         execFile(binPath, args, options, (error, stdout, stderr) => {
-            console.log(stdout);  
-            console.error(stderr);  
-
             if (error) {
                 return done(error);
             }
@@ -73,9 +74,6 @@ describe("pwa-asset-generator", function () {
         };
 
         execFile(binPath, args, options, (error, stdout, stderr) => {
-            console.log(stdout);  
-            console.error(stderr);  
-
             if (error) {
                 return done(error);
             }

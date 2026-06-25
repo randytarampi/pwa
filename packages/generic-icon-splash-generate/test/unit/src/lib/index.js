@@ -1,4 +1,4 @@
-const { errorMessage, logMessage } = require("../../../../src");
+import { errorMessage, logMessage } from "../../../../src/index.js";
 
 describe("lib", function () {
     describe("errorMessage", function () {

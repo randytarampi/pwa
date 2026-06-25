@@ -1,48 +1,47 @@
 #!/usr/bin/env node
-'use strict'
-var abbrev = require('abbrev')
-var yargs = require('yargs/yargs')
-var hideBin = require('yargs/helpers').hideBin
-var argv = yargs(hideBin(process.argv))
-var splash = require('../')
+import abbrev from 'abbrev'
+import yargs from 'yargs/yargs'
+import { hideBin } from 'yargs/helpers'
+import splash from '../index.js'
+
+const parser = yargs(hideBin(process.argv))
 
 // help
-argv.help('help')
-argv.alias('h', 'help')
+parser.help('help')
+parser.alias('h', 'help')
 
 // register abbreviated aliases
-var abbrevs = abbrev(['width', 'height', 'size', 'format', 'help'])
-var aliases = Object.keys(abbrevs)
-aliases.forEach(function (alias) {
+const abbrevs = abbrev(['width', 'height', 'size', 'format', 'help'])
+Object.keys(abbrevs).forEach(function (alias) {
   if (alias !== abbrevs[alias]) {
-    argv.alias(alias, abbrevs[alias])
+    parser.alias(alias, abbrevs[alias])
   }
 })
 
 // document options
-argv.option('width', {
+parser.option('width', {
   description: 'width of the image in pixels'
 })
-argv.option('height', {
+parser.option('height', {
   description: 'height of the image in pixels'
 })
-argv.option('size', {
+parser.option('size', {
   description: 'string identifiying the splash image'
 })
-argv.option('format', {
+parser.option('format', {
   description: 'format of the output to stdout (csv or json)'
 })
 
-argv.usage('Usage: ios-splash [options]')
+parser.usage('Usage: ios-splash [options]')
 
-argv.example('$ ios-splash --width 320', 'Default~iphone.png,320,480')
-argv.example('$ ios-splash --width 320 --format json', '{"name":"Default~iphone.png","width":320,"height":480}')
-argv.example('$ ios-splash --size ~iphone', 'Default~iphone.png,320,480')
+parser.example('$ ios-splash --width 320', 'Default~iphone.png,320,480')
+parser.example('$ ios-splash --width 320 --format json', '{"name":"Default~iphone.png","width":320,"height":480}')
+parser.example('$ ios-splash --size ~iphone', 'Default~iphone.png,320,480')
 
-argv = argv.argv
+const argv = parser.argv
 
 function formatLog (splash, argv) {
-  var format = argv.format
+  let format = argv.format
   if (format === 'json') {
     return JSON.stringify(splash)
   }
@@ -56,13 +55,13 @@ function formatLog (splash, argv) {
 }
 
 function cli () {
-  var options = {
+  const options = {
     size: argv.size,
     width: argv.width,
     height: argv.height
   }
 
-  var output = splash(options)
+  const output = splash(options)
   if (output) console.log(formatLog(output, argv))
 }
 

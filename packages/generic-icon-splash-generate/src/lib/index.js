@@ -1,10 +1,10 @@
-const sharp = require("sharp");
-const {mkdirp} = require("mkdirp");
-const path = require("path");
-const colors = require("colors");
+import sharp from "sharp";
+import { mkdirp } from "mkdirp";
+import path from "node:path";
+import colors from "colors";
 
-const errorMessage = error => console.error(colors.red("ERROR"), typeof error === "string" ? error : error.message);  
-const logMessage = (...args) => console.log(colors.green("OK"), ...args);  
+export const errorMessage = error => console.error(colors.red("ERROR"), typeof error === "string" ? error : error.message);
+export const logMessage = (...args) => console.log(colors.green("OK"), ...args);
 
 const getFileFormatFromFilename = filename => {
     const extname = path.extname(filename);
@@ -39,8 +39,8 @@ const generateImageForTemplateToFile = (image, outputDirectory, template, format
 
 const generateImageForTemplateToBuffer = (image, outputDirectory, template, format) => {
     return generateImageForTemplateInternal(image, outputDirectory, template, format)
-        .toBuffer({resolveWithObject: true})
-        .then(({data, info}) => {
+        .toBuffer({ resolveWithObject: true })
+        .then(({ data, info }) => {
             logMessage("Image resized to", info.width, "x", info.height, "and returned as buffer");
             return data;
         })
@@ -65,9 +65,14 @@ const generateAssetsGenerator = generator => (templates, input, outputDirectory,
         .then(() => Promise.all(templates.map(template => generator(image, outputDirectory, template, format, type))));
 };
 
-module.exports = {
+export const iconsGenerator = generateAssetsGenerator(generateImageForTemplate);
+export const splashScreensGenerator = generateAssetsGenerator(generateImageForTemplate);
+
+const api = {
     errorMessage,
     logMessage,
-    iconsGenerator: generateAssetsGenerator(generateImageForTemplate),
-    splashScreensGenerator: generateAssetsGenerator(generateImageForTemplate),
+    iconsGenerator,
+    splashScreensGenerator
 };
+
+export default api;
