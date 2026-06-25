@@ -1,10 +1,13 @@
 #!/usr/bin/env node
-'use strict'
-var argv = require('minimist')(process.argv.slice(2))
-var pkg = require('../package.json')
-var generate = require('../')
-var input = argv.input || argv.i
-var output = argv.output || argv.o
+import minimist from 'minimist'
+import { createRequire } from 'node:module'
+import generate from '../index.js'
+
+const require = createRequire(import.meta.url)
+const pkg = require('../package.json')
+const argv = minimist(process.argv.slice(2))
+const input = argv.input || argv.i
+const output = argv.output || argv.o
 
 function help () {
   console.log([

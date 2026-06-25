@@ -1,9 +1,11 @@
-'use strict'
-var splash = require('./splash.json')
-var widths = splash.map(function (image) {
+import { createRequire } from 'node:module'
+
+const require = createRequire(import.meta.url)
+const splash = require('./splash.json')
+const widths = splash.map(function (image) {
   return image.width
 })
-var heights = splash.map(function (image) {
+const heights = splash.map(function (image) {
   return image.height
 })
 
@@ -24,23 +26,26 @@ function getWidthForSize (size) {
   if (typeof size === 'number') {
     return size
   }
-  var width = Number(size)
+  const width = Number(size)
   if (!isNaN(width) && size !== '') {
     return width
   }
   return null
 }
 
-module.exports = function (options) {
-  options = options || {}
-  var width = options.width
-  var height = options.height
+function androidSplash (options = {}) {
+  const width = options.width
+  const height = options.height
+
   if (!width && !height) {
     return splash
   }
   return getSplashForSize(width, height)
 }
 
-module.exports.splash = splash
-module.exports.getSplashForSize = getSplashForSize
-module.exports.getWidthForSize = getWidthForSize
+androidSplash.splash = splash
+androidSplash.getSplashForSize = getSplashForSize
+androidSplash.getWidthForSize = getWidthForSize
+
+export default androidSplash
+export { splash, getSplashForSize, getWidthForSize }

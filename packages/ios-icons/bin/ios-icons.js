@@ -1,44 +1,45 @@
 #!/usr/bin/env node
-'use strict'
-var abbrev = require('abbrev')
-var yargs = require('yargs/yargs')
-var hideBin = require('yargs/helpers').hideBin
-var argv = yargs(hideBin(process.argv))
-var icons = require('../')
-var pkg = require('../package.json')
+import abbrev from 'abbrev'
+import yargs from 'yargs/yargs'
+import { hideBin } from 'yargs/helpers'
+import { createRequire } from 'node:module'
+import icons from '../index.js'
+
+const require = createRequire(import.meta.url)
+const pkg = require('../package.json')
+const parser = yargs(hideBin(process.argv))
 
 // help
-argv.help('help')
-argv.alias('h', 'help')
+parser.help('help')
+parser.alias('h', 'help')
 
 // register abbreviated aliases
-var abbrevs = abbrev(['size', 'format', 'help', 'version'])
-var aliases = Object.keys(abbrevs)
-aliases.forEach(function (alias) {
+const abbrevs = abbrev(['size', 'format', 'help', 'version'])
+Object.keys(abbrevs).forEach(function (alias) {
   if (alias !== abbrevs[alias]) {
-    argv.alias(alias, abbrevs[alias])
+    parser.alias(alias, abbrevs[alias])
   }
 })
 
 // document options
-argv.option('size', {
+parser.option('size', {
   description: 'number of pixels (width) or string identifiying the icon image'
 })
-argv.option('format', {
+parser.option('format', {
   description: 'format of the output to stdout (csv or json)'
 })
 
 // will show up in help
-argv.usage('Usage: ios-icons [options]')
+parser.usage('Usage: ios-icons [options]')
 
-argv.example('$ ios-icons --size 180', 'icon-60@3x.png,180')
-argv.example('$ ios-icons --size 180 --format json', '{"name":"icon-60@3x.png","width":180}')
-argv.example('$ ios-icons --size 60@3x', 'icon-60@3x.png,180')
+parser.example('$ ios-icons --size 180', 'icon-60@3x.png,180')
+parser.example('$ ios-icons --size 180 --format json', '{"name":"icon-60@3x.png","width":180}')
+parser.example('$ ios-icons --size 60@3x', 'icon-60@3x.png,180')
 
-argv = argv.argv
+const argv = parser.argv
 
 function formatLog (icons, argv) {
-  var format = (argv.format || 'csv').toLowerCase()
+  const format = (argv.format || 'csv').toLowerCase()
   if (format === 'json') {
     return JSON.stringify(icons)
   }
@@ -55,11 +56,11 @@ function cli () {
     return console.log(pkg.version)
   }
 
-  var options = {
+  const options = {
     size: argv.size
   }
 
-  var output = icons(options)
+  const output = icons(options)
   if (output) console.log(formatLog(output, argv))
 }
 

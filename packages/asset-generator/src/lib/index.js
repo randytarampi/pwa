@@ -1,26 +1,31 @@
-const androidIcons = require("@randy.tarampi/android-icons");
-const androidSplash = require("@randy.tarampi/android-splash");
-const {
+import androidIcons from "@randy.tarampi/android-icons";
+import androidSplash from "@randy.tarampi/android-splash";
+import {
     iconsGenerator,
-    splashScreensGenerator,
-} = require("@randy.tarampi/generic-icon-splash-generate");
-const iosIcons = require("@randy.tarampi/ios-icons");
-const iosSplash = require("@randy.tarampi/ios-splash");
+    splashScreensGenerator
+} from "@randy.tarampi/generic-icon-splash-generate";
+import iosIcons from "@randy.tarampi/ios-icons";
+import iosSplash from "@randy.tarampi/ios-splash";
 
-const icons = [...androidIcons(), ...iosIcons()];
-const splashes = [...androidSplash(), ...iosSplash()];
-const images = [...icons, ...splashes];
+export const icons = [...androidIcons(), ...iosIcons()];
+export const splashes = [...androidSplash(), ...iosSplash()];
+export const images = [...icons, ...splashes];
 
-const generateIconsGenerator = icons => (inputFile, outputDirectory = process.cwd(), format, type) => iconsGenerator(
-    icons, inputFile, outputDirectory, format, type);
-const generateSplashScreensGenerator = splashes => (
-    inputFile, outputDirectory = process.cwd(), format, type) => splashScreensGenerator(splashes, inputFile,
+const generateIconsGenerator = templates => (inputFile, outputDirectory = process.cwd(), format, type) => iconsGenerator(
+    templates, inputFile, outputDirectory, format, type);
+const generateSplashScreensGenerator = templates => (
+    inputFile, outputDirectory = process.cwd(), format, type) => splashScreensGenerator(templates, inputFile,
     outputDirectory, format, type);
 
-module.exports = {
+export const generateIcons = generateIconsGenerator(icons);
+export const generateSplashScreens = generateSplashScreensGenerator(splashes);
+
+const api = {
     icons,
     splashes,
     images,
-    generateIcons: generateIconsGenerator(icons),
-    generateSplashScreens: generateSplashScreensGenerator(splashes)
+    generateIcons,
+    generateSplashScreens
 };
+
+export default api;

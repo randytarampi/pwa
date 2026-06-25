@@ -1,15 +1,17 @@
-'use strict'
-var icons = require('./icons.json')
-var idRegEx = /^(.*)\.png$/
-var widths = icons.map(function (icon) {
+import { createRequire } from 'node:module'
+
+const require = createRequire(import.meta.url)
+const icons = require('./icons.json')
+const idRegEx = /^(.*)\.png$/
+const widths = icons.map(function (icon) {
   return icon.width
 })
-var ids = icons.map(function (icon) {
+const ids = icons.map(function (icon) {
   return icon.name.match(idRegEx)[1]
 })
 
 function getIconForSize (size) {
-  var width = getWidthForSize(size)
+  const width = getWidthForSize(size)
 
   if (!width) {
     return null
@@ -21,7 +23,7 @@ function getIconForSize (size) {
 function getWidthForSize (size) {
   if (typeof size === 'number') return size
 
-  var width = Number(size)
+  let width = Number(size)
   if (!isNaN(width)) return width
 
   width = widths[ids.indexOf(size)]
@@ -30,14 +32,17 @@ function getWidthForSize (size) {
   return widths[ids.indexOf(size.match(idRegEx)[1])]
 }
 
-module.exports = function (options) {
-  options = options || {}
-  var size = options.size
+function androidIcons (options = {}) {
+  const size = options.size
+
   if (!size) return icons
 
   return getIconForSize(size)
 }
 
-module.exports.icons = icons
-module.exports.getIconForSize = getIconForSize
-module.exports.getWidthForSize = getWidthForSize
+androidIcons.icons = icons
+androidIcons.getIconForSize = getIconForSize
+androidIcons.getWidthForSize = getWidthForSize
+
+export default androidIcons
+export { icons, getIconForSize, getWidthForSize }

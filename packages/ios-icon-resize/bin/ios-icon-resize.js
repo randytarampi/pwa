@@ -1,15 +1,17 @@
 #!/usr/bin/env node
-'use strict'
-var abbrev = require('abbrev')
-var minimist = require('minimist')
-var pkg = require('../package.json')
-var resize = require('../')
+import abbrev from 'abbrev'
+import minimist from 'minimist'
+import { createRequire } from 'node:module'
+import resize from '../index.js'
 
-var opts = {
+const require = createRequire(import.meta.url)
+const pkg = require('../package.json')
+
+const opts = {
   alias: abbrev('help', 'input', 'output', 'version')
 }
 
-var argv = minimist(process.argv.slice(2), opts)
+const argv = minimist(process.argv.slice(2), opts)
 
 function help () {
   console.log([
