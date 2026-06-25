@@ -60,7 +60,10 @@
     "packages/*"
   ],
   "resolutions": {
-    "immutable": "5.1.5"
+    "immutable": "^5.1.7",
+    "@randy.tarampi/js": "portal:../me/packages/js",
+    "@randy.tarampi/lambda-logger": "portal:../me/packages/lambda-logger",
+    "@randy.tarampi/serverless": "portal:../me/packages/serverless"
   },
   "devDependencies": {
     "lerna": "^9.0.7"

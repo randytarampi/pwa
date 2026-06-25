@@ -9,10 +9,10 @@
   },
   "bugs": "https://github.com/randytarampi/pwa-asset-service/issues",
   "dependencies": {
-    "@randy.tarampi/js": "^7.0.0",
-    "@randy.tarampi/lambda-logger": "^7.0.0",
+    "@randy.tarampi/js": "portal:../../../me/packages/js",
+    "@randy.tarampi/lambda-logger": "portal:../../../me/packages/lambda-logger",
     "@randy.tarampi/pwa-asset-generator": "^3.0.4",
-    "@randy.tarampi/serverless": "^7.0.0",
+    "@randy.tarampi/serverless": "portal:../../../me/packages/serverless",
     "busboy": "^1.6.0",
     "kotlin": "^1.9.25",
     "temp": "^0.9.4",
