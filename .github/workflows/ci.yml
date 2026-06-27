@@ -12,7 +12,12 @@ jobs:
           node-version: 24
       - run: corepack enable
       - run: yarn install --immutable
-      - run: yarn test
+      - run: |
+          if [ "$(npx lerna ls --since HEAD...origin/master --json)" = "[]" ]; then
+            yarn test
+          else
+            npx lerna run test --since HEAD...origin/master
+          fi
   jvm:
     runs-on: ubuntu-latest
     steps:
