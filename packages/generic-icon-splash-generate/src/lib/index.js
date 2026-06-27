@@ -1,9 +1,12 @@
+// @ts-check
 import sharp from "sharp";
 import { mkdirp } from "mkdirp";
 import path from "node:path";
 import colors from "colors";
 
+/** @param {*} error - Or an Error. @returns {void} */
 export const errorMessage = error => console.error(colors.red("ERROR"), typeof error === "string" ? error : error.message);
+/** @param {...*} args - Whatever you want to print. @returns {void} */
 export const logMessage = (...args) => console.log(colors.green("OK"), ...args);
 
 const getFileFormatFromFilename = filename => {
@@ -65,7 +68,9 @@ const generateAssetsGenerator = generator => (templates, input, outputDirectory,
         .then(() => Promise.all(templates.map(template => generator(image, outputDirectory, template, format, type))));
 };
 
+/** @type {ReturnType<typeof generateAssetsGenerator>} */
 export const iconsGenerator = generateAssetsGenerator(generateImageForTemplate);
+/** @type {ReturnType<typeof generateAssetsGenerator>} */
 export const splashScreensGenerator = generateAssetsGenerator(generateImageForTemplate);
 
 const api = {
@@ -75,4 +80,5 @@ const api = {
     splashScreensGenerator
 };
 
+/** @type {{errorMessage: typeof errorMessage, logMessage: typeof logMessage, iconsGenerator: typeof iconsGenerator, splashScreensGenerator: typeof splashScreensGenerator}} */
 export default api;
