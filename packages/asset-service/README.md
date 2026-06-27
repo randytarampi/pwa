@@ -1,7 +1,7 @@
 pwa-asset-service
 ---
 
-[![Build status](https://img.shields.io/travis/com/randytarampi/pwa.svg?style=flat-square)](https://travis-ci.com/randytarampi/pwa)
+[![CI](https://github.com/randytarampi/pwa/actions/workflows/ci.yml/badge.svg)](https://github.com/randytarampi/pwa/actions/workflows/ci.yml)
 [![Coverage status](https://img.shields.io/coveralls/randytarampi/pwa.svg?style=flat-square)](https://coveralls.io/github/randytarampi/pwa?branch=master)
 [![Maintainability status](https://img.shields.io/codeclimate/maintainability-percentage/randytarampi/pwa.svg?style=flat-square)](https://codeclimate.com/github/randytarampi/pwa/maintainability)
 [![Analytics](https://ga-beacon.appspot.com/UA-50921068-1/beacon/github/randytarampi/pwa-asset-service/?flat&useReferrer)](https://github.com/igrigorik/ga-beacon)
