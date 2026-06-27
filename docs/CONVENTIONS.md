@@ -1,9 +1,21 @@
 # Conventions
 
+## ESM rules
+
+- ESM is the default for the JS workspaces because the repo is `type: module`.
+- Config files that need CommonJS should use `.cjs`.
+- `asset-service` is Kotlin/Gradle and should keep its own build conventions.
+
+## Dependency management
+
+- Use `workspace:*` for internal workspace deps.
+- Use `portal:` for the cross-repo links into `../me/packages/*`.
+- Keep versions aligned with `syncpack`; don’t let the workspace drift just because it compiles today.
+
+## Baseline
+
 - Use Yarn 4 for installs and workspace scripts.
 - Node 24 is the baseline for the JavaScript packages.
-- JS workspaces should stay ESM and use flat ESLint config where present.
-- Keep Kotlin/Gradle code in `asset-service` on its own build conventions.
 - Follow conventional commits so release tooling stays predictable.
 
 ## Voice and Style
