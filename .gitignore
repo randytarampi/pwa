@@ -78,3 +78,5 @@ config/local.js
 pretest-results.xml
 eslint-results.xml
 sassLint-results.xml
+
+.nx/

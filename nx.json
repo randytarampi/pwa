@@ -1,0 +1,12 @@
+{
+  "targetDefaults": {
+    "lint": {
+      "inputs": ["{projectRoot}/src/**", "{projectRoot}/test/**", "{projectRoot}/eslint.config.js", "{projectRoot}/package.json"],
+      "outputs": []
+    },
+    "test": {
+      "inputs": ["{projectRoot}/src/**", "{projectRoot}/test/**", "{projectRoot}/package.json"],
+      "outputs": ["{projectRoot}/test-results.xml", "{projectRoot}/.nyc_output/"]
+    }
+  }
+}
