@@ -1,6 +1,5 @@
 # Logs
 logs
-*.log
 npm-debug.log*
 
 # Runtime data
@@ -13,9 +12,6 @@ lib-cov
 
 # Coverage directory used by tools like istanbul
 coverage
-
-# nyc test coverage
-.nyc_output
 
 # Grunt intermediate storage (http://gruntjs.com/creating-plugins#storing-task-files)
 .grunt
@@ -40,12 +36,23 @@ jspm_packages
 # Optional REPL history
 .node_repl_history
 
-# Project files
-.idea
-*.iml
-
 # OS files
 .DS_Store
+
+# Generated
+## Node
+.nyc_output/
+*.log
+
+## Testing
+test-results.xml
+
+## JetBrains
+*.iml
+.idea/
+
+## Lerna
+lerna-debug.log
 
 # Compiled resources
 dist
@@ -71,4 +78,3 @@ config/local.js
 pretest-results.xml
 eslint-results.xml
 sassLint-results.xml
-test-results.xml
