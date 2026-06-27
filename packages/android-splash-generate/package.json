@@ -6,8 +6,8 @@
   "bin": "./bin/android-splash-generate.js",
   "bugs": "https://github.com/randytarampi/android-splash-generate/issues",
   "dependencies": {
-    "@randy.tarampi/android-splash": "^2.1.11",
-    "@randy.tarampi/generic-icon-splash-generate": "^3.0.4",
+    "@randy.tarampi/android-splash": "workspace:*",
+    "@randy.tarampi/generic-icon-splash-generate": "workspace:*",
     "minimist": "^1.2.8"
   },
   "devDependencies": {

@@ -6,8 +6,8 @@
   "bin": "./bin/android-icon-resize.js",
   "bugs": "https://github.com/randytarampi/android-icon-resize/issues",
   "dependencies": {
-    "@randy.tarampi/android-icons": "^3.1.11",
-    "@randy.tarampi/generic-icon-splash-generate": "^3.0.4",
+    "@randy.tarampi/android-icons": "workspace:*",
+    "@randy.tarampi/generic-icon-splash-generate": "workspace:*",
     "abbrev": "^5.0.0",
     "yargs": "^18.0.0"
   },
