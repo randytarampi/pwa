@@ -6,8 +6,8 @@
   "bin": "./bin/ios-icon-resize.js",
   "bugs": "https://github.com/randytarampi/ios-icon-resize/issues",
   "dependencies": {
-    "@randy.tarampi/generic-icon-splash-generate": "^3.0.4",
-    "@randy.tarampi/ios-icons": "^4.2.11",
+    "@randy.tarampi/generic-icon-splash-generate": "workspace:*",
+    "@randy.tarampi/ios-icons": "workspace:*",
     "abbrev": "^5.0.0",
     "minimist": "^1.2.8"
   },

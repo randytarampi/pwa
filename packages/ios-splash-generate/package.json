@@ -6,8 +6,8 @@
   "bin": "./bin/ios-splash-generate.js",
   "bugs": "https://github.com/randytarampi/ios-splash-generate/issues",
   "dependencies": {
-    "@randy.tarampi/generic-icon-splash-generate": "^3.0.4",
-    "@randy.tarampi/ios-splash": "^3.1.11",
+    "@randy.tarampi/generic-icon-splash-generate": "workspace:*",
+    "@randy.tarampi/ios-splash": "workspace:*",
     "abbrev": "^5.0.0",
     "minimist": "^1.2.8"
   },

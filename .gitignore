@@ -29,8 +29,10 @@ jspm_packages
 # npm and yarn directories
 .npm
 .yarn/*
+!.yarn/
 !.yarn/releases
 !.yarn/plugins
+!.yarn/constraints.cjs
 .pnp.*
 
 # Optional REPL history
