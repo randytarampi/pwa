@@ -49,11 +49,13 @@
     "cover:collect": "yarn run test:collect; yarn run cover:actual:collect:lcov",
     "coveralls": "cat coverage/lcov.info | coveralls",
     "lint": "eslint .",
+    "knip": "knip",
     "pretest": "lerna run pretest --no-bail",
     "test": "yarn run test:actual; yarn run test:collect",
     "test:actual": "lerna run test --no-bail",
     "test:actual:collect": "junit-merge packages/*/test-results.xml --out ./test-results.xml",
-    "test:collect": "yarn run test:actual:collect"
+    "test:collect": "yarn run test:actual:collect",
+    "prepare": "husky"
   },
   "packageManager": "yarn@4.17.0",
   "workspaces": [
@@ -66,6 +68,8 @@
     "@randy.tarampi/serverless": "portal:../me/packages/serverless"
   },
   "devDependencies": {
-    "lerna": "^9.0.7"
+    "husky": "^9.1.7",
+    "lerna": "^9.0.7",
+    "lint-staged": "^17.0.8"
   }
 }
