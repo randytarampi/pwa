@@ -58,4 +58,4 @@ jobs:
 
       - name: Publish packages
         if: ${{ steps.changed.outputs.has_changes == 'true' }}
-        run: npx lerna publish from-git --yes --provenance
+        run: npx lerna publish from-git --yes
