@@ -4881,13 +4881,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"async@npm:~1.5.2":
-  version: 1.5.2
-  resolution: "async@npm:1.5.2"
-  checksum: 10c0/9ee84592c393aad1047d1223004317ecc65a9a3f76101e0f4614a0818eac962e666510353400a3c9ea158df540579a293f486f3578e918c5e90a0f5ed52e8aea
-  languageName: node
-  linkType: hard
-
 "asynckit@npm:0.4.0, asynckit@npm:^0.4.0":
   version: 0.4.0
   resolution: "asynckit@npm:0.4.0"
@@ -5844,20 +5837,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"codeclimate-test-reporter@npm:^0.5.1":
-  version: 0.5.1
-  resolution: "codeclimate-test-reporter@npm:0.5.1"
-  dependencies:
-    async: "npm:~1.5.2"
-    commander: "npm:2.9.0"
-    lcov-parse: "npm:0.0.10"
-    request: "npm:~2.88.0"
-  bin:
-    codeclimate-test-reporter: ./bin/codeclimate.js
-  checksum: 10c0/7c8d30f200d330b76fef54c204d60b597302142545eadd62fd623ef264a659b5dcebb023d02b861e1256bb333d896feed675c0f9aff00d235a6fcea2bbfad086
-  languageName: node
-  linkType: hard
-
 "color-convert@npm:2.0.1, color-convert@npm:^2.0.1":
   version: 2.0.1
   resolution: "color-convert@npm:2.0.1"
@@ -5922,15 +5901,6 @@ __metadata:
   dependencies:
     delayed-stream: "npm:~1.0.0"
   checksum: 10c0/0dbb829577e1b1e839fa82b40c07ffaf7de8a09b935cadd355a73652ae70a88b4320db322f6634a4ad93424292fa80973ac6480986247f1734a1137debf271d5
-  languageName: node
-  linkType: hard
-
-"commander@npm:2.9.0":
-  version: 2.9.0
-  resolution: "commander@npm:2.9.0"
-  dependencies:
-    graceful-readlink: "npm:>= 1.0.0"
-  checksum: 10c0/56bcda1e47f453016ed25d9f300bed9e622842a5515802658adb62792fa2ff9af6ee3f9ff16e058d7b20aacc78fb3baa3e02f982414bae1fb5f198c7cb41d5ad
   languageName: node
   linkType: hard
 
@@ -8785,13 +8755,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"graceful-readlink@npm:>= 1.0.0":
-  version: 1.0.1
-  resolution: "graceful-readlink@npm:1.0.1"
-  checksum: 10c0/c53e703257e77f8a4495ff0d476c09aa413251acd26684f4544771b15e0ad361d1075b8f6d27b52af6942ea58155a9bbdb8125d717c70df27117460fee295a54
-  languageName: node
-  linkType: hard
-
 "graphemer@npm:^1.4.0":
   version: 1.4.0
   resolution: "graphemer@npm:1.4.0"
@@ -10589,13 +10552,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lcov-parse@npm:0.0.10":
-  version: 0.0.10
-  resolution: "lcov-parse@npm:0.0.10"
-  checksum: 10c0/2fb7f691e991936ea3f41f3649936780ba22d99f7db54e370277236ea7210eef1fd12337d61ff274341a87b0711b702a085774ada9fc496df29d7c26b9bab626
-  languageName: node
-  linkType: hard
-
 "lcov-parse@npm:^1.0.0":
   version: 1.0.0
   resolution: "lcov-parse@npm:1.0.0"
@@ -12068,16 +12024,6 @@ __metadata:
   dependencies:
     npm-normalize-package-bin: "npm:^5.0.0"
   checksum: 10c0/6408b38343b51d5e329a0a4af4cf19d7872bc9099f6f7553fbadb5d56e69092d5af76fe501fa0817fcb8af29cf3cc8f8806a88031580f54068e5e80abf1ca870
-  languageName: node
-  linkType: hard
-
-"npm-check-updates@npm:^22.2.7":
-  version: 22.2.8
-  resolution: "npm-check-updates@npm:22.2.8"
-  bin:
-    ncu: build/cli.js
-    npm-check-updates: build/cli.js
-  checksum: 10c0/f499dcede11816a18b6590bafd752b869f8042a2a5f9ef1019e2d0b1cc98dc43c39724ca526c1ceec574ead1e71d5c2e9101a7ff9777ba316400fd26eace5e65
   languageName: node
   linkType: hard
 
@@ -13849,14 +13795,12 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "pwa@workspace:."
   dependencies:
-    codeclimate-test-reporter: "npm:^0.5.1"
     coveralls: "npm:^3.1.1"
     husky: "npm:^9.1.7"
     junit-merge: "npm:^2.0.0"
     knip: "npm:^6.22.0"
     lerna: "npm:^9.0.7"
     lint-staged: "npm:^17.0.8"
-    npm-check-updates: "npm:^22.2.7"
     syncpack: "npm:^15.3.2"
   languageName: unknown
   linkType: soft
@@ -14251,7 +14195,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"request@npm:^2.88.2, request@npm:~2.88.0":
+"request@npm:^2.88.2":
   version: 2.88.2
   resolution: "request@npm:2.88.2"
   dependencies:
