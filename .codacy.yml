@@ -1,0 +1,5 @@
+---
+exclude_paths:
+  - "packages/*/dist/**"
+  - "packages/asset-service/build/**"
+  - "packages/asset-service/.gradle/**"
