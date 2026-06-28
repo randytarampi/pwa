@@ -3531,7 +3531,7 @@ __metadata:
     dms-conversion: "npm:^3.1.1"
     georaptor: "github:randytarampi/georaptor#me-release"
     haversine: "npm:^1.1.1"
-    immutable: "github:randytarampi/immutable-js#me-release"
+    immutable: "npm:^5.1.7"
     latlon-geohash: "npm:^1.1.0"
     libphonenumber-js: "npm:^1.8.4"
     lodash: "npm:^4.17.20"
