@@ -23,3 +23,7 @@
 - `ios-splash-generate` → `generic-icon-splash-generate`, `ios-splash`.
 - `asset-service` sits beside the JS graph and depends on `asset-generator` plus `../me/packages/js`, `lambda-logger`, and `serverless` through `portal:` links.
 - Keep the Kotlin/Gradle build isolated; don’t make JS assumptions bleed into it.
+
+## CI/CD Pipeline
+- `.github/workflows/ci.yml` runs tests on PRs on Node 24.
+- `.github/workflows/release.yml` does master-branch semantic-release with OIDC trusted publishing.
