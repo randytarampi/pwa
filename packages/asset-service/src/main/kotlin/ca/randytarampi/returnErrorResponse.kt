@@ -7,6 +7,7 @@ fun returnErrorResponse(
     event: dynamic,
     context: dynamic,
     callback: (error: Throwable?, response: Response) -> Unit,
-): ((error: dynamic) -> Unit) = { _ ->
-    returnErrorResponseForLogger(logger)(event, context, callback)
-}
+): ((error: dynamic) -> Unit) =
+    { _ ->
+        returnErrorResponseForLogger(logger)(event, context, callback)
+    }

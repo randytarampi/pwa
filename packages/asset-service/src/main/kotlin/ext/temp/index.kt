@@ -18,8 +18,13 @@ external fun track()
 external fun mkdir(prefix: dynamic, callback: (error: Throwable?, createdDirectory: String) -> Unit)
 external fun mkdirSync(prefix: dynamic): String
 
-external fun open(prefix: dynamic, callback: (error: Throwable?, createdFile: TempModuleCreationOutput) -> Unit)
+external fun open(
+    prefix: dynamic,
+    callback: (error: Throwable?, createdFile: TempModuleCreationOutput) -> Unit,
+)
+
 external fun openSync(prefix: dynamic): TempModuleCreationOutput
 
 external fun cleanup(callback: (error: Throwable?, cleanupMetadata: TempModuleCleanupOutput) -> Unit)
+
 external fun cleanupSync(): TempModuleCleanupOutput

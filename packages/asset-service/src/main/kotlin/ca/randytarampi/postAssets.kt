@@ -35,67 +35,73 @@ suspend fun generateSplashScreens(
     ).await()
 
 @JsName("postAssets")
-fun postAssets(event: dynamic, context: dynamic, callback: (Throwable?, dynamic) -> Unit) = GlobalScope.async {
-    try {
-        configureEnvironment()
+fun postAssets(
+    event: dynamic,
+    context: dynamic,
+    callback: (Throwable?, dynamic) -> Unit,
+) =
+    GlobalScope.async {
+        try {
+            configureEnvironment()
 
-        logger.debug(
-            "%s@%s handling request %s",
-            context.functionName,
-            context.functionVersion,
-            context.awsRequestId,
-            event,
-            context,
-        )
-
-        if (event.source == "serverless-plugin-warmup") {
-            callbackOnWarmup(event, context, callback)
-            return@async
-        }
-
-        if (event.headers["Content-Type"] == null && event.headers["content-type"] == null) {
-            returnErrorResponse(event, context, callback)(
-                RequestError("Missing Content-Type header", RequestError.codes.badRequest),
+            logger.debug(
+                "%s@%s handling request %s",
+                context.functionName,
+                context.functionVersion,
+                context.awsRequestId,
+                event,
+                context,
             )
-            return@async
-        }
 
-        val parsedMultipartEventFiles = parseFilesFromMultipartEvent(event)
-        val parsedIconFile = parsedMultipartEventFiles.icon[Object.keys(parsedMultipartEventFiles.icon)[0]]
-        val parsedSplashFile = parsedMultipartEventFiles.splash[Object.keys(parsedMultipartEventFiles.splash)[0]]
+            if (event.source == "serverless-plugin-warmup") {
+                callbackOnWarmup(event, context, callback)
+                return@async
+            }
 
-        val tempDirectoryPath = createTempDirectory()
-        generateIcons(
-            inputFile = parsedIconFile.data,
-            outputDirectory = tempDirectoryPath,
-            format = null,
-            type = null,
-        )
-        generateSplashScreens(
-            inputFile = parsedSplashFile.data,
-            outputDirectory = tempDirectoryPath,
-            format = null,
-            type = null,
-        )
+            if (event.headers["Content-Type"] == null && event.headers["content-type"] == null) {
+                returnErrorResponse(event, context, callback)(
+                    RequestError("Missing Content-Type header", RequestError.codes.badRequest),
+                )
+                return@async
+            }
 
-        val zippedBuffer = zipDirectory(tempDirectoryPath)
+            val parsedMultipartEventFiles = parseFilesFromMultipartEvent(event)
+            val parsedIconFile = parsedMultipartEventFiles.icon[Object.keys(parsedMultipartEventFiles.icon)[0]]
+            val parsedSplashFile = parsedMultipartEventFiles.splash[Object.keys(parsedMultipartEventFiles.splash)[0]]
 
-        callback(
-            null,
-            responseBuilder(
-                body = zippedBuffer.toString("base64"),
-                statusCode = 200,
-                isBase64Encoded = true,
-                passedHeaders = js(
-                    """({
+            val tempDirectoryPath = createTempDirectory()
+            generateIcons(
+                inputFile = parsedIconFile.data,
+                outputDirectory = tempDirectoryPath,
+                format = null,
+                type = null,
+            )
+            generateSplashScreens(
+                inputFile = parsedSplashFile.data,
+                outputDirectory = tempDirectoryPath,
+                format = null,
+                type = null,
+            )
+
+            val zippedBuffer = zipDirectory(tempDirectoryPath)
+
+            callback(
+                null,
+                responseBuilder(
+                    body = zippedBuffer.toString("base64"),
+                    statusCode = 200,
+                    isBase64Encoded = true,
+                    passedHeaders =
+                        js(
+                            """({
                         "Content-Type": "application/zip",
                         "Content-Disposition": "attachment; filename=assets-.zip"
                     })""",
+                        ),
                 ),
-            ),
-        )
-    } catch (error: Throwable) {
-        returnErrorResponse(event, context, callback)(error)
-        throw error
+            )
+        } catch (error: Throwable) {
+            returnErrorResponse(event, context, callback)(error)
+            throw error
+        }
     }
-}

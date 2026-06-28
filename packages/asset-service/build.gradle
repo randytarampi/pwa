@@ -44,12 +44,13 @@ node {
 }
 
 ktlint {
-    ignoreFailures = true
-    disabledRules = ["filename"]
+    ignoreFailures = false
+    disabledRules = ["filename", "standard:filename"]
+    baseline = file("ktlint-baseline.xml")
 
     filter {
-        exclude("src/main/kotlin/ext/**")
-        exclude("src/test/kotlin/ext/**")
+        include("src/main/kotlin/ca/randytarampi/**/*.kt")
+        include("src/test/kotlin/ca/randytarampi/**/*.kt")
     }
 }
 

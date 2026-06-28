@@ -1,6 +1,6 @@
 package ca.randytarampi
 
-import ext.zip_dir.zipdir
+import ext.zipDir.zipdir
 import kotlin.coroutines.resume
 import kotlin.coroutines.resumeWithException
 import kotlin.coroutines.suspendCoroutine
