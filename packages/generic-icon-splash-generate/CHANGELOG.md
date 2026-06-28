@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.5](https://github.com/randytarampi/generic-icon-splash-generate/compare/@randy.tarampi/generic-icon-splash-generate@3.0.4...@randy.tarampi/generic-icon-splash-generate@3.0.5) (2026-06-28)
+
+
+### Bug Fixes
+
+* upgrade sharp from 0.26.3 to 0.27.0 ([7b2a20e](https://github.com/randytarampi/generic-icon-splash-generate/commit/7b2a20e3d6e50c7aa13faab80ad0d8642f00ec04))
+* upgrade sharp from 0.27.2 to 0.28.0 ([0494d24](https://github.com/randytarampi/generic-icon-splash-generate/commit/0494d2476a1946689c88901bac5103087a5c53a1))
+
+
+
+
+
 ## [3.0.4](https://github.com/randytarampi/generic-icon-splash-generate/compare/@randy.tarampi/generic-icon-splash-generate@3.0.3...@randy.tarampi/generic-icon-splash-generate@3.0.4) (2020-11-22)
 
 **Note:** Version bump only for package @randy.tarampi/generic-icon-splash-generate

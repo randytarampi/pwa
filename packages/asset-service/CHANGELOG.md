@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.6](https://github.com/randytarampi/pwa-asset-service/compare/@randy.tarampi/pwa-asset-service@0.1.5...@randy.tarampi/pwa-asset-service@0.1.6) (2026-06-28)
+
+
+### Bug Fixes
+
+* swap portal deps to published version ranges. CI was broken by Yarn hardened mode + portal deps. 🤝 ([b7910e1](https://github.com/randytarampi/pwa-asset-service/commit/b7910e124c978fdd6a2ff5d29e11b71371cd00a9))
+
+
+
+
+
 ## [0.1.5](https://github.com/randytarampi/pwa-asset-service/compare/@randy.tarampi/pwa-asset-service@0.1.4...@randy.tarampi/pwa-asset-service@0.1.5) (2020-11-22)
 
 **Note:** Version bump only for package @randy.tarampi/pwa-asset-service

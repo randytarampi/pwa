@@ -1,7 +1,7 @@
 {
   "name": "@randy.tarampi/ios-icon-resize",
   "description": "Create all required icons from one icon. Right size, right file name.",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "author": "Randy Tarampi <randy.tarampi@gmail.com>",
   "bin": "./bin/ios-icon-resize.js",
   "bugs": "https://github.com/randytarampi/ios-icon-resize/issues",
