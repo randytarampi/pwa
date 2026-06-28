@@ -28,7 +28,7 @@ gen_enforced_dependency(WorkspaceCwd, 'eslint', '^10.5.0', 'devDependencies') :-
 gen_enforced_dependency(WorkspaceCwd, 'tape', '^5.10.2', 'devDependencies') :-
   workspace_has_dependency(WorkspaceCwd, 'tape', _, 'devDependencies').
 
-gen_enforced_field('.', resolutions, "{\"immutable\":\"^5.1.7\",\"@randy.tarampi/js\":\"portal:../me/packages/js\",\"@randy.tarampi/lambda-logger\":\"portal:../me/packages/lambda-logger\",\"@randy.tarampi/serverless\":\"portal:../me/packages/serverless\"}").
+gen_enforced_field('.', resolutions, "{\"immutable\":\"^5.1.7\"}").
 
 gen_enforced_field(WorkspaceCwd, resolutions, "{}") :-
   workspace_ident(WorkspaceCwd, Ident),
