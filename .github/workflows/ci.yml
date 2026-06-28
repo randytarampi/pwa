@@ -37,7 +37,10 @@ jobs:
         with:
           path: .nx
           key: nx-${{ runner.os }}-${{ hashFiles('yarn.lock') }}
-      - run: yarn install
+      - name: Install dependencies
+        env:
+          YARN_ENABLE_HARDENED_MODE: false
+        run: yarn install
       - run: |
           if [ "$(npx lerna ls --since HEAD...origin/master --json)" = "[]" ]; then
             yarn test
@@ -48,8 +51,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Checkout sibling me repo
+        run: git clone --depth 1 https://x-access-token:${{ github.token }}@github.com/randytarampi/me.git ../me
       - run: corepack enable
-      - run: yarn install
+      - name: Install dependencies
+        env:
+          YARN_ENABLE_HARDENED_MODE: false
+        run: yarn install
       - uses: actions/setup-java@v4
         with:
           distribution: temurin
