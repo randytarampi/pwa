@@ -17,7 +17,7 @@
     "syncpack": "^15.3.2"
   },
   "engines": {
-    "node": ">=24"
+    "node": ">=20"
   },
   "keywords": [
     "android",
@@ -35,7 +35,6 @@
     "splash"
   ],
   "license": "MIT",
-  "private": true,
   "publishConfig": {
     "access": "public"
   },

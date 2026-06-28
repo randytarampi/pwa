@@ -1,49 +1,60 @@
-name: Release
+name: release
 
 on:
   workflow_run:
-    workflows: ["CI"]
-    branches: [master]
-    types: [completed]
+    workflows:
+      - CI
+    branches:
+      - master
+    types:
+      - completed
+
+concurrency:
+  group: release-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+  id-token: write
 
 jobs:
   release:
-    runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' && github.actor != 'github-actions[bot]' }}
     environment: production
-    if: ${{ github.event.workflow_run.conclusion == 'success' }}
-    permissions:
-      contents: write
-      id-token: write
+    runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Run `git checkout`
         uses: actions/checkout@v4
         with:
-          ref: ${{ github.event.workflow_run.head_sha }}
           fetch-depth: 0
+          ref: ${{ github.event.workflow_run.head_sha }}
 
-      - name: Setup Node.js 24
+      - name: Setup node@24
         uses: actions/setup-node@v4
         with:
-          node-version: 24
+          node-version: '24'
+          cache: yarn
+          cache-dependency-path: yarn.lock
 
       - name: Enable Corepack
         run: corepack enable
 
-      - name: Cache Yarn
-        uses: actions/cache@v4
-        with:
-          path: |
-            .yarn/cache
-            node_modules
-          key: yarn-${{ runner.os }}-${{ hashFiles('yarn.lock') }}
-          restore-keys: |
-            yarn-${{ runner.os }}-
-
       - name: Install dependencies
         run: yarn install --immutable
 
+      - name: Check for publishable changes
+        id: changed
+        run: |
+          if [ -n "$(npx lerna changed -alp || true)" ]; then
+            echo "has_changes=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "has_changes=false" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Version packages
-        run: npx lerna version --yes
+        if: ${{ steps.changed.outputs.has_changes == 'true' }}
+        run: npx lerna version --conventional-commits --yes
 
       - name: Publish packages
-        run: npx lerna publish from-git --provenance --yes
+        if: ${{ steps.changed.outputs.has_changes == 'true' }}
+        run: npx lerna publish from-git --yes --provenance
