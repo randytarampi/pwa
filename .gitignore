@@ -81,4 +81,6 @@ pretest-results.xml
 eslint-results.xml
 sassLint-results.xml
 
+.codegraph/
+
 .nx/
