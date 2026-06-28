@@ -25,6 +25,9 @@ Details:
 - [Limitations](docs/LIMITATIONS.md)
 - CodeGraph: semantic code index available. Run `codegraph status` to check, `codegraph init` to rebuild. MCP tools available in OpenCode.
 
+Setup / onboarding:
+- Run `codegraph init` after cloning to enable semantic code search via CodeGraph.
+
 ## How to add/enrich/update guidance in this repo
 - Keep this file as the entry point; expand the focused docs instead.
 - Update `ARCHITECTURE.md` when package layout or dependencies change.
