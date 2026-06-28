@@ -1,7 +1,7 @@
 {
   "name": "@randy.tarampi/android-splash-generate",
   "description": "Generate all required splash screen images from one source. Right size, right file name.",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "author": "Randy Tarampi <randy.tarampi@gmail.com>",
   "bin": "./bin/android-splash-generate.js",
   "bugs": "https://github.com/randytarampi/android-splash-generate/issues",

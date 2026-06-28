@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.1.13](https://github.com/randytarampi/android-splash/compare/@randy.tarampi/android-splash@2.1.12...@randy.tarampi/android-splash@2.1.13) (2026-06-28)
+
+
+### Bug Fixes
+
+* delete zombie .snyk files, gate release on CI, add --provenance. Triple threat. 🎯 ([9f87719](https://github.com/randytarampi/android-splash/commit/9f87719f95cf1152891c25db43d68dcaa6aeaefa))
+
+
+
+
+
 ## [2.1.12](https://github.com/randytarampi/android-splash/compare/@randy.tarampi/android-splash@2.1.11...@randy.tarampi/android-splash@2.1.12) (2026-06-28)
 
 **Note:** Version bump only for package @randy.tarampi/android-splash

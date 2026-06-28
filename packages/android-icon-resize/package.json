@@ -1,7 +1,7 @@
 {
   "name": "@randy.tarampi/android-icon-resize",
   "description": "Create all required icons from one icon. Right size, right file name.",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "author": "Randy Tarampi <randy.tarampi@gmail.com>",
   "bin": "./bin/android-icon-resize.js",
   "bugs": "https://github.com/randytarampi/android-icon-resize/issues",
