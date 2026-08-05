@@ -20,8 +20,8 @@
   },
   "devDependencies": {
     "@jetbrains/ts2kt-automator": "^2.0.0",
-    "@semantic-release/changelog": "^6.0.3",
-    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/changelog": "^7.0.0",
+    "@semantic-release/git": "^11.0.1",
     "cross-env": "^10.1.0",
     "kotlin-test": "^1.9.25",
     "mocha": "^11.7.6",
