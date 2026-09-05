@@ -12,7 +12,7 @@
      \/__/       \/__/         \/__/                  \/__/           \/__/       \/__/       \/__/         \/__/         \/__/       \/__/       \/__/         \/__/
 ```
 
-[![CI](https://img.shields.io/github/actions/workflow/status/randytarampi/pwa/ci.yml?branch=main&style=flat-square&label=CI)](https://github.com/randytarampi/pwa/actions/workflows/ci.yml)
+[![CI](https://img.shields.io/github/actions/workflow/status/randytarampi/pwa/ci.yml?branch=main&style=flat-square&label=CI)](https://github.com/randytarampi/pwa/actions/workflows/ci.yml) [![Qlty Coverage](https://qlty.sh/gh/randytarampi/projects/pwa/coverage.svg)](https://qlty.sh/gh/randytarampi/projects/pwa)
 [![License](https://img.shields.io/github/license/randytarampi/pwa?style=flat-square)](LICENSE) [![Issues](https://img.shields.io/github/issues/randytarampi/pwa?style=flat-square)](https://github.com/randytarampi/pwa/issues) [![Pull requests](https://img.shields.io/github/issues-pr/randytarampi/pwa?style=flat-square)](https://github.com/randytarampi/pwa/pulls)
 [![Maintained with Lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg?style=flat-square)](https://lernajs.io/)
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/randytarampi/pwa.svg?style=flat-square)
