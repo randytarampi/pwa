@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.1.14](https://github.com/randytarampi/ios-splash/compare/%40randy.tarampi%2Fios-splash%403.1.13...%40randy.tarampi%2Fios-splash%403.1.14) (2026-09-05)
+
+### Bug Fixes
+
+* **ci:** update lerna since refs to origin/main ([901d893](https://github.com/randytarampi/ios-splash/commit/901d8934d7f4c753eb444da4922fd9556eea06e5))
+
+
 ## [3.1.13](https://github.com/randytarampi/ios-splash/compare/@randy.tarampi/ios-splash@3.1.12...@randy.tarampi/ios-splash@3.1.13) (2026-06-28)
 
 

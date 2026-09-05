@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.7](https://github.com/randytarampi/android-icon-resize/compare/%40randy.tarampi%2Fandroid-icon-resize%400.1.6...%40randy.tarampi%2Fandroid-icon-resize%400.1.7) (2026-09-05)
+
+### Bug Fixes
+
+* **ci:** update lerna since refs to origin/main ([901d893](https://github.com/randytarampi/android-icon-resize/commit/901d8934d7f4c753eb444da4922fd9556eea06e5))
+
+
 ## [0.1.6](https://github.com/randytarampi/android-icon-resize/compare/@randy.tarampi/android-icon-resize@0.1.5...@randy.tarampi/android-icon-resize@0.1.6) (2026-06-28)
 
 

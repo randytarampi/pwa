@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.2.14](https://github.com/randytarampi/ios-icons/compare/%40randy.tarampi%2Fios-icons%404.2.13...%40randy.tarampi%2Fios-icons%404.2.14) (2026-09-05)
+
+### Bug Fixes
+
+* **ci:** update lerna since refs to origin/main ([901d893](https://github.com/randytarampi/ios-icons/commit/901d8934d7f4c753eb444da4922fd9556eea06e5))
+
+
 ## [4.2.13](https://github.com/randytarampi/ios-icons/compare/@randy.tarampi/ios-icons@4.2.12...@randy.tarampi/ios-icons@4.2.13) (2026-06-28)
 
 

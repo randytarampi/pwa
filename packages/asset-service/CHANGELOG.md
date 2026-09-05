@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.8](https://github.com/randytarampi/pwa-asset-service/compare/%40randy.tarampi%2Fpwa-asset-service%400.1.7...%40randy.tarampi%2Fpwa-asset-service%400.1.8) (2026-09-05)
+
+### Bug Fixes
+
+* **ci:** stop ignoring ktlint violations. Lint is not optional. 🧹 ([d945c8e](https://github.com/randytarampi/pwa-asset-service/commit/d945c8e03a0ffc5e1d6f7f05b196d270212270c5))
+* **ci:** update lerna since refs to origin/main ([901d893](https://github.com/randytarampi/pwa-asset-service/commit/901d8934d7f4c753eb444da4922fd9556eea06e5))
+* **kotlin:** conform asset-service file naming to pascalcase ([6f4511d](https://github.com/randytarampi/pwa-asset-service/commit/6f4511df044477e02ad300fc8a1ed3aa24152251))
+
+
 ## [0.1.7](https://github.com/randytarampi/pwa-asset-service/compare/@randy.tarampi/pwa-asset-service@0.1.6...@randy.tarampi/pwa-asset-service@0.1.7) (2026-06-28)
 
 
