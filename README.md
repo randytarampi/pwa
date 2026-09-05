@@ -12,7 +12,7 @@
      \/__/       \/__/         \/__/                  \/__/           \/__/       \/__/       \/__/         \/__/         \/__/       \/__/       \/__/         \/__/
 ```
 
-[![CI](https://github.com/randytarampi/pwa/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/randytarampi/pwa/actions/workflows/ci.yml)
+[![CI](https://img.shields.io/github/actions/workflow/status/randytarampi/pwa/ci.yml?branch=main&style=flat-square&label=CI)](https://github.com/randytarampi/pwa/actions/workflows/ci.yml)
 [![Maintained with Lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg?style=flat-square)](https://lernajs.io/)
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/randytarampi/pwa.svg?style=flat-square)
 ![GitHub repo size in bytes](https://img.shields.io/github/repo-size/randytarampi/pwa.svg?style=flat-square)

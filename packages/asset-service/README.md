@@ -1,9 +1,9 @@
 pwa-asset-service
 ---
 
-[![CI](https://github.com/randytarampi/pwa/actions/workflows/ci.yml/badge.svg)](https://github.com/randytarampi/pwa/actions/workflows/ci.yml)
+[![CI](https://img.shields.io/github/actions/workflow/status/randytarampi/pwa/ci.yml?branch=main&style=flat-square&label=CI)](https://github.com/randytarampi/pwa/actions/workflows/ci.yml)
 [![Coverage status](https://img.shields.io/coveralls/randytarampi/pwa.svg?style=flat-square)](https://coveralls.io/github/randytarampi/pwa?branch=main)
-[![Maintainability status](https://img.shields.io/codeclimate/maintainability-percentage/randytarampi/pwa.svg?style=flat-square)](https://codeclimate.com/github/randytarampi/pwa/maintainability)
+[![CodeQL](https://img.shields.io/github/actions/workflow/status/randytarampi/pwa/codeql.yml?branch=main&style=flat-square&label=CodeQL)](https://github.com/randytarampi/pwa/security/code-scanning)
 [![Analytics](https://ga-beacon.appspot.com/UA-50921068-1/beacon/github/randytarampi/pwa-asset-service/?flat&useReferrer)](https://github.com/igrigorik/ga-beacon)
 
 
