@@ -11,7 +11,7 @@ Canonical commands:
 - `yarn coveralls` — publish coverage when needed
 
 Constraints and sharp edges:
-- Node 24, Yarn 4.17, and Lerna 9 are the baseline.
+- Node 24, Yarn 4.18, and Lerna 10 are the baseline.
 - JS workspaces are ESM; config files that need CommonJS stay `.cjs`.
 - `packages/asset-service` is Kotlin/Gradle and keeps its own build conventions.
 - The JS side is split into 10 generator/icon/splash packages plus `asset-generator`.
