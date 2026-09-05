@@ -64,7 +64,7 @@ jobs:
 
       - name: Build asset-service
         working-directory: packages/asset-service
-        run: ./gradlew build -x test -x nodeTest
+        run: ./gradlew --no-daemon build -x test -x nodeTest
 
       - name: Perform CodeQL analysis
         uses: github/codeql-action/analyze@v3
