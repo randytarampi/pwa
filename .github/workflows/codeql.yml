@@ -45,10 +45,14 @@ jobs:
         uses: github/codeql-action/init@v3
         with:
           languages: javascript-typescript,kotlin
+          build-mode: autobuild
 
       - name: Build asset-service
         working-directory: packages/asset-service
         run: ./gradlew build -x test
+
+      - name: Autobuild CodeQL targets
+        uses: github/codeql-action/autobuild@v3
 
       - name: Perform CodeQL analysis
         uses: github/codeql-action/analyze@v3
