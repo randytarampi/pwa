@@ -5,7 +5,7 @@
 [![npm license](https://img.shields.io/npm/l/@randy.tarampi/ios-splash-generate.svg?registry_uri=https%3A%2F%2Fregistry.npmjs.com&style=flat-square)](https://www.npmjs.com/package/@randy.tarampi/ios-splash-generate)
 [![CI](https://img.shields.io/github/actions/workflow/status/randytarampi/pwa/ci.yml?branch=main&style=flat-square&label=CI)](https://github.com/randytarampi/pwa/actions/workflows/ci.yml)
 [![Coverage status](https://img.shields.io/coveralls/randytarampi/pwa.svg?style=flat-square)](https://coveralls.io/github/randytarampi/pwa?branch=main)
-[![Maintainability status](https://img.shields.io/codeclimate/maintainability-percentage/randytarampi/pwa.svg?style=flat-square)](https://codeclimate.com/github/randytarampi/pwa/maintainability)
+[![Qlty Maintainability](https://qlty.sh/gh/randytarampi/projects/pwa/maintainability.svg?style=flat-square)](https://qlty.sh/gh/randytarampi/pwa)
 [![Analytics](https://ga-beacon.appspot.com/UA-50921068-1/beacon/github/randytarampi/pwa/?flat&useReferrer)](https://github.com/igrigorik/ga-beacon)
 
 
