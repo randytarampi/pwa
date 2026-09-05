@@ -45,7 +45,6 @@ jobs:
         uses: github/codeql-action/init@v3
         with:
           languages: javascript-typescript,kotlin
-          build-mode: manual
 
       - name: Build asset-service
         working-directory: packages/asset-service
