@@ -15,7 +15,7 @@
     "syncpack": "^15.3.2"
   },
   "engines": {
-    "node": ">=20"
+    "node": ">=24"
   },
   "keywords": [
     "android",
@@ -45,10 +45,11 @@
     "cover:actual:collect:lcov": "mkdir -p .nyc_output/ coverage/ && lerna exec -- \"if [ -d \"./.nyc_output\" ]; then cp -r .nyc_output ../..; fi;\" && nyc report --reporter=lcov",
     "cover:collect": "yarn run test:collect; yarn run cover:actual:collect:lcov",
     "coveralls": "cat coverage/lcov.info | coveralls",
-    "lint": "eslint .",
+    "lint": "eslint . --no-config-lookup --config eslint.config.js",
+    "verify": "yarn lint && yarn test",
     "knip": "knip",
     "pretest": "lerna run pretest --no-bail",
-    "test": "yarn run test:actual; yarn run test:collect",
+    "test": "yarn run test:actual && yarn run test:collect",
     "test:actual": "lerna run test --no-bail",
     "test:actual:collect": "junit-merge packages/*/test-results.xml --out ./test-results.xml",
     "test:collect": "yarn run test:actual:collect",
@@ -59,6 +60,7 @@
     "packages/*"
   ],
   "devDependencies": {
+    "eslint": "^10.5.0",
     "husky": "^9.1.7",
     "knip": "^6.22.0",
     "lerna": "^9.0.7",

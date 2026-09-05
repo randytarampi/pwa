@@ -42,10 +42,10 @@ jobs:
           YARN_ENABLE_HARDENED_MODE: false
         run: yarn install
       - run: |
-          if [ "$(npx lerna ls --since HEAD...origin/master --json)" = "[]" ]; then
+          if [ "$(npx lerna ls --since HEAD...origin/main --json)" = "[]" ]; then
             yarn test
           else
-            npx lerna run test --since HEAD...origin/master
+            npx lerna run test --since HEAD...origin/main
           fi
   jvm:
     runs-on: ubuntu-latest

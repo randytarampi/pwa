@@ -52,7 +52,7 @@ describe("pwa-asset-generator", function () {
             cwd: outputImageDirectoryPath,
         };
 
-        execFile(binPath, args, options, (error, stdout, stderr) => {
+        execFile(binPath, args, options, (error) => {
             if (error) {
                 return done(error);
             }
@@ -73,7 +73,7 @@ describe("pwa-asset-generator", function () {
             cwd: __dirname,
         };
 
-        execFile(binPath, args, options, (error, stdout, stderr) => {
+        execFile(binPath, args, options, (error) => {
             if (error) {
                 return done(error);
             }

@@ -41,11 +41,9 @@ parser.example('$ ios-splash --size ~iphone', 'Default~iphone.png,320,480')
 const argv = parser.argv
 
 function formatLog (splash, argv) {
-  let format = argv.format
-  if (format === 'json') {
+  if (argv.format === 'json') {
     return JSON.stringify(splash)
   }
-  if (!(format === 'csv' || format === 'json')) format = 'csv'
   if (!Array.isArray(splash)) {
     splash = [splash]
   }
