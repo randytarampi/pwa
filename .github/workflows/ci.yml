@@ -55,6 +55,30 @@ jobs:
           file: coverage/lcov.info
           flag-name: ${{ matrix.node-version }}
           parallel: true
+  qlty:
+    needs: node
+    permissions:
+      contents: read
+      id-token: write
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: yarn
+      - run: corepack enable
+      - name: Install dependencies
+        env:
+          YARN_ENABLE_HARDENED_MODE: false
+        run: yarn install --immutable
+      - name: Generate coverage
+        run: yarn c8 -r lcov --exclude 'packages/asset-service/**' --exclude '**/*.kt' --exclude '**/*.kts' yarn test
+      - name: Upload coverage to Qlty
+        uses: qltysh/qlty-action/coverage@v2
+        with:
+          oidc: true
+          files: coverage/lcov.info
   jvm:
     runs-on: ubuntu-latest
     steps:
