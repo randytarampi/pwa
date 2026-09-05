@@ -1,0 +1,3 @@
+# Disable automatic plugin release updates.
+[plugin]
+release = false
