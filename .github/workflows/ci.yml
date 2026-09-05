@@ -47,6 +47,14 @@ jobs:
           else
             npx lerna run test --since HEAD...origin/main
           fi
+      - name: Generate coverage
+        run: yarn c8 -r lcov --exclude packages/asset-service/** --exclude '**/*.kt' --exclude '**/*.kts' yarn test
+      - name: Upload coverage to Coveralls
+        uses: coverallsapp/github-action@v2
+        with:
+          file: coverage/lcov.info
+          flag-name: ${{ matrix.node-version }}
+          parallel: true
   jvm:
     runs-on: ubuntu-latest
     steps:
@@ -65,3 +73,12 @@ jobs:
       - name: Build asset-service
         working-directory: packages/asset-service
         run: ./gradlew build
+
+  finish:
+    needs: node
+    runs-on: ubuntu-latest
+    steps:
+      - name: Coveralls Finished
+        uses: coverallsapp/github-action@v2
+        with:
+          parallel-finished: true
