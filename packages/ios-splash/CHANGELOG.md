@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.1.15](https://github.com/randytarampi/ios-splash/compare/%40randy.tarampi%2Fios-splash%403.1.14...%40randy.tarampi%2Fios-splash%403.1.15) (2026-09-05)
+
+**Note:** Version bump only for package @randy.tarampi/ios-splash
+
+
+
+
+
 ## [3.1.14](https://github.com/randytarampi/ios-splash/compare/%40randy.tarampi%2Fios-splash%403.1.13...%40randy.tarampi%2Fios-splash%403.1.14) (2026-09-05)
 
 ### Bug Fixes

@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.2.15](https://github.com/randytarampi/ios-icons/compare/%40randy.tarampi%2Fios-icons%404.2.14...%40randy.tarampi%2Fios-icons%404.2.15) (2026-09-05)
+
+**Note:** Version bump only for package @randy.tarampi/ios-icons
+
+
+
+
+
 ## [4.2.14](https://github.com/randytarampi/ios-icons/compare/%40randy.tarampi%2Fios-icons%404.2.13...%40randy.tarampi%2Fios-icons%404.2.14) (2026-09-05)
 
 ### Bug Fixes

@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.9](https://github.com/randytarampi/pwa-asset-service/compare/%40randy.tarampi%2Fpwa-asset-service%400.1.8...%40randy.tarampi%2Fpwa-asset-service%400.1.9) (2026-09-05)
+
+**Note:** Version bump only for package @randy.tarampi/pwa-asset-service
+
+
+
+
+
 ## [0.1.8](https://github.com/randytarampi/pwa-asset-service/compare/%40randy.tarampi%2Fpwa-asset-service%400.1.7...%40randy.tarampi%2Fpwa-asset-service%400.1.8) (2026-09-05)
 
 ### Bug Fixes
