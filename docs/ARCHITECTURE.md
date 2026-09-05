@@ -26,4 +26,4 @@
 
 ## CI/CD Pipeline
 - `.github/workflows/ci.yml` runs tests on PRs on Node 24.
-- `.github/workflows/release.yml` does main-branch semantic-release with OIDC trusted publishing.
+- CodeQL remains enabled for security analysis; this repository has no active release workflow.
