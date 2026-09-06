@@ -26,4 +26,4 @@
 
 ## CI/CD Pipeline
 - `.github/workflows/ci.yml` runs tests on PRs on Node 24.
-- CodeQL remains enabled for security analysis; this repository has no active release workflow.
+- CodeQL remains enabled for security analysis; releases run through `workflow_run` after CI succeeds, verify the head SHA, and deploy through the production environment with a required reviewer.
