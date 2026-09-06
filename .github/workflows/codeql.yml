@@ -44,27 +44,5 @@ jobs:
       - name: Perform CodeQL analysis
         uses: github/codeql-action/analyze@v3
 
-  analyze-kotlin:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Check out repository
-        uses: actions/checkout@v7
-
-      - name: Set up Java
-        uses: actions/setup-java@v6
-        with:
-          distribution: temurin
-          java-version: "21"
-
-      - name: Initialize CodeQL
-        uses: github/codeql-action/init@v3
-        with:
-          languages: kotlin
-          build-mode: manual
-
-      - name: Build asset-service
-        working-directory: packages/asset-service
-        run: ./gradlew --no-daemon build -x test -x nodeTest
-
-      - name: Perform CodeQL analysis
-        uses: github/codeql-action/analyze@v3
+  # Kotlin-native static analysis (or a dedicated Gradle-integrated CodeQL
+  # workflow) is the replacement for this currently unsupported Kotlin/JS leg.
