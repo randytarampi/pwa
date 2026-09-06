@@ -20,6 +20,8 @@ jobs:
     if: ${{ github.event.workflow_run.conclusion == 'success' && github.actor != 'github-actions[bot]' }}
     environment: production
     runs-on: ubuntu-latest
+    env:
+      NPM_CONFIG_PROVENANCE: true
     steps:
       - name: Run `git checkout`
         uses: actions/checkout@v7
