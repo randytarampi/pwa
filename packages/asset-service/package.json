@@ -25,11 +25,11 @@
     "cross-env": "^10.1.0",
     "kotlin-test": "^1.9.25",
     "mocha": "^12.0.0",
-    "semantic-release": "^25.0.5",
+    "semantic-release": "^26.0.1",
     "serverless": "^4.35.1",
     "serverless-apigw-binary": "^0.4.4",
     "serverless-apigwy-binary": "^1.0.1",
-    "serverless-domain-manager": "^10.1.0",
+    "serverless-domain-manager": "^11.0.1",
     "serverless-offline": "^14.5.0",
     "serverless-plugin-tracing": "^2.0.0"
   },
